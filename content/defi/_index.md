@@ -9,22 +9,18 @@ menu:
 draft: false
 ---
 
-Les communautés scientifiques du {{% scilog %}} sont organisées en groupes de travail et actions transverses. Les groupes de travail sont internes au {{% scilog %}}, alors que les actions transverses réunissent une communauté associée à plusieurs GDR.
+Les communautés scientifiques du {{% scilog %}} sont organisées en [Groupes Thématiques](/defi/) mais le travail effectif de la communauté porte sur des défis précis et redéfinis régulièrement.
 
-Les groupes de travail sont les suivants :
+Les 9 défis actuels sont les suivants :
 
-  * [AFSEC : Approches Formelles des Systèmes Embarqués Communicants](/group/afsec/)
-  * [CLAP : Compilation, Langages, Analyses, Parallélisme](/group/clap/)
-  * [Debugging](/group/debugging/)
-  * [GLIA : Génie Logiciel et Intelligence Artificielle](/group/glia/)
-  * [GL_Sec : La sécurité dans le développement logiciel](/group/gl-sec/)
-  * [HiFi : Méthodes Formelles et Programmation Haute Fidélité pour Systèmes Critiques Émergents](/group/hifi/)
-  * [IDM : Ingénierie Dirigée par les Modèles](/group/idm/)
-  * [IE : Ingénierie des Exigences](/group/ie/)
-  * [LVP : Langages et vérification de programmes](/group/lvp/)
-  * [Logiciel Éco-Responsable](/group/eco-resp/)
-  * [MTV2 : Méthodes de test pour la validation et la vérification](/group/mtv2/)
-  * [VL : Vélocité Logicielle](/group/vl/)
-  * [YODA : "trustworthY and Optimal Dynamic Adaptation »](/group/yoda/)
+  * [ADDYCT : ADaptation DYnamique et ConTinue](/defi/addyct/)
+  * [AI4SE : IA pour la Production Logicielle](/defi/ai4se/)
+  * [DevX : Expérience Développeur ](/defi/devx/)
+  * [FadingICT : Scénarios décroissants du numérique](/defi/glia/)
+  * [GL4Sec : Outils  de  test  et  de  vérification  pour  la  sécurité](/defi/gl4sec/)
+  * [IPP : Interopérabilité pour les preuves et les programme](/defi/ipp/)
+  * [PAE : Programmation et Analyse de systèmes Embarqués](/defi/pae/)
+  * [SE4AIA : Sciences du logiciel pour les applications à base d’IA](/defi/se4aia/)
+  * [Trusted : Confiance et traçabilité dans la production de logiciels](/defi/trusted/)
 
 

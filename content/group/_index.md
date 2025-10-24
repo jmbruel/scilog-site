@@ -9,22 +9,23 @@ menu:
 draft: false
 ---
 
-Les communautés scientifiques du {{% scilog %}} sont organisées en groupes de travail et actions transverses. Les groupes de travail sont internes au {{% scilog %}}, alors que les actions transverses réunissent une communauté associée à plusieurs GDR.
+Les communautés scientifiques du {{% scilog %}}, qui travaillent par ailleurs sur des [défis scientifiques](/defi/) concrets, sont organisées en Groupes Thématiques. 
 
-Les groupes de travail sont les suivants :
+Les groupes thématiques ont été redéfinis sont les suivants :
 
-  * [AFSEC : Approches Formelles des Systèmes Embarqués Communicants](/group/afsec/)
   * [CLAP : Compilation, Langages, Analyses, Parallélisme](/group/clap/)
-  * [Debugging](/group/debugging/)
-  * [GLIA : Génie Logiciel et Intelligence Artificielle](/group/glia/)
-  * [GL_Sec : La sécurité dans le développement logiciel](/group/gl-sec/)
-  * [HiFi : Méthodes Formelles et Programmation Haute Fidélité pour Systèmes Critiques Émergents](/group/hifi/)
-  * [IDM : Ingénierie Dirigée par les Modèles](/group/idm/)
-  * [IE : Ingénierie des Exigences](/group/ie/)
+  * [DevX : Expérience Développeur](/group/devx/)
+  * [ECORESP : Eco-responsabilité dans le logiciel](/group/eco-resp/)
+  * [EDT : Ingénierie des jumeaux numériques](/group/edt/)
+  * [GLSec : Sécurité des logiciels](/group/glsec/)
+  * [IA : logiciels et intelligence artificielle](/group/ia/)
+  * [IIDM : Ingénierie Dirigée par les Modèles](/group/idm/)
   * [LVP : Langages et vérification de programmes](/group/lvp/)
-  * [Logiciel Éco-Responsable](/group/eco-resp/)
-  * [MTV2 : Méthodes de test pour la validation et la vérification](/group/mtv2/)
+  * [MTV2 : Test pour la validation et la vérification logicielles](/group/eco-resp/)
+  * [PARTS : Systèmes temps réel](/group/parts/)
+  * [SyLA : adaptation dans les systèmes logiciels](/group/syla) 
+  * [TONES : Optimisation et vérification pour les systèmes critiques](/group/tones/)
+  * [TraceIE : Ingénierie des exigences traçabilité dans les logiciels](/group/ie/)
   * [VL : Vélocité Logicielle](/group/vl/)
-  * [YODA : "trustworthY and Optimal Dynamic Adaptation »](/group/yoda/)
 
 
