@@ -172,7 +172,7 @@ Organisation des contenus du site GDR-GPL.
 **Fichiers Markdown (1) :**
 
 - `index.md`
-  - Titre: Anciens sites web du GDR SciLog
+  - Titre: Anciens sites web du GDR SciLog (GPL)
   - Type: page
   - Date: "2024-11-21T13:39:27Z"
 
