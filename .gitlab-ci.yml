@@ -23,7 +23,7 @@ test:
 create-pages:
   stage: deploy
   script:
-    - hugo hugo --config config.toml
+    - hugo --config config.toml
   pages: true
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
