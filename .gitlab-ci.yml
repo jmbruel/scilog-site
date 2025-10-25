@@ -8,8 +8,8 @@ default:
   before_script:
     - hugo version
     - hugo mod get -u $THEME_URL
-    - apt update
-    - apt install hugo
+    # - apt update
+    # - apt install hugo
     # - hugo version
 
 # Use everywhere except on the default branch
