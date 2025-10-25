@@ -10,6 +10,9 @@ default:
     - hugo mod get -u $THEME_URL
     # - apt update
     # - apt install hugo
+    - brew install hugo
+    - hugo mod tidy
+    - hugo mod vendor
     # - hugo version
 
 # Use everywhere except on the default branch
