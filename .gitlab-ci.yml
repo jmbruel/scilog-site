@@ -1,4 +1,4 @@
-image: hugomods/hugo:exts
+image: hugomods/latest
 
 variables:
   HUGO_ENV: production
@@ -8,8 +8,8 @@ default:
   before_script:
     - hugo version
     - hugo mod get -u $THEME_URL
-    - apt-get update
-    - hugo version
+    # - apt-get update
+    # - hugo version
 
 # Use everywhere except on the default branch
 test:
