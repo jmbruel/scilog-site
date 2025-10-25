@@ -1,0 +1,31 @@
+image: hugomods/hugo:exts
+
+variables:
+  HUGO_ENV: production
+  THEME_URL: "github.com/gdr-sdl/theme"
+
+default:
+  before_script:
+    - hugo version
+    - hugo mod get -u $THEME_URL
+    - pwd
+    - ls
+
+
+# Use everywhere except on the default branch
+test:
+  script:
+    - hugo
+  rules:
+    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+
+# Run only on the default branch
+create-pages:
+  stage: deploy
+  script:
+    - hugo --config hugo.toml
+  pages: true
+  artifacts:
+    paths:
+      - publicrules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
