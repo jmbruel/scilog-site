@@ -11,7 +11,7 @@ variables:
   TZ: Europe/Oslo
 
 image:
-  name: golang:1.25.3-bookworm
+  name: golang:latest
 
 pages:
   stage: deploy
