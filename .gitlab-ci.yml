@@ -1,4 +1,4 @@
-image: hugomods/latest
+image: hugomods/hugo:go1.21.1-ext-alpine
 
 variables:
   HUGO_ENV: production
