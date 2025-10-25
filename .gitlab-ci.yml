@@ -26,5 +26,6 @@ create-pages:
   pages: true
   artifacts:
     paths:
-      - publicrules:
+      - public
+  rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
