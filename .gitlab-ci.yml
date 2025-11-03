@@ -1,4 +1,4 @@
-image: hugomods/hugo:go1.21.1-ext-alpine
+image: hugomods/hugo:ext-alpine  # Use a more specific version if needed
 
 variables:
   HUGO_ENV: production
@@ -7,18 +7,15 @@ variables:
 default:
   before_script:
     - hugo version
+    - git config --global --add safe.directory /builds/gdr-scilog/site  # Fix potential git safety issues
     - hugo mod get -u $THEME_URL
-    # - apt update
-    # - apt install hugo
-    - brew install hugo
     - hugo mod tidy
     - hugo mod vendor
-    # - hugo version
 
 # Use everywhere except on the default branch
 test:
   script:
-    - hugo
+    - hugo --minify
   rules:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
 
@@ -26,9 +23,8 @@ test:
 create-pages:
   stage: deploy
   script:
-    - hugo --config hugo.toml
-  pages: true
-  artifacts:
+    - hugo --minify --config hugo.toml
+  pages:
     paths:
       - public
   rules:
