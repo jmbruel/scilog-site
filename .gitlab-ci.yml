@@ -20,7 +20,7 @@ test:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
 
 # Run only on the default branch
-create-pages:
+pages:
   stage: deploy
   script:
     - hugo --minify --config hugo.toml
