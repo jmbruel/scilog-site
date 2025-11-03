@@ -24,7 +24,7 @@ create-pages:
   stage: deploy
   script:
     - hugo --minify --config hugo.toml
-  pages:
+  artifacts:
     paths:
       - public
   rules:
