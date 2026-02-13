@@ -121,6 +121,6 @@ git push origin feature/ajout-my-first-post
 
 === Déploiement
 
-Après review, tests automatiques (CI) et validation → Merge.
+Après review, tests automatiques (CI) et validation → Merge.    
 Déploiement automatique via GitHub Actions.
 Site mis à jour sous quelques minutes.
