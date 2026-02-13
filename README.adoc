@@ -1,0 +1,126 @@
+# GDR SciLog - Site Web
+:url: https://jmbruel.github.io/sean/
+:repo: https://src.koda.cnrs.fr/gdr-scilog/private/site.git/
+:scilog: https://mygdr.hosted.lip6.fr/accueilGDR/7/10[GDR SciLog]
+:ins2i: http://www.cnrs.fr/ins2i/[CNRS Sciences Informatiques]
+
+image::static/assets/logo-scilog.png[Logo du GDR SciLog]
+
+// ![Version](https://img.shields.io/github/v/release/gdr-gpl/gdr-gpl)
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+WARNING: Site under construction. 
+// The published version is at https://jmbruel.github.io/sean/.
+
+Ce dépôt contient les sources du site {url}.
+
+Site web moderne et collaboratif pour le {scilog} (Groupement de Recherche Sciences du Logiciel - de l'institut {ins2i}) de la communauté scientifique française des Sciences du Logiciel.
+
+==== Architecture technique
+
+=== Technologies utilisées
+* *Hugo* v0.151.2 - Générateur de sites statiques
+* *GitHub Actions* - CI/CD
+* *Markdown* & *AsciiDoc* - Format de contenu
+
+=== Thème personnalisé
+Le site utilise un thème personnalisé développé spécifiquement pour ce projet :
+* *Repository du thème* : https://github.com/gdr-gpl/theme,https://github.com/gdr-gpl/theme (et les commits correspondants)
+
+== Contribution
+
+Workflow de contribution :
+
+. Cloner le dépôt
+   ↓
+. Créer une branche
+   ↓
+. Créer/Modifier le contenu
+   ↓
+. Commiter les changements
+   ↓
+. Pousser et créer une Pull Request
+   ↓
+. Review par l'équipe
+   ↓
+. Merge et déploiement automatique
+
+=== Cloner le dépôt
+
+[source,bash]
+----
+cd existing_repo
+git remote add origin https://src.koda.cnrs.fr/gdr-scilog/private/site.git
+git branch -M main
+git push -uf origin main
+----
+
+WARNING: Il est fort probable que vous deviez renseigner votre token d'accès GitHub/GitLab pour pouvoir cloner le dépôt. L'URL du site devra alors être https://votre.login.de.connexion@src.koda.cnrs.fr/gdr-scilog/private/site.git
+
+=== Créer une branche 
+
+[source,bash]
+----
+git checkout -b feature/ajout-my-first-post
+----
+
+Convention de nommage :
+
+`feature/` : Nouveau contenu
+`fix/` : Correction
+`update/` : Mise à jour
+
+=== Créer/Modifier un contenu
+
+Soit en utilisant l'outil Hugo si vous avez l'habitude :
+
+[source,bash]
+----
+hugo new content content/uncategorized/my-first-post.md
+----
+
+L'avantage d'utiliser Hugo est de pouvoir tester en local :
+[source,bash]
+----
+hugo server -D
+----
+
+=== Commiter
+
+[source,bash]
+----
+git add content/uncategorized/my-first-post.md
+git commit -m "feat(post): ajout mon premier post"
+----
+
+Convention de commit :
+
+type(scope): description
+
+Types :
+- `feat`: nouveau contenu
+- `fix`: correction
+- `docs`: documentation
+- `style`: mise en forme
+- `refactor`: restructuration
+- `chore`: maintenance
+
+=== Pousser et créer une PR
+
+[source,bash]
+----
+git push origin feature/ajout-my-first-post
+----
+
+=== Déploiement
+
+Après review, tests automatiques (CI) et validation → Merge.
+Déploiement automatique via GitHub Actions.
+Site mis à jour sous quelques minutes.
