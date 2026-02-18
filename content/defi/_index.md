@@ -9,7 +9,7 @@ menu:
 draft: false
 ---
 
-Les communautés scientifiques du {{% scilog %}} sont organisées en [Groupes Thématiques](/defi/) mais le travail effectif de la communauté porte sur des défis précis et redéfinis régulièrement.
+Les communautés scientifiques du {{% scilog %}} sont organisées en [Groupes Thématiques](/group/) mais le travail effectif de la communauté porte sur des défis précis et redéfinis régulièrement.
 
 Les 9 défis actuels sont les suivants :
 
@@ -23,4 +23,4 @@ Les 9 défis actuels sont les suivants :
   * [SE4AIA : Sciences du logiciel pour les applications à base d’IA](/defi/se4aia/)
   * [Trusted : Confiance et traçabilité dans la production de logiciels](/defi/trusted/)
 
-
+(mise à jour 2026-01-18)
