@@ -16,7 +16,7 @@ Les 9 défis actuels sont les suivants (par ordre alphabétique) :
   * [ADDYCT : ADaptation DYnamique et ConTinue](/defi/addyct/)
   * [AI4SE : IA pour la Production Logicielle](/defi/ai4se/)
   * [DevX : Expérience Développeur ](/defi/devx/)
-  * [FadingICT : Scénarios décroissants du numérique](/defi/fadingICT/)
+  * [FadingICT : Scénarios décroissants du numérique](/defi/fadingict/)
   * [GL4Sec : Outils  de  test  et  de  vérification  pour  la  sécurité](/defi/gl4sec/)
   * [IPP : Interopérabilité pour les preuves et les programme](/defi/ipp/)
   * [PAE : Programmation et Analyse de systèmes Embarqués](/defi/pae/)
