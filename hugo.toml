@@ -4,6 +4,7 @@ title = 'GdR SciLog'
 theme = "mon-theme"
 canonifyURLs = true
 enableRobotsTXT = true
+copyright = "&copy; {currentYear} All right reserved contact@scilog.fr"
 
 [taxonomies]
   archive = "archives"
