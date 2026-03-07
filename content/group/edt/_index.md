@@ -1,3 +1,9 @@
+---
+title: EDT
+type: page
+date: "2026-03-07T16:22:42Z"
+draft: false
+---
 # Génie Logiciel du Jumeau Numérique
 
 ## Contact
