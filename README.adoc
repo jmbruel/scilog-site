@@ -1,8 +1,9 @@
 = GDR SciLog - Site Web
-:url: https://jmbruel.github.io/scilog-site/
+:url: https://gdr-scilog.cnrs.fr/
 :repo: https://src.koda.cnrs.fr/gdr-scilog/private/site.git/
-:scilog: https://mygdr.hosted.lip6.fr/accueilGDR/7/10[GDR SciLog]
+:scilog: https://gdr-scilog.cnrs.fr/[GDR SciLog]
 :ins2i: http://www.cnrs.fr/ins2i/[CNRS Sciences Informatiques]
+:mygdr: https://mygdr.hosted.lip6.fr/accueilGDR/7/10
 
 image::static/assets/logo-scilog.png[Logo du GDR SciLog]
 
