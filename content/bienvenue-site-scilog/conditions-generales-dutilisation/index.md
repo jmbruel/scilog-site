@@ -1,34 +1,30 @@
 ---
 title: "Conditions Générales d'Utilisation et Mentions Légales"
 type: page
-date: "2025-04-03T13:15:33Z"
+date: "2026-03-27T00:00:01Z"
 draft: false
 ---
 
 # 
 
-## **Site Internet du GDR Sciences du Logiciel  
-(GDR 3168)**
+## Site Internet du GDR Sciences du Logiciel  
 
-[https://gdr-gpl.cnrs.fr/](https://gdr-gpl-2013-2024.imag.fr/index.html)
+https://gdr-scilog.cnrs.fr/
 
-GDR 3168 – GDR Sciences du Logiciel (GDR SciLog) – CNRS – Nice  
-CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE  
-I3S - Univ. Côte d'Azur  
-2000 route des lucioles, Bât Euclide B  
-BP 121  
-06903 SOPHIA ANTIPOLIS CEDEX  
-Région : Provence-Alpes-Côte d'Azur  
-Tél : 04 89 15 42 43
+GDR 3168 – GDR Sciences du Logiciel (GDR SciLog) – CNRS – Toulouse  
+CNRS - IRIT (UMR 5505) 
+118 rte de Narbonne
+31068 Toulouse CEDEX  
+Région : Occitanie  
 
 ## **Conditions Générales d'Utilisation (CGU)**
 
 #### **Informations éditoriales**
 
-  * Directrice de la publication : Mireille Blay-Fornarino, directrice du {{% scilog %}}
+  * Directeur de la publication : Jean-Michel Bruel, co-directeur du {{% scilog %}}
   * Responsable éditorial : Yves Ledru
-  * Webmestre : Yves Ledru
-  * Hébergeur : Laboratoire d’Informatique de Grenoble
+  * Webmestre : Jean-Michel Bruel
+  * Hébergeur : CNRS
 
 
 
@@ -62,11 +58,11 @@ Toutes les images, marques, logos, noms de domaine et information sous forme de 
 
 
 
-Pour tout autre demande sur support papier ou électronique doit être adressée au webmestre (Yves.Ledru [at] imag.fr).
+Pour tout autre demande sur support papier ou électronique doit être adressée au webmestre (Jean-Michel.Bruel [at] irit.fr).
 
 ### **Article 4 : Protection des informations nominatives**
 
-Ce site Web comporte des informations nominatives concernant notamment les personnels du {{% scilog %}} et de ses partenaires, entre dans le cadre de la dispense de déclaration à la CNIL n°2006-138 du 09/05/2006 décidant de la dispense de déclaration des traitements constitués à des fins d'information ou de communication externe. Conformément à la loi n° 78-17 du 6 janvier 1978, relative à l'Informatique, aux fichiers et aux Libertés (articles 38, 39, 40), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant, en ligne sur ce site. Pour exercer ce droit, vous pouvez faire une demande sur support papier ou électronique en contactant le webmestre (Yves.Ledru [at] imag.fr)  
+Ce site Web comporte des informations nominatives concernant notamment les personnels du {{% scilog %}} et de ses partenaires, entre dans le cadre de la dispense de déclaration à la CNIL n°2006-138 du 09/05/2006 décidant de la dispense de déclaration des traitements constitués à des fins d'information ou de communication externe. Conformément à la loi n° 78-17 du 6 janvier 1978, relative à l'Informatique, aux fichiers et aux Libertés (articles 38, 39, 40), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant, en ligne sur ce site. Pour exercer ce droit, vous pouvez faire une demande sur support papier ou électronique en contactant le webmestre (Jean-Michel.Bruel [at] irit.fr)  
   
 La liberté d’accès aux données à caractère personnel présentes sur ce site (annuaire) n’en confère pas une liberté de collecte ou d’exploitation de ces données.
 
@@ -83,9 +79,9 @@ Ces fichiers ne sont utilisés que pour assurer la bonne marche du système ou r
 ### **Article 6 : Cookies**
 
 L’Utilisateur est informé que lors de ses visites sur le site du {{% scilog %}}, un cookie peut s’installer automatiquement sur son logiciel de navigation.  
-Les cookies sont de petits fichiers stockés temporairement sur le disque dur de l’ordinateur de l’Utilisateur par votre navigateur et qui sont nécessaires à l’utilisation du site [https://gdr-gpl.cnrs.fr/](https://gdr-gpl-2013-2024.imag.fr/index.html).  
+Les cookies sont de petits fichiers stockés temporairement sur le disque dur de l’ordinateur de l’Utilisateur par votre navigateur et qui sont nécessaires à l’utilisation du site https://gdr-scilog.cnrs.fr/.  
 Les cookies ne contiennent pas d’information personnelle et ne peuvent pas être utilisés pour identifier quelqu’un.  
 Un cookie contient un identifiant unique, généré aléatoirement et donc anonyme. Certains cookies expirent à la fin de la visite de l’Utilisateur, d’autres restent.  
 L’information contenue dans les cookies est utilisée pour améliorer le site du {{% scilog %}}.  
-En naviguant sur le site, L’Utilisateur les accepte.  
+En naviguant sur le site, l’Utilisateur les accepte.  
  

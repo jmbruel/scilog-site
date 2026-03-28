@@ -5,6 +5,7 @@ theme = "mon-theme"
 canonifyURLs = true
 enableRobotsTXT = true
 copyright = "&copy; {currentYear} All right reserved contact@scilog.fr"
+enableEmoji = true
 
 [taxonomies]
   archive = "archives"
@@ -16,3 +17,4 @@ copyright = "&copy; {currentYear} All right reserved contact@scilog.fr"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
