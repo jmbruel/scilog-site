@@ -13,11 +13,12 @@ Plusieurs actions sont actuellement en cours
 
   * [Appel à mobilité](/action/appel-mobilite/)
   * [Prix de thèse GDR SciLog](/action/prix-de-these-gpl)
+  * [Journées nationales](/action/national-day/)
   * Ateliers CONCOURS
 
 
 
-Dans le passé le {{% scilog %}} a également fait les actions suivantes
+Dans le passé le {{% scilog %}} a également fait les actions suivantes :
 
   * Appel à actions émergentes 2013
   * Initiative COS-Tools

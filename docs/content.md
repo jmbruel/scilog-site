@@ -17,7 +17,7 @@ Organisation des contenus du site GDR-GPL.
   - Type: news
   - Date: "2024-06-23T09:46:44Z"
 
-**Sous-dossiers (6) :** uncategorized, national day, ecole, bienvenue-site-GDR SciLog, group, action
+**Sous-dossiers (6) :** uncategorized, national_day, ecole, bienvenue-site-GDR SciLog, group, action
 
 ### uncategorized/
 
@@ -93,7 +93,7 @@ Organisation des contenus du site GDR-GPL.
   - Type: news
   - Date: "2025-07-14T13:17:37Z"
 
-### national day/
+### national_day/
 
 **Fichiers Markdown (5) :**
 

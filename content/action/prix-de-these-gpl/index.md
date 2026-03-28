@@ -5,7 +5,7 @@ date: "2025-01-31T21:59:49Z"
 draft: false
 ---
 
-Créé en 2013 pour récompenser chaque année une excellente thèse préparée au sein du {{% scilog %}}log %}}, le **Prix de thèse du {{% scilog %}}** a pour objectif de promouvoir les travaux du {{% scilog %}} auprès de la communauté informatique.
+Créé en 2013 pour récompenser chaque année une excellente thèse préparée au sein du {{% scilog %}}, le **Prix de thèse** du {{% scilog %}} a pour objectif de promouvoir les travaux du {{% scilog %}} auprès de la communauté informatique.
 
   
 Le prix est décerné par un jury couvrant les thématiques du {{% scilog %}}. Pour l'édition concernant les thèses soutenues en 2023, le jury était présidé par Pascal Poizat et est constitué des membres suivants : B. Baudry, S. Bliudze, I. Borne, S. Chabridon, S. Conchon, S. Costiou, F. Dabrowski, S. Ebersold, A. Giorgetti, Y.-G. Guéhéneuc, D. E. Khelladi, N. Kosmatov, N. Kushik, M. Lhommeau, S. Mosser, A. Noureddine, T. Polacsek, G. Salaün, P. Temple.

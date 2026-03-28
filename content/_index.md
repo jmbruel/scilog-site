@@ -13,7 +13,7 @@ _Le {{% scilog %}} (Groupement de Recherche en Sciences du Logiciel) est une uni
 
 Vous trouverez sur ce site les dernières actualités relatives au {{% scilog %}} :
 
-  * [Dernières journées nationales](/national-day/) (juin 2025)
+  * [Prochaines journées nationales](action/national-day/) (juin 2026)
   * [Annonces de conférences, ateliers et journées de travail](/action/)
 
 
