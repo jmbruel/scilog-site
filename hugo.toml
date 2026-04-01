@@ -18,3 +18,14 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[params]
+    codir1email = 'jean-michel.bruel@irit.fr'
+    codir1name = 'Jean-Michel Bruel'
+    codir2name = 'Pascal Poizat'
+    codir3name = 'Nicolas Magaud'
+    CSpres = 'Florence Maraninchi'
+    ri = 'Benoit Combemale'
+    pes = 'Sophie Chabridon'
+    com = 'Yves Ledru'
+    school = 'Daniel Le Berre'
+    these = 'Sandrine Blazy'
