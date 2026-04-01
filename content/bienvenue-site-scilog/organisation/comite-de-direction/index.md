@@ -31,7 +31,7 @@ Le comité de direction est composé d'au moins les 9 membres suivants :
 ### Membres actuels
 
 | Rôle | Personne actuelle
-| -----|-----------------
+| :-----|:-----------------
 Co-directeur·rice 1  | {{< param "codir1name" >}}
 Co-directeur·rice 2  | {{< param "codir2name" >}}
 Co-directeur·rice 3  | {{< param "codir3name" >}}
