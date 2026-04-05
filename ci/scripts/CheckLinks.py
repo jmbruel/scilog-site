@@ -21,7 +21,7 @@ class CheckLinkType(Enum):
 
 
 # Mode de vérification des liens
-CHECK_LINK_TYPE = CheckLinkType.INTERNAL
+CHECK_LINK_TYPE = CheckLinkType.BOTH
 
 # Cache des domaines déjà testés en mode FAST_CHECK
 domain_cache = {}
