@@ -50,7 +50,7 @@ Sans pour autant atteindre la parité parfaite, le Comité Stratégique est actu
 | Huchard | Marianne | U. Montpellier | LIRMM (UMR 5506) |
 | Hurault | Aurélie | INP Toulouse | IRIT (UMR 5505) |
 | Jézéquel | Jean-Marc | U. de Rennes | IRISA (UMR 6074) |
-| Le Berre | Daniel | U. Lens | CRIL (UMR 8188) |
+| Le Berre | Daniel | U. d’Artois | CRIL (UMR 8188) |
 | Ledru | Yves | U. Grenoble Alpes | LIG (UMR 5217) |
 | Le Gall | Pascale | CentraleSupélec | MICS (EA 4037) |
 | Maraninchi | Florence | U. Grenoble | Verimag (UMR 5104) |
