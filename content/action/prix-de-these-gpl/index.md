@@ -8,7 +8,7 @@ draft: false
 Créé en 2013 pour récompenser chaque année une excellente thèse préparée au sein du {{% scilog %}}, le **Prix de thèse du {{% scilog %}}** a pour objectif de promouvoir les travaux du {{% scilog %}} auprès de la communauté informatique.
 
   
-Le prix est décerné par un jury couvrant les thématiques du {{% scilog %}}. Pour l'édition concernant les thèses soutenues en 2025, le jury est présidé par Sandrine Blazy et est constitué des membres suivants : Rabéa Ameur-Boulifa, Benoit Baudry, Dorra Ben Khalifa, Frédéric Dabrowski, Thomas Degueule, David Delahaye, Sophie Ebersold, Julien Forget, Olivier Hermant, Nikolai Kosmatov, Dylan Marinho, Thomas Polacsek, Julien Signoles et Benoit Verhaeghe.
+Le prix est décerné par un jury couvrant les thématiques du {{% scilog %}}. Pour l'édition concernant les thèses soutenues en 2025, le jury est présidé par Sandrine Blazy et est constitué des membres suivants : Rabéa Ameur-Boulifa, Benoit Baudry, Dorra Ben Khalifa, Frédéric Dabrowski, Thomas Degueule, David Delahaye, Cédric Dumoulin, Sophie Ebersold, Julien Forget, Olivier Hermant, Nikolai Kosmatov, Dylan Marinho, Thomas Polacsek et Julien Signoles.
 
 
 Les articles récents relatifs au prix de thèse sont les suivants :
