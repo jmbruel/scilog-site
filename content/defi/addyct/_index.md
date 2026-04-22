@@ -5,30 +5,12 @@ date: "2024-06-23T11:20:58Z"
 draft: false
 ---
 
-# ADaptation DYnamique et ConTinue -- ADDYCT {#Adapt}
+## Contact
+* Jannik Laval (DISP, Université Lumière Lyon 2)
+* Jolan Philippe (LIFO, Orléans)
 
-Porteur(s) :
+### Laboratoires et chercheurs inscrits dans le Défi : [Sur le site MyGDR](https://mygdr.hosted.lip6.fr/GTView/210/)
 
-:   Jannik Laval (DISP, Université Lumière Lyon 2), Philippe Jolan
-    (LIFO, Orléans)
-
-Contributeurs :
-
-:   Eric Cariou (Université de Bretagne Occidentale, Brest), Rabea
-    Ameur-Boulifa (Telecom Paris), Sylvain Guérin (IMT Atlantique,
-    Brest), Olga Kouchnarenko (femto-st), Nawal Guermouche (LAAS-CNRS)
-
-Titre complet :
-
-:   ADaptation DYnamique et ConTinue
-
-Titre anglais :
-
-:   Dynamic and Continuous Adaptation
-
-Acronyme :
-
-:   ADDYCT
 
 ## Contexte
 
@@ -145,8 +127,8 @@ répondre à leur besoin d'adaptation continue :
 
 ## Liens avec les GTs
 
-Ce défi est directement relié aux groupes de travail EDT (Engineering
-Digital Twin), le GT SyLA (Systèmes Logiciels Adaptables), qui traitent
+Ce défi est directement relié aux [GT EDT](https://gdr-scilog.cnrs.fr/group/edt/) (Engineering
+Digital Twin), le [GT SyLA](https://gdr-scilog.cnrs.fr/group/syla/) (Systèmes Logiciels Adaptables), qui traitent
 respectivement de la représentation logicielle (i.e., modèle) des
 systèmes physiques, et de la capacité d'adaptation des logiciels face à
 des contextes changeants, et le GT IIDM (Industrialisation de
@@ -161,125 +143,23 @@ autant qu'il soit un élément central.
 
 ## Liens avec les autres défis
 
-- Programmation et Analyse de systèmes Embarqués
-  (Annexe [\[PAE\]](#PAE){reference-type="ref" reference="PAE"});
+- Programmation et Analyse de systèmes Embarqués ([PAE](https://gdr-scilog.cnrs.fr/defi/pae/))
 
-- Confiance et traçabilité dans la production de logiciels
-  (Annexe [\[Trusted\]](#Trusted){reference-type="ref"
-  reference="Trusted"});
+- Confiance et traçabilité dans la production de logiciels ([Trusted](http://localhost:1313/defi/trusted/))
 
-- Interopérabilité pour les preuves et les programmes (Annexe 
-  [\[IPP\]](#IPP){reference-type="ref" reference="IPP"});
+- Interopérabilité pour les preuves et les programmes ([IPP](https://gdr-scilog.cnrs.fr/defi/ipp/))
 
-- Scénarios décroissants du numérique
-  (Annexe [\[fadingICT\]](#fadingICT){reference-type="ref"
-  reference="fadingICT"})
+- Scénarios décroissants du numérique ([fadingICT](https://gdr-scilog.cnrs.fr/defi/glia/))
 
 ## Liens avec les autres GdRs
 
-- RSD (Réseaux et Systèmes Distribués) <https://gdr-rsd.cnrs.fr/>
+- [RSD (Réseaux et Systèmes Distribués)](https://gdr-rsd.cnrs.fr/)
 
-- MADICS (Masses de Données, Informations et Connaissances en Sciences)
-  <https://www.madics.fr/>
+- [MADICS (Masses de Données, Informations et Connaissances en Sciences)](<https://www.madics.fr/>)
 
-- MACS (Modélisation, Analyse et Conduite des Systèmes dynamiques)
-  <https://gdr-macs.fr/>
+- [MACS (Modélisation, Analyse et Conduite des Systèmes dynamiques)](https://gdr-macs.fr/)
 
-- SOC2 (SOC: Sûreté de Fonctionnement et Sécurité des Systèmes)
-  <https://www.gdr-soc.cnrs.fr/>
+- [SOC2 (SOC: Sûreté de Fonctionnement et Sécurité des Systèmes)](https://www.gdr-soc.cnrs.fr/)
 
-- ROD (Recherche opérationnelle et décision) <http://gdrro.lip6.fr/>
-
-## Liens divers
-
-### Normes et certifications
-
-- ISO/IEC 30173:2023 -- Digital twin --- Concepts and terminology
-
-- IEC 63278-1:2023 -- Asset Administration Shell for industrial
-  applications
-
-- ISO/IEC 25002:2024 -- Systems and software engineering --- Systems and
-  software Quality Requirements and Evaluation (SQuaRE) --- Quality
-  model overview and usage
-
-### Projets ANR ou Européens
-
-- PEPR Cloud (<https://pepr-cloud.fr/>)
-
-- ANR Taranis (<https://taranis-cloud.fr/>)
-
-- ANR SeMaFoR (<https://anr.fr/Projet-ANR-20-CE25-0017>)
-
-- ANR ADAPT (<https://project.inria.fr/adapt/fr/>)
-
-- ANR For-Coala (<https://for-coala.github.io/jobs/>)
-
-### Sujets de thèses - Quelques travaux en cours ou réalisés
-
-- Brell Sanwouo. *Vers des systèmes logiciels complexes et
-  auto-adaptatifs* (Taranis) -- <http://theses.fr/s408144>
-
-- Martin Molli. *Modèles de décisions pour les plateformes edge-cloud*
-  (Taranis) -- <https://theses.fr/s402238>
-
-- Mouheb Jemai. *Orchestration intelligente et scalable pour garantir
-  les performances et la fiabilité du système dans tous les écosystèmes
-  Cloud Native* (Taranis) -- <https://theses.fr/s409932>
-
-- Olivia Proust. *Vers des langages de gestion de configuration
-  formellement vérifiés* (For-Coala) --
-  <https://for-coala.github.io/about/>
-
-- Nathan Rabier. *Gestion des contraintes dynamiques et des délais dans
-  les logiciels distribués* -- <https://taranis-cloud.fr/>
-
-- Simon Artus. *Reconfiguration intelligente et dynamique d'une
-  infrastructure de services Cloud2IoT* -- <https://theses.fr/s411527>
-
-- Nathan Gallone. *Reconfiguration et contrôle de systèmes à composants
-  structurés distribués* -- <https://theses.fr/s400485>
-
-- Ahmed Ouadie Kebbeb. *Modélisation formelle et analyse automatisée des
-  langages de mise à disposition des ressources* --
-  <https://theses.fr/s408987>
-
-- Brice Arléon Zemtsop Ndadji. *Reconfiguration dynamique sécurisée et
-  optimisée des applications cloud* --
-  <https://phd.cristal.univ-lille.fr/details.html?id=c7716a16907d4c60a059be524c6e8da0>
-
-- Karima Khadir -- *Vers une approche de découverte et de sélection
-  distribuées des services IoT basées sur des avatars autonomes* --
-  <https://theses.fr/2021ISAT0052>
-
-- Christson Awanyo -- *De la gestion autonome des systèmes de systèmes
-  IoT à la détection et résolution proactives des conflits* --
-  <https://theses.fr/s349902>
-
-- Meriem Smati. *Améliorer la Résilience des Systèmes de Systèmes IoT
-  par l'Intégration des Jumeaux Numériques*
-
-- Samah Zebboudj. *Approche Stochastique pour le Maintien en Condition
-  Opérationnelle des Jumeaux Numériques*
-
-- Mouhamadou Ball. *Evaluation de sécurité des meutes de drones par
-  emploi de jumeaux numériques*
-
-- Nour EL Houda Boubaker -- *Gestion dynamique des processus
-  cyber-physiques externalisés vers des environnements Fog et Cloud
-  Computing.*
-
-- Thouria Ben Haddi -- *Système Décentralisé et Fédéré pour une Mobilité
-  Intelligente et Inclusive considérant les troubles du spectre de
-  l'autisme*
-
-## Conférences et journaux
-
-- Journaux : TAAS (Transaction on Autonomous and Adaptive Systems); SCP
-  (Science of Computer Programming); JLAMP (Journal of Logical and
-  Algebraic Methods) pour les modèles formalisés des moteurs de
-  reconfiguration, IEEE TSC (Transactions on Services Computing)
-
-- Conférences : ASE, EDT, ICSA, ICSE, ICSME, ICSOC, Models, SANER,
-  SEAMS, WWW
+- [ROD (Recherche opérationnelle et décision)](http://gdrro.lip6.fr/)
 

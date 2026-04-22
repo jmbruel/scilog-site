@@ -1,16 +1,20 @@
 ---
-title: EDT
+title: EDT (Engineering Digital Twin)
 type: page
 date: "2026-03-07T16:22:42Z"
 draft: false
 ---
-# Génie Logiciel du Jumeau Numérique
 
 ## Contact
 * Jannik Laval (jannik.laval@univ-lyon2.fr),
 * Antoine Beugnard (antoine.beugnard@imt-atlantique.fr),
 * Sylvain Vauttier (sylvain.vauttier@mines-ales.fr)
 * Sylvain Guerin (sylvain.guerin@imt-atlantique.fr)
+
+### Laboratoires et chercheurs inscrits dans le GT : [Sur le site MyGDR](https://mygdr.hosted.lip6.fr/GTView/200/)
+
+## Défi du GDR lié au GT : 
+[Défi ADDYCT](https://gdr-scilog.cnrs.fr/defi/addyct/)
 
 ## Thématique
 
@@ -60,18 +64,7 @@ La réalisation d’instances de jumeau numérique sera un moyen de valider les 
     * Développer la vérification et la validation ;
     * Développer les approches Model in the Loop / HIL / SIL.
 
-### Actions :
 
-**Animation**
-– du GT : 2 réunions présentielles par an, d’autres rendez-vous en visio selon les activités.
-– intra GDR : partager les problématiques transverses du jumeau numérique avec les autres GT, en invitant des présentations ou en étant invité lors de leurs propres journées.
-– inter GDR : un CT jumeau numérique a été créé à la SAGIP, société savante associée au GDR MACS. D’autres GDR partagent nos problématiques. Il reste à les identifier et prendre contact avec eux.
-
-**Diffusion / pédagogie**
-– La création d’un cursus de Master « Dev. du JN » (multi-disciplinaire, international) en Erasmus semble être une piste sérieuse autour de laquelle les membres du GT peuvent collaborer.
-
-Projets
-– Le nombre d’appels à projets concernant les jumeaux numériques augmente. Le GT peut être une instance d’animation, permettant la mise en commun de nos forces et de nos efforts.
 
 ## Précédents évènements
 
