@@ -33,7 +33,7 @@ Pour plus d'information, vous pouvez consulter la [page du groupe LVP](https://g
 
 ## Liste de diffusion
 
-Les personnes intéressées peuvent s'abonner à notre [liste de diffusion](https://groupes.renater.fr/sympa/info/lvp). L'adresse pour diffuser un message est [lvp@groupes.renater.fr](mailto:lvp@groupes.renater.fr.).
+Les personnes intéressées peuvent s'abonner à notre [liste de diffusion](https://groupes.renater.fr/sympa/info/gt-lvp-gdr-scilog). L'adresse pour diffuser un message est [gt-lvp-gdr-scilog@groupes.renater.fr](mailto:gt-lvp-gdr-scilog@groupes.renater.fr).
 
 ## Responsables
 
