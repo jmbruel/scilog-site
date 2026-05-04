@@ -6,10 +6,10 @@ draft: false
 ---
 **Programme**
 
-- [Introduction](./20260317/1-SJN.pdf)
-- [Programme EDT (Antoine Beugnard)](./20260317/2-EDT.pdf)
-- [What‑if Simulations for Human‑Centered Digital Twins (CEA List / LIDEO — Chris Reinke, Victor Lavairye)](./20260317/3-whatif.pdf)
-- [DevOps pour et par le Jumeau Numérique (Sylvain Vauttier)](./20260317/4-Devops.pdf)
+- [Introduction](https://gdr-scilog.cnrs.fr/group/edt/20260317/1-SJN.pdf)
+- [Programme EDT (Antoine Beugnard)](https://gdr-scilog.cnrs.fr/group/edt/20260317/2-EDT.pdf)
+- [What‑if Simulations for Human‑Centered Digital Twins (CEA List / LIDEO — Chris Reinke, Victor Lavairye)](https://gdr-scilog.cnrs.fr/group/edt/20260317/3-whatif.pdf)
+- [DevOps pour et par le Jumeau Numérique (Sylvain Vauttier)](https://gdr-scilog.cnrs.fr/group/edt/20260317/4-Devops.pdf)
 
 **Informations**
 
