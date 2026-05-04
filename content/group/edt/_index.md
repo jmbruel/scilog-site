@@ -22,7 +22,7 @@ Selon le [Digital Twin Consortium](https://www.digitaltwinconsortium.org/), un j
 
 ## Objectifs du groupe de travail
 
-Le GT a pour objectif de faire vivre la communauté travaillant sur l'ingénierie des Jumeaux Numériques. Pour cela, il permet la structuration de la recherche en proposant l'animation de la communauté et le partage des connaissances. Dans cet objectif, les chercheurs sont invités à partager leurs questionnements et leurs verrous scientifiques, les résultats de leurs recherche, à valoriser leurs projets.
+Le GT a pour objectif de faire vivre la communauté travaillant sur l'ingénierie des Jumeaux Numériques. Pour cela, il permet la structuration de la recherche en proposant l'animation de la communauté et le partage des connaissances. Dans cet objectif, les chercheurs sont invités à partager leurs questionnements et leurs verrous scientifiques, les résultats de leurs recherches, à valoriser leurs projets.
 
 Cette action d'animation est menée en étroite collaboration avec le programme EDT (ANR-25-APJN-0001 -- [https://edtlab.fr/](https://edtlab.fr/)) qui partage ce même objectif de construire et d’animer une communauté autour de l’ingénierie des Jumeaux Numériques. 
 
