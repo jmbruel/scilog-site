@@ -20,6 +20,12 @@ draft: false
 
 Selon le [Digital Twin Consortium](https://www.digitaltwinconsortium.org/), un jumeau numérique est une représentation virtuelle intégrée, basée sur des données, d'entités et de processus du monde réel, avec une interaction synchronisée à une fréquence et une fidélité spécifiées. Les systèmes de jumeaux numériques sont construits sur des systèmes IOT intégrés et synchronisés, utilisent des données historiques et en temps réel pour représenter le passé et le présent, et simulent des futurs prédits. Cette capacité lui permet notamment de s'adapter et d’apprendre de l’environnement de manière dynamique et continue. Il est donc un système complexe à forte composante logicielle qui contient des modèles, des schémas de données, des processus, du code, des modèles d’IA, capables d’interagir avec son environnement matériel. Le défi pour notre communauté est la manière de construire le jumeau numérique.
 
+## Objectifs du groupe de travail
+
+Le GT a pour objectif de faire vivre la communauté travaillant sur l'ingénierie des Jumeaux Numériques. Pour cela, il permet la structuration de la recherche en proposant l'animation de la communauté et le partage des connaissances. Dans cet objectif, les chercheurs sont invités à partager leurs questionnements et leurs verrous scientifiques, les résultats de leurs recherches, à valoriser leurs projets.
+
+Cette action d'animation est menée en étroite collaboration avec le programme EDT (ANR-25-APJN-0001 -- [https://edtlab.fr/](https://edtlab.fr/)) qui partage ce même objectif de construire et d’animer une communauté autour de l’ingénierie des Jumeaux Numériques. 
+
 ## Détails
 
 Le défi est de construire le jumeau numérique en adaptant les acquis des sciences du logiciel (abstraction, modularité, composabilité, interopérabilité sémantique, gestion de la variabilité, gestion de l‘évolution, cycle de vie ...) tout en considérant l’ensemble de ses composantes. Le jumeau numérique doit être considéré dès sa conception comme un système durable en termes de :
@@ -68,7 +74,7 @@ La réalisation d’instances de jumeau numérique sera un moyen de valider les 
 
 ## Précédents évènements
 
-- [17/03/2026 - soirée Jumeaux Numériques](./20260317_soiree_jjn/)
+- [17/03/2026 - soirée Jumeaux Numériques](https://gdr-scilog.cnrs.fr/group/edt/20260317_soiree_jjn/)
 
 - [11/12/2025 - 2ème journée Jumeaux Numériques](https://gdrgpl.myxwiki.org/xwiki/bin/view/Main/GTs/action%20Jumeaux%20Num%C3%A9riques/)
 
