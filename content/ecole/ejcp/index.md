@@ -1,5 +1,5 @@
 ---
-title: EJCP
+title: EJCP 2026
 type: page
 date: "2026-06-19"
 draft: false
