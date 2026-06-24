@@ -14,20 +14,28 @@ Le prix concernant les thèses soutenues l'année n est habituellement décerné
 Le prix est décerné par un jury couvrant les thématiques du {{% scilog %}}. Pour l'édition concernant les thèses soutenues en 2025, le jury est présidé par Sandrine Blazy et est constitué des membres suivants : Rabéa Ameur-Boulifa, Benoit Baudry, Dorra Ben Khalifa, Frédéric Dabrowski, Thomas Degueule, David Delahaye, Cédric Dumoulin, Sophie Ebersold, Julien Forget, Olivier Hermant, Nikolai Kosmatov, Dylan Marinho, Thomas Polacsek et Julien Signoles.
 
 
-**Lauréats pour les soutenances de 2020 à 2024.**
+**Lauréats pour les soutenances de 2020 à 2025.**
 
 Année de soutenance| Lauréat| Thèse  
 ---|---|---  
+**2025**|  Georges Aaron RANDRIANAINA (prix) | [Incremental, Reproducible Builds of Software Variants](https://hal.science/tel-05242776).  Université de Rennes / IRISA sous la direction de Mathieu Acher et Olivier Zendra, et le co-encadrement de Djamel Eddine Khelladi<hr>
+| | Clément ALLAIN (accessit) | [Verification of fine-grained concurrent OCaml 5 algorithms using separation logic](https://clef-men.github.io/phd/manuscript.pdf).  Université Paris Cité / Inria sous la direction de François Pottier et le co-encadrement de Gabriel Scherer <hr>
+| | Damien JAIME (accessit) | [Analysis and evolution of dependencies in software ecosystems](https://theses.hal.science/tel-05144827).  Sorbonne Université / LIP6 sous la direction de Pascal Poizat et le co-encadrement de Joyce El Haddad <hr>
+| | <hr>
 **2024**|  Mickaël LAURENT (prix)  | [Inférence de types polymorphes pour des langages dynamiques : reconstruction de types pour des systèmes combinant polymorphisme paramétrique, surcharge et sous-typage.](https://theses.hal.science/tel-04972652)  Université Paris Cité / IRIF sous la direction de Giuseppe Castagna <hr>
 | | Anouck CHAN (accessit) | [Co-conception d'un produit et de son système industriel : Une approche ingénierie des exigences pour l’aérospatial.](https://depozit.isae.fr/theses/2024/2024_Chan_Anouck.pdf) Toulouse ISAE / ONERA sous la direction de Thomas Polacsek et Stéphanie Roussel <hr>
+| | <hr>
 **2023**|  Xavier DENIS (prix)  | [Deductive Verification of Rust Programs.](https://theses.hal.science/tel-04517581)  Université Paris Saclay / LMF sous la direction de Claude Marché <hr>
 | | Sylvain GUERIN (accessit) | [FML : un langage de fédération de modèles pour l'interopérabilité sémantique de sources d'information hétérogènes.](https://theses.hal.science/tel-04555528v1) ENSTA Bretagne / Lab-STICC sous la direction d'Antoine Beugnard et Joël Champeau <hr> 
 | | Youcef REMIL (accessit)| [A Data Mining Perspective on Explainable AIOps with Applications to Software Maintenance.](https://theses.hal.science/tel-04391281v1) Université de Lyon / INSA Lyon sous la direction de Jean-François Boulicaut  <hr>
+| | <hr>
 **2022**|  Paulo Emilio DE VILHENA  (prix)| [Preuves de programmes avec effect handlers.](https://www.theses.fr/s230574) Université Paris Cité / INRIA sous la direction de François Pottier <hr> 
 | | Faezeh KHORRAM (accessit)| [A testing framework for executable domain-specific languages.](https://www.theses.fr/2022IMTA0332) IMT Atlantique / LS2N sous la direction de Gerson Sunyé  <hr>
+| | <hr>
 **2021**|  Antoine PIETRI (prix) | _[Organizing the graph of public software development for large-scale mining.](https://www.theses.fr/2021UNIP7183)_ Université Paris Cité / INRIA sous la direction de Stefano Zacchiroli  <hr>
 | | Victor LANVIN (accessit)  | _[A semantic foundation for gradual set-theoretic types.](https://www.theses.fr/2021UNIP7159)_ Université Paris Cité / IRIF sous la direction de Giuseppe Castagna.  <hr>
 |  | Frédéric RECOULES  (accessit)  | [_Vérification automatique de code bas-niveau : C, assembleur et binaire._](https://www.theses.fr/2021GRALM079) Université Grenoble Alpes / VERIMAG sous la direction de Marie-Laure Potet, Sébastien Bardin et Richard Bonichon  <hr>
+| | <hr>
 **2020**| Benjamin FARINIER (prix) | [Procédures de décision pour l'analyse de vulnérabilités.](https://theses.fr/2020GRALM013) Université Grenoble-Alpes / VERIMAG sous la direction de Marie-Laure Potet et Sébastien Bardin <hr>
 | | Valentin BESNARD (accessit) | [EMI - Une approche pour unifier l'analyse et l'exécution embarquée à l'aide d'un interpréteur de modèles pilotable : application aux modèles UML des systèmes embarqués.](https://www.theses.fr/2020ENTA0007) ENSTA Bretagne / Lab-STICC sous la direction de Philippe Dhaussy, Matthias Brun et Ciprian Teodorov <hr>
 | | Lelio BRUN (accessit) | [Sémantique mécanisée et compilation vérifiée pour un langage synchrone à flots de données avec réinitialisation.](https://www.theses.fr/2020UPSLE003) Université Paris Sciences et Lettres / DIENS sous la direction de Marc Pouzet et Timothy Bourke <hr>  
