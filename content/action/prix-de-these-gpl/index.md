@@ -1,7 +1,7 @@
 ---
 title: "Prix de thèse GDR SciLog"
 type: page
-date: "2025-01-31T21:59:49Z"
+date: "2026-06-24"
 draft: false
 ---
 
