@@ -7,13 +7,12 @@ draft: false
 
 Créé en 2013 pour récompenser chaque année une excellente thèse préparée au sein du {{% scilog %}}, le **Prix de thèse** du {{% scilog %}} a pour objectif de promouvoir les travaux du {{% scilog %}} auprès de la communauté informatique.
 
-  
+
+Le prix concernant les thèses soutenues l'année n est habituellement décerné lors des [journées du GDR](/action/national-day/) l'année n+1.
+
+
 Le prix est décerné par un jury couvrant les thématiques du {{% scilog %}}. Pour l'édition concernant les thèses soutenues en 2025, le jury est présidé par Sandrine Blazy et est constitué des membres suivants : Rabéa Ameur-Boulifa, Benoit Baudry, Dorra Ben Khalifa, Frédéric Dabrowski, Thomas Degueule, David Delahaye, Cédric Dumoulin, Sophie Ebersold, Julien Forget, Olivier Hermant, Nikolai Kosmatov, Dylan Marinho, Thomas Polacsek et Julien Signoles.
 
-
-Les articles récents relatifs au prix de thèse sont les suivants :
-
-[L'archive des articles de ce prix de thèse (jusqu'à l'édition 2025 pour les thèses soutenues en 2024) est disponible ici.](https://gdr-gpl.cnrs.fr/?page_id=376)
 
 **Lauréats pour les soutenances de 2020 à 2024.**
 
