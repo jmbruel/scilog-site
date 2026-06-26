@@ -13,3 +13,5 @@ tmp
 __pycache__
 package-lock.json
 builds
+
+.vscode
