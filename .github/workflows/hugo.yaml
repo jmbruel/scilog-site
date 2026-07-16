@@ -1,13 +1,14 @@
 name: Build and deploy
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -39,6 +40,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v5
       - name: Create directory for user-specific executable files
@@ -84,16 +86,22 @@ jobs:
             --minify \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
+        if: github.event_name != 'pull_request'
         id: cache-save
         uses: actions/cache/save@v5
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
   deploy:
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
