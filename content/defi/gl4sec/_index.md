@@ -46,5 +46,3 @@ dynamiquement détectée (par exemple, avec l'aide de LLMs).
 
 - Nikolaï KOSMATOV (Thales cortAIx Labs)
 - Michaël MARCOZZI (CEA List) 
-
-## Actualités du défi IPP
