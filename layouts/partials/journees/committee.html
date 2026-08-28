@@ -1,0 +1,18 @@
+{{- /* committee.html — comité d'organisation d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.committee }}
+  <section class="annual-event-section" id="comite">
+    <h2>Comité d'organisation</h2>
+    <div class="annual-event-committee">
+      {{- range . }}
+        <article>
+          <h3>{{ .name }}</h3>
+          {{- with .role }}<p>{{ . }}</p>{{ end }}
+          {{- with .affiliation }}<span>{{ . }}</span>{{ end }}
+          {{- with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        </article>
+      {{- end }}
+    </div>
+  </section>
+{{- end }}

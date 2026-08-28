@@ -1,0 +1,13 @@
+{{- /* important-dates.html — dates importantes d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.important_dates }}
+  <div class="annual-event-facts" aria-label="Dates importantes">
+    {{- range . }}
+      <div>
+        <span>{{ .label }}</span>
+        <strong>{{ .date }}</strong>
+      </div>
+    {{- end }}
+  </div>
+{{- end }}

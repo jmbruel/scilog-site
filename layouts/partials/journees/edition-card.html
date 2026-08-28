@@ -1,0 +1,36 @@
+{{- /* edition-card.html — carte d'une édition dans l'archive des journées.
+       Context: dict with .edition (une édition de data/journees_editions/) */ -}}
+{{- $ed := .edition -}}
+<article class="annual-day-card{{ if $ed.featured }} annual-day-card--featured{{ end }}">
+  <div class="annual-day-topline">
+    <span class="annual-day-year">{{ $ed.label | default $ed.slug }}</span>
+    {{- with $ed.status }}
+      <span class="annual-day-status">{{ . }}</span>
+    {{- end }}
+  </div>
+
+  <h2>{{ $ed.title }}</h2>
+
+  <p class="annual-day-where">
+    {{- with $ed.date_label }}{{ . }}{{ end -}}
+    {{- if and $ed.date_label $ed.location }} · {{ end -}}
+    {{- with $ed.location }}{{ . }}{{ end -}}
+  </p>
+
+  {{- with $ed.summary }}
+    <p class="annual-day-summary">{{ . | markdownify }}</p>
+  {{- end }}
+
+  <div class="annual-day-actions" aria-label="Liens principaux">
+    <a class="annual-day-link annual-day-link--primary" href="{{ relURL (printf "/journees/%s/" $ed.slug) }}">
+      Page de l'édition
+    </a>
+    {{- range $ed.links }}
+      {{- $url := .url -}}
+      {{- $isExternal := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+      <a class="annual-day-link{{ with .kind }} annual-day-link--{{ . }}{{ end }}" href="{{ $url }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
+        {{ .label }}
+      </a>
+    {{- end }}
+  </div>
+</article>

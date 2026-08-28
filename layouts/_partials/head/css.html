@@ -1,0 +1,20 @@
+{{- /* Charge le CSS global du thème, puis les styles spécifiques
+       aux journées nationales (assets/css/journees.css). */ -}}
+{{- with resources.Get "css/main.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with resources.Get "css/journees.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}

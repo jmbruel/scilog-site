@@ -1,0 +1,24 @@
+{{- /* programme.html — programme d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.programme }}
+  <section class="annual-event-section" id="programme">
+    <h2>Programme</h2>
+    {{- with .status }}<p class="annual-event-status">{{ . }}</p>{{ end }}
+    {{- with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{- with .days }}
+      <div class="annual-event-programme">
+        {{- range . }}
+          <article>
+            <h3>{{ .date }}</h3>
+            <ul>
+              {{- range .items }}
+                <li><span>{{ .time }}</span><strong>{{ .title }}</strong></li>
+              {{- end }}
+            </ul>
+          </article>
+        {{- end }}
+      </div>
+    {{- end }}
+  </section>
+{{- end }}

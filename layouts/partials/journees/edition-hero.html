@@ -1,0 +1,21 @@
+{{- /* edition-hero.html — bannière d'une édition.
+       Context: dict with .event (YAML of the edition) */ -}}
+{{- $event := .event -}}
+<section class="annual-event-hero" id="accueil">
+  <div class="annual-event-hero-copy">
+    {{- with $event.date_label }}<p class="annual-event-kicker">{{ . }}</p>{{ end }}
+    <h1>{{ $event.title }}</h1>
+    {{- with $event.subtitle }}<p class="annual-event-subtitle">{{ . }}</p>{{ end }}
+    {{- with $event.location }}<p class="annual-event-place">{{ . }}</p>{{ end }}
+  </div>
+
+  {{- with $event.actions }}
+    <div class="annual-event-actions">
+      {{- range . }}
+        {{- $url := .url -}}
+        {{- $external := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+        <a class="annual-event-button{{ with .kind }} annual-event-button--{{ . }}{{ end }}" href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+      {{- end }}
+    </div>
+  {{- end }}
+</section>

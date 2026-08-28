@@ -1,0 +1,14 @@
+{{- /* code-of-conduct.html — code de conduite d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.code_of_conduct }}
+  <div id="code">
+    <h2>Code de conduite</h2>
+    {{- with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{- with .items }}
+      <ul>
+        {{- range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    {{- end }}
+  </div>
+{{- end }}

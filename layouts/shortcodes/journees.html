@@ -1,0 +1,41 @@
+{{- /* journees.html — archive des journées nationales.
+       Découvre automatiquement chaque édition depuis les pages de la section
+       content/journees/ (les mêmes que le menu « Journées »), charge sa fiche
+       data/journees_editions/<slug>.yml et l'affiche via le composant
+       édition-card, de la plus récente à la plus ancienne.
+       Les brouillons (draft: true) ne sont pas listés. */ -}}
+{{- $journees := hugo.Data.journees -}}
+{{- $section := site.GetPage "/journees" -}}
+
+<div class="annual-days-page">
+  {{- with $journees.intro }}
+    <p class="annual-days-lead">{{ . | markdownify }}</p>
+  {{- end }}
+
+  {{- /* Construit la liste des éditions publiées. */ -}}
+  {{- $list := slice -}}
+  {{- with $section -}}
+    {{- range .Pages -}}
+      {{- if and (not .Draft) (eq .Params.type "page") -}}
+        {{- $slug := .Params.slug | default .Title -}}
+        {{- $ed := index hugo.Data.journees_editions $slug -}}
+        {{- if $ed -}}
+          {{- $item := merge $ed (dict "slug" $slug) -}}
+          {{- $list = $list | append $item -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $sorted := sort $list "slug" "desc" -}}
+
+  {{- if gt (len $sorted) 0 }}
+    <div class="annual-days-list">
+      {{- range $sorted }}
+        {{- partial "journees/edition-card.html" (dict "edition" .) }}
+      {{- end }}
+    </div>
+  {{- else }}
+    <p>Aucune édition n'est encore renseignée.</p>
+  {{- end }}
+</div>

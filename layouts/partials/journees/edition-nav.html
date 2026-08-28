@@ -1,0 +1,26 @@
+{{- /* edition-nav.html — navigation interne d'une édition.
+       Context: dict with .event and .hasSection (maison clé signature -> bool) */ -}}
+{{- $event := .event -}}
+{{- $hasSection := .hasSection -}}
+{{- $nav := $event.nav -}}
+{{- /* Correspondance id de navigation -> clé de section interne */ -}}
+{{- $idToKey := dict
+      "appels" "calls"
+      "programme" "programme"
+      "inscription" "registration"
+      "intervenants" "speakers"
+      "lieu" "venue"
+      "photos" "photos"
+      "code" "code_of_conduct"
+      "partenaires" "partners"
+      "comite" "committee" -}}
+{{- if $nav }}
+<nav class="annual-event-nav" aria-label="Navigation de l'édition">
+  {{- range $nav }}
+    {{- $key := index $idToKey .id -}}
+    {{- if or (not $key) (index $hasSection $key) }}
+      <a href="#{{ .id }}">{{ .label }}</a>
+    {{- end }}
+  {{- end }}
+</nav>
+{{- end }}

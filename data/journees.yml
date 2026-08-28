@@ -1,0 +1,11 @@
+intro: >
+  Les journées nationales du GDR SciLog réunissent chaque année la communauté
+  autour des actions, défis scientifiques, groupes de travail, posters,
+  conférences invitées et temps collectifs du GDR.
+
+  Chaque édition dispose de sa propre page, renseignée directement depuis les
+  fichiers du site. Les éditions passées restent archivées et accessibles.
+
+  Les éditions listées ici sont découvertes automatiquement à partir des
+  dossiers de content/journees/ : pour ajouter une nouvelle édition, lancez
+  simplement "make new-journee EDITION=2027-2028".
