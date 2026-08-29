@@ -1,6 +1,7 @@
-{{- /* edition-card.html — carte d'une édition dans l'archive des journées.
-       Context: dict with .edition (une édition de data/journees_editions/) */ -}}
+{{- /* Carte d'une édition dans l'archive des journées.
+       Context: dict with .edition from Markdown front matter. */ -}}
 {{- $ed := .edition -}}
+{{- $pageURL := $ed.permalink | default (relURL (printf "/journees/%s/" $ed.slug)) -}}
 <article class="annual-day-card{{ if $ed.featured }} annual-day-card--featured{{ end }}">
   <div class="annual-day-topline">
     <span class="annual-day-year">{{ $ed.label | default $ed.slug }}</span>
@@ -22,7 +23,7 @@
   {{- end }}
 
   <div class="annual-day-actions" aria-label="Liens principaux">
-    <a class="annual-day-link annual-day-link--primary" href="{{ relURL (printf "/journees/%s/" $ed.slug) }}">
+    <a class="annual-day-link annual-day-link--primary" href="{{ $pageURL }}">
       Page de l'édition
     </a>
     {{- range $ed.links }}

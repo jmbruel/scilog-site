@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ if eq .Section "journees" }}
+    {{ .Content }}
+  {{ else }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    {{ end }}
+  {{ end }}
+{{ end }}

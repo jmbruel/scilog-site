@@ -1,66 +1,22 @@
-{{- /* journee-edition.html — page complète d'une édition.
-       Usage : {{< journee-edition "2027-2028" >}}
-       Lit data/journees_editions/2027-2028.yml et compose les composants
-       réutilisables du dossier layouts/partials/journees/.
-       Supporte des contenus incomplets : une section absente ou désactivée
-       dans "sections" ne s'affiche tout simplement pas. */ -}}
-{{- $slug := .Get 0 | default "" -}}
-{{- $event := index hugo.Data.journees_editions $slug -}}
+{{- /* Page complète d'une édition.
+       Usage :
+       {{< journee-edition >}}
+       ## Programme
+       ...
+       {{< /journee-edition >}}
 
-{{- if not $event -}}
-  <p class="annual-event-empty">Aucune donnée trouvée pour l'édition "{{ $slug }}".</p>
-{{- else -}}
+       Les métadonnées viennent du front matter de la page Markdown.
+       Le contenu éditable reste dans le corps Markdown de cette page. */ -}}
+{{- $params := .Page.Params -}}
+{{- $slug := $params.slug | default .Page.File.ContentBaseName -}}
+{{- $event := merge $params (dict "title" .Page.Title "slug" $slug) -}}
+{{- $ctx := dict "event" $event "Page" .Page -}}
 
-  {{- /* Construit la liste des sections réellement actives.
-         Les champs de la page d'accueil (intro, important_dates) sont
-         toujours considérés comme actifs s'ils sont renseignés. */ -}}
-  {{- $declared := $event.sections | default (dict) -}}
+<div class="annual-event" id="accueil">
+  {{- partial "journees/edition-hero.html" $ctx }}
+  {{- partial "journees/edition-nav.html" $ctx }}
 
-  {{- $sectionExists := dict -}}
-  {{- range (slice "calls" "programme" "registration" "speakers" "venue" "photos" "code_of_conduct" "partners" "committee" "resources") -}}
-    {{- $name := . -}}
-    {{- $has := false -}}
-    {{- if index $declared $name -}}
-      {{- $has = true -}}
-    {{- else if (index $event $name) -}}
-      {{- $has = true -}}
-    {{- end -}}
-    {{- $sectionExists = merge $sectionExists (dict $name $has) -}}
-  {{- end -}}
-
-  {{- /* Attache les métadonnées calculées à l'événement et au contexte. */ -}}
-  {{- $event = merge $event (dict "hasSection" $sectionExists) -}}
-  {{- $ctx := dict "event" $event "hasSection" $sectionExists -}}
-
-  <div class="annual-event" id="accueil">
-
-    {{- partial "journees/edition-hero.html" $ctx }}
-    {{- partial "journees/edition-nav.html" $ctx }}
-
-    <section class="annual-event-section">
-      <h2>Bienvenue</h2>
-      {{- range $event.intro }}
-        <p>{{ . | markdownify }}</p>
-      {{- end }}
-      {{- partial "journees/important-dates.html" $ctx }}
-    </section>
-
-    {{- if index $sectionExists "calls" }}{{ partial "journees/calls.html" $ctx }}{{ end }}
-    {{- if index $sectionExists "programme" }}{{ partial "journees/programme.html" $ctx }}{{ end }}
-    {{- if index $sectionExists "registration" }}{{ partial "journees/registration.html" $ctx }}{{ end }}
-    {{- if index $sectionExists "speakers" }}{{ partial "journees/speakers.html" $ctx }}{{ end }}
-    {{- if index $sectionExists "venue" }}{{ partial "journees/venue.html" $ctx }}{{ end }}
-
-    {{- if or (index $sectionExists "photos") (index $sectionExists "code_of_conduct") }}
-      <section class="annual-event-section annual-event-two-columns">
-        {{- if index $sectionExists "photos" }}{{ partial "journees/photos.html" $ctx }}{{ end }}
-        {{- if index $sectionExists "code_of_conduct" }}{{ partial "journees/code-of-conduct.html" $ctx }}{{ end }}
-      </section>
-    {{- end }}
-
-    {{- partial "journees/partners.html" $ctx }}
-    {{- partial "journees/committee.html" $ctx }}
-    {{- if index $sectionExists "resources" }}{{ partial "journees/resources.html" $ctx }}{{ end }}
-
-  </div>{{- /* .annual-event */ -}}
-{{- end -}}
+  <div class="annual-event-markdown">
+    {{- .Inner | .Page.RenderString -}}
+  </div>
+</div>

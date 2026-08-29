@@ -207,6 +207,76 @@
   background: #e2e8f0;
 }
 
+.annual-event-markdown {
+  line-height: 1.65;
+}
+
+.annual-event-markdown h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.35rem;
+  margin: 2.25rem 0 1rem;
+}
+
+.annual-event-markdown h2:first-child {
+  margin-top: 0;
+}
+
+.annual-event-markdown h3 {
+  font-size: 1.12rem;
+  margin: 1.4rem 0 0.45rem;
+}
+
+.annual-event-markdown h4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.annual-event-markdown h5,
+.annual-event-markdown h6 {
+  font-size: 0.95rem;
+  margin: 0.8rem 0 0.25rem;
+  color: #4a5568;
+}
+
+.annual-event-markdown blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #2b6cb0;
+  background: #f7fafc;
+}
+
+.annual-event-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.9rem;
+}
+
+.annual-event-markdown thead {
+  background: #edf2f7;
+}
+
+.annual-event-markdown th,
+.annual-event-markdown td {
+  border: 1px solid #e2e8f0;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.annual-event-markdown ul,
+.annual-event-markdown ol {
+  padding-left: 1.3rem;
+}
+
+.annual-event-markdown a {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
 .annual-event-section {
   margin: 0 0 2.25rem;
 }
