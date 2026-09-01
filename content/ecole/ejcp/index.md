@@ -13,4 +13,5 @@ L'école accueille chaque année pendant une semaine une quarantaine de jeunes c
 
 #### Cette année,  l’école aura lieu à Nantes (Loire-Atlantique) du 12 au 16 octobre 2026.
 
-Plus d'information sur le site de l'[EJCP 2026](https://ejcp2026-scilog.ls2n.fr)
+<!-- Plus d'information sur le site de l'[EJCP 2026](https://ejcp2026-scilog.ls2n.fr) -->
+Plus d'information sur le site de l'[EJCP 2026](https://pagesperso.ls2n.fr/~delahaye-b/EJCP26/)
