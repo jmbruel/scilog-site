@@ -10,4 +10,4 @@ categories:
 archives: ["2026-11"]
 ---
 
-La journée annuelle du GT LVP (Langages et Vérification de Programmes) aura lieu le lundi 23 novembre 2026 à l'ENS Paris-Saclay. Plus d'informations sont disponibles sur la [page de l'évènement](https://groupes.renater.fr/wiki/lvp/journee_lvp_novembre2026).
+La journée annuelle du GT LVP (Langages et Vérification de Programmes) aura lieu le lundi 23 novembre 2026 à l'ENS Paris-Saclay. Elle sera co-organisée avec le défi [IPP](https://gdr-scilog.cnrs.fr/defi/ipp/). Plus d'informations sont disponibles sur la [page de l'évènement](https://groupes.renater.fr/wiki/lvp/journee_lvp_novembre2026).
