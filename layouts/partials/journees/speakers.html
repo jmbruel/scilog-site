@@ -1,0 +1,17 @@
+{{- /* speakers.html — intervenants d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.speakers }}
+  <section class="annual-event-section" id="intervenants">
+    <h2>Intervenants</h2>
+    <div class="annual-event-people">
+      {{- range . }}
+        <article>
+          <h3>{{ .name }}</h3>
+          {{- with .role }}<p>{{ . }}</p>{{ end }}
+          {{- with .affiliation }}<span>{{ . }}</span>{{ end }}
+        </article>
+      {{- end }}
+    </div>
+  </section>
+{{- end }}

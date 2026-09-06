@@ -1,0 +1,30 @@
+{{- /* Archive des journées nationales.
+       Découvre les éditions depuis content/journees/<edition>/_index.md.
+       Les métadonnées de carte viennent du front matter Markdown. */ -}}
+{{- $section := site.GetPage "/journees" -}}
+
+<div class="annual-days-page">
+  {{- $list := slice -}}
+  {{- with $section -}}
+    {{- range .Pages -}}
+      {{- if and (not .Draft) (eq .Params.type "page") -}}
+        {{- $slug := .Params.slug | default .Title -}}
+        {{- $summary := .Params.summary | default .Summary -}}
+        {{- $item := merge .Params (dict "title" .Title "slug" $slug "summary" $summary "permalink" .RelPermalink) -}}
+        {{- $list = $list | append $item -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $sorted := sort $list "slug" "desc" -}}
+
+  {{- if gt (len $sorted) 0 }}
+    <div class="annual-days-list">
+      {{- range $sorted }}
+        {{- partial "journees/edition-card.html" (dict "edition" .) }}
+      {{- end }}
+    </div>
+  {{- else }}
+    <p>Aucune édition n'est encore renseignée.</p>
+  {{- end }}
+</div>

@@ -13,7 +13,7 @@ Plusieurs actions sont actuellement en cours
 
   * [Appel à mobilité](/action/appel-mobilite/)
   * [Prix de thèse GDR SciLog](/action/prix-de-these-gpl)
-  * [Journées nationales](/action/national-day/)
+  * [Journées nationales](/journees/)
   * [Ateliers CONCOURS](/action/atelier-de-preparation-aux-concours2026/)
 
 

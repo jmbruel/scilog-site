@@ -1,0 +1,15 @@
+{{- /* resources.html — liens et ressources d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.resources }}
+  <section class="annual-event-section">
+    <h2>Ressources</h2>
+    <ul class="annual-event-link-list">
+      {{- range . }}
+        {{- $url := .url -}}
+        {{- $external := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+        <li><a href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+  </section>
+{{- end }}

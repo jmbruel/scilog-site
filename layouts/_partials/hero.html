@@ -1,0 +1,206 @@
+<div class="hero-banner">
+  <!-- Image du banner -->
+  <a href="/">
+    <img id="hero-banner-image" src="/banner_1.jpg" alt="Banner" class="hero-image" />
+  </a>
+
+  <!-- Navigation -->
+  <nav class="hero-nav" id="hero-nav">
+    <span class="nav-site-label">GDR SciLog</span>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <ul id="main-nav-list">
+      {{ $menu := sort site.Menus.hero "Weight" }}
+
+      {{ range $menu }}
+
+      {{ $section := site.GetPage .URL }}
+      {{ $children := slice }}
+
+      {{ with $section }}
+      {{ if not .IsHome }}
+
+      {{ range .Resources }}
+      {{ if eq .ResourceType "page" }}
+      {{- if or (eq .Type "page") (eq (.Params.type) "page") }}
+      {{ $children = $children | append . }}
+      {{- end }}
+      {{ end }}
+      {{ end }}
+
+      {{ range .Pages }}
+      {{- if or (eq .Type "page") (eq (.Params.type) "page") }}
+      {{ $children = $children | append . }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
+
+      {{ $children = sort $children "File.Path" }}
+
+      {{ if gt (len $children) 0 }}
+      <li class="dropdown">
+        <a href="{{ .URL }}" class="dropdown-toggle">{{ .Name }}</a>
+        <span class="dropdown-toggle-arrow" tabindex="0" role="button" aria-label="Expand submenu">▼</span>
+
+        <ul class="dropdown-menu">
+          {{/*
+            Cas particulier des Journées nationales :
+            - les éditions sont triées de la plus récente à la plus ancienne,
+            - l'intitulé affiché vient de la propriété 'label' (ex. "2027–28"),
+            - un lien "Toutes les éditions" mène à l'archive /journees/.
+            Aucune édition supplémentaire n'à éditer manuellement ici : on
+            ajoute juste ses fichiers et elle apparaît automatiquement.
+          */}}
+          {{ if eq .Name "Journées" }}
+            {{ $editions := sort $children "File.Path" "desc" }}
+            {{ range $editions }}
+            <li>
+              <a href="{{ .RelPermalink }}">
+                {{ if .Params.label }}{{ .Params.label }}{{ else }}{{ .Title }}{{ end }}
+              </a>
+            </li>
+            {{ end }}
+            <li>
+              <a href="{{ $section.RelPermalink }}">Toutes les éditions</a>
+            </li>
+          {{ else }}
+            {{ range $children }}
+            <li>
+              <a
+                href="{{ if .RelPermalink }}{{ .RelPermalink }}{{ else }}{{ $.RelPermalink }}{{ .File.BaseFileName }}/{{ end }}">
+                {{ if .Title }}{{ .Title }}{{ else }}{{ .File.BaseFileName }}{{ end }}
+              </a>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </li>
+      {{ else }}
+
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
+</div>
+
+<script>
+  (function () {
+    var bannerImage = document.getElementById('hero-banner-image');
+    if (bannerImage) {
+      var bannerFiles = [
+        '/banner_1.jpg', '/banner_2.jpg', '/banner_3.jpg', '/banner_4.jpg', '/banner_5.jpg',
+        '/banner_6.jpg', '/banner_7.jpg', '/banner_8.jpg', '/banner_9.jpg', '/banner_10.jpg'
+      ];
+      bannerImage.src = bannerFiles[Math.floor(Math.random() * bannerFiles.length)];
+    }
+
+    function initNav() {
+      var nav = document.getElementById('hero-nav');
+      var toggleBtn = document.getElementById('mobile-menu-toggle');
+      var navList = document.getElementById('main-nav-list');
+      if (!nav || !toggleBtn || !navList) return;
+
+      function isMobile() { return window.innerWidth <= 768; }
+
+      function showMenu(menu) {
+        menu.style.cssText = 'display:block !important; position:static !important; visibility:visible !important; overflow:visible !important; height:auto !important; max-height:none !important; opacity:1 !important; width:100% !important;';
+      }
+
+      function hideMenu(menu) {
+        menu.style.cssText = 'display:none !important;';
+      }
+
+      function resetMenu(menu) {
+        menu.style.cssText = '';
+      }
+
+      function openMenu() {
+        nav.classList.add('menu-open');
+        document.body.classList.add('mobile-nav-open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.textContent = '✕ Fermer';
+      }
+
+      function closeMenu() {
+        nav.classList.remove('menu-open');
+        document.body.classList.remove('mobile-nav-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.textContent = '☰';
+        navList.querySelectorAll('li.dropdown').forEach(function (li) {
+          li.classList.remove('open');
+          var menu = li.querySelector('.dropdown-menu');
+          if (menu) {
+            if (isMobile()) {
+              hideMenu(menu);
+            } else {
+              resetMenu(menu);
+            }
+          }
+        });
+      }
+
+      navList.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+        if (isMobile()) {
+          hideMenu(menu);
+        } else {
+          resetMenu(menu);
+        }
+      });
+
+      toggleBtn.addEventListener('click', function () {
+        nav.classList.contains('menu-open') ? closeMenu() : openMenu();
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (!isMobile()) return;
+        if (e.target === nav) closeMenu();
+      });
+
+      navList.querySelectorAll('.dropdown-toggle-arrow').forEach(function (arrow) {
+        arrow.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (!isMobile()) return;
+
+          var parentLi = this.closest('li.dropdown');
+          if (!parentLi) return;
+          var menu = parentLi.querySelector('.dropdown-menu');
+          if (!menu) return;
+
+          var isCurrentlyOpen = parentLi.classList.contains('open');
+
+          navList.querySelectorAll('li.dropdown').forEach(function (li) {
+            li.classList.remove('open');
+            var m = li.querySelector('.dropdown-menu');
+            if (m) hideMenu(m);
+          });
+
+          if (!isCurrentlyOpen) {
+            parentLi.classList.add('open');
+            showMenu(menu);
+          }
+        });
+      });
+
+      navList.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (isMobile()) closeMenu();
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        closeMenu();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initNav);
+    } else {
+      initNav();
+    }
+  })();
+</script>

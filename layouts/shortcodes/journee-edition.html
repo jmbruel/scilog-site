@@ -1,0 +1,22 @@
+{{- /* Page complète d'une édition.
+       Usage :
+       {{< journee-edition >}}
+       ## Programme
+       ...
+       {{< /journee-edition >}}
+
+       Les métadonnées viennent du front matter de la page Markdown.
+       Le contenu éditable reste dans le corps Markdown de cette page. */ -}}
+{{- $params := .Page.Params -}}
+{{- $slug := $params.slug | default .Page.File.ContentBaseName -}}
+{{- $event := merge $params (dict "title" .Page.Title "slug" $slug) -}}
+{{- $ctx := dict "event" $event "Page" .Page -}}
+
+<div class="annual-event" id="accueil">
+  {{- partial "journees/edition-hero.html" $ctx }}
+  {{- partial "journees/edition-nav.html" $ctx }}
+
+  <div class="annual-event-markdown">
+    {{- .Inner | .Page.RenderString -}}
+  </div>
+</div>

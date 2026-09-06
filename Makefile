@@ -33,3 +33,36 @@ deploy: public/index.html
 	@echo "==> Deploy updates "
 	#       rake && git commit -am ":memo: Deploy updates"; git pull; git push
 	hugo && git commit -am "🤖 DEPLOY: last updates"; git pull; git push
+
+# -----------------------------------------------------
+# Journées nationales
+#
+# Crée la page Markdown d'une nouvelle édition. Usage :
+#
+#   make new-journee EDITION=2027-2028
+#
+# Génère content/journees/2027-2028/_index.md. La nouvelle
+# édition apparaît automatiquement dans le menu "Journées" et
+# dans l'archive /journees/.
+# -----------------------------------------------------
+EDITION ?=
+
+# Extrait l'année de départ (A) de "2027-2028".
+_A = $(word 1,$(subst -, ,$(EDITION)))
+
+new-journee:
+	@[ -n "$(EDITION)" ] || (echo "Usage: make new-journee EDITION=2027-2028" && exit 1)
+	@echo "$(EDITION)" | grep -Eq '^[0-9]{4}-[0-9]{4}$$' \
+		|| (echo "EDITION doit ressembler à 2027-2028" && exit 1)
+	@test -d content/journees/$(EDITION) \
+		&& echo "L'édition $(EDITION) existe déjà." && exit 1 \
+		|| true
+	@mkdir -p content/journees/$(EDITION)
+	@sed -e 's/2027-2028/$(EDITION)/g' -e 's/2027-01-01/$(_A)-01-01/g' \
+		-e 's/draft: true/draft: false/' \
+		content/journees/_template/_index.md \
+		> content/journees/$(EDITION)/_index.md
+	@echo "==> Édition $(EDITION) créée :"
+	@echo "     content/journees/$(EDITION)/_index.md"
+	@echo "Renseignez la page Markdown (date, lieu, programme…) puis lancez 'make serve'."
+	@echo "L'édition apparaîtra automatiquement dans le menu et l'archive."

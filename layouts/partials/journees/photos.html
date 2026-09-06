@@ -1,0 +1,16 @@
+{{- /* photos.html — galerie de photos d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.photos }}
+  <div id="photos">
+    <h2>Photos</h2>
+    {{- with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{- with .links }}
+      <ul class="annual-event-link-list">
+        {{- range . }}
+          <li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a></li>
+        {{- end }}
+      </ul>
+    {{- end }}
+  </div>
+{{- end }}

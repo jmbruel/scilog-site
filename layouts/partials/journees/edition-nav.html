@@ -1,0 +1,11 @@
+{{- /* Navigation interne d'une édition. Les ancres sont déclarées dans le
+       front matter de la page Markdown. */ -}}
+{{- $event := .event -}}
+{{- $nav := $event.nav -}}
+{{- if $nav }}
+<nav class="annual-event-nav" aria-label="Navigation de l'édition">
+  {{- range $nav }}
+    <a href="#{{ .id }}">{{ .label }}</a>
+  {{- end }}
+</nav>
+{{- end }}

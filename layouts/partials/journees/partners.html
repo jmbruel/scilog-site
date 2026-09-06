@@ -1,0 +1,13 @@
+{{- /* partners.html — partenaires d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.partners }}
+  <section class="annual-event-section" id="partenaires">
+    <h2>Partenaires</h2>
+    <div class="annual-event-pills">
+      {{- range . }}
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+      {{- end }}
+    </div>
+  </section>
+{{- end }}

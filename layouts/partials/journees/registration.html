@@ -1,0 +1,58 @@
+{{- /* registration.html — inscription et tarifs d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.registration }}
+  <section class="annual-event-section" id="inscription">
+    <h2>Inscription et tarifs</h2>
+    {{- with .deadline }}
+      <p class="annual-event-status">Tarif non majoré jusqu'au {{ . }}.</p>
+    {{- end }}
+
+    {{- with .prices }}
+      <div class="annual-event-table-wrap">
+        <table class="annual-event-table">
+          <thead>
+            <tr>
+              <th>Tarif</th>
+              {{- range .columns }}<th>{{ . }}</th>{{ end }}
+            </tr>
+          </thead>
+          <tbody>
+            {{- range .rows }}
+              <tr>
+                <td>{{ .label }}</td>
+                {{- range .values }}<td>{{ . }}</td>{{ end }}
+              </tr>
+            {{- end }}
+          </tbody>
+        </table>
+      </div>
+    {{- end }}
+
+    {{- with .support_text }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    <div class="annual-event-split annual-event-split--compact">
+      {{- with .payment_options }}
+        <div>
+          <h3>Paiement</h3>
+          <ul>
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      {{- end }}
+      {{- with .included }}
+        <div>
+          <h3>Inclus</h3>
+          <ul>
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      {{- end }}
+    </div>
+
+    <div class="annual-event-actions">
+      {{- with .url }}<a class="annual-event-button annual-event-button--primary" href="{{ . }}" target="_blank" rel="noopener">S'inscrire</a>{{ end }}
+      {{- with .purchase_order_mailto }}<a class="annual-event-button" href="{{ . }}">Envoyer un bon de commande</a>{{ end }}
+    </div>
+  </section>
+{{- end }}

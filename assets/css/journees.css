@@ -1,0 +1,542 @@
+/* ============================================================
+   Journées nationales — styles pour l'archive et les éditions
+   (assets/css/journees.css)
+   ============================================================ */
+
+.annual-days-page,
+.annual-event {
+  margin: 1.5rem 0;
+}
+
+/* ---- Carte d'édition (archive) ---- */
+
+.annual-days-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 1.5rem;
+}
+
+.annual-days-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.annual-day-card {
+  border: 1px solid #d8dee6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.annual-day-card--featured {
+  border-color: #2b6cb0;
+  border-left: 5px solid #2b6cb0;
+}
+
+.annual-day-topline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.annual-day-year {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.annual-day-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.annual-day-card--featured .annual-day-status {
+  background: #2b6cb0;
+  color: #fff;
+}
+
+.annual-day-card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.annual-day-where {
+  margin: 0 0 0.75rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.annual-day-summary {
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+.annual-day-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.annual-day-link {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #f7fafc;
+  color: #1a202c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.annual-day-link--primary {
+  background: #2b6cb0;
+  border-color: #2b6cb0;
+  color: #fff;
+}
+
+.annual-day-link:hover {
+  filter: brightness(0.96);
+}
+
+/* ---- Page d'une édition ---- */
+
+.annual-event-empty {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.annual-event-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.annual-event-hero-copy {
+  max-width: 46rem;
+}
+
+.annual-event-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.annual-event-hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.9rem;
+  color: #fff;
+}
+
+.annual-event-subtitle {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.annual-event-place {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.annual-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.annual-event-button {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.annual-event-button--primary {
+  background: #fff;
+  color: #1a365d;
+  border-color: #fff;
+}
+
+.annual-event-button:hover {
+  filter: brightness(0.95);
+}
+
+.annual-event-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.annual-event-nav a {
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #2b6cb0;
+  text-decoration: none;
+  background: #edf2f7;
+}
+
+.annual-event-nav a:hover {
+  background: #e2e8f0;
+}
+
+.annual-event-markdown {
+  line-height: 1.65;
+}
+
+.annual-event-markdown h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.35rem;
+  margin: 2.25rem 0 1rem;
+}
+
+.annual-event-markdown h2:first-child {
+  margin-top: 0;
+}
+
+.annual-event-markdown h3 {
+  font-size: 1.12rem;
+  margin: 1.4rem 0 0.45rem;
+}
+
+.annual-event-markdown h4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.annual-event-markdown h5,
+.annual-event-markdown h6 {
+  font-size: 0.95rem;
+  margin: 0.8rem 0 0.25rem;
+  color: #4a5568;
+}
+
+.annual-event-markdown blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #2b6cb0;
+  background: #f7fafc;
+}
+
+.annual-event-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.9rem;
+}
+
+.annual-event-markdown thead {
+  background: #edf2f7;
+}
+
+.annual-event-markdown th,
+.annual-event-markdown td {
+  border: 1px solid #e2e8f0;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.annual-event-markdown ul,
+.annual-event-markdown ol {
+  padding-left: 1.3rem;
+}
+
+.annual-event-markdown a {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.annual-event-section {
+  margin: 0 0 2.25rem;
+}
+
+.annual-event-section h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.annual-event-section h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.annual-event-section h4 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #4a5568;
+  margin: 0.9rem 0 0.35rem;
+}
+
+.annual-event-status,
+.annual-event-muted {
+  color: #718096;
+  font-style: italic;
+}
+
+.annual-event-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.annual-event-facts > div {
+  flex: 1 1 180px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #f7fafc;
+}
+
+.annual-event-facts span {
+  display: block;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-bottom: 0.2rem;
+}
+
+.annual-event-facts strong {
+  font-size: 1rem;
+}
+
+.annual-event-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.annual-event-split--compact {
+  margin-top: 1rem;
+}
+
+.annual-event-panel {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  background: #fafbfc;
+}
+
+.annual-event-deadlines {
+  margin: 0;
+  padding: 0;
+}
+
+.annual-event-deadlines > div {
+  margin-bottom: 0.4rem;
+}
+
+.annual-event-deadlines dt {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.annual-event-deadlines dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.annual-event-deadlines dd span {
+  color: #2b6cb0;
+  font-size: 0.8rem;
+}
+
+.annual-event-text-button {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.annual-event-programme {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.annual-event-programme article {
+  border-left: 3px solid #2b6cb0;
+  padding-left: 1rem;
+}
+
+.annual-event-programme article h3 {
+  margin-top: 0;
+}
+
+.annual-event-programme ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.annual-event-programme li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.annual-event-programme li span {
+  flex: 0 0 110px;
+  font-weight: 600;
+  color: #2b6cb0;
+  font-size: 0.9rem;
+}
+
+.annual-event-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.annual-event-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.annual-event-table th,
+.annual-event-table td {
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.annual-event-table thead th {
+  background: #edf2f7;
+  font-weight: 700;
+}
+
+.annual-event-people,
+.annual-event-committee {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.annual-event-people article,
+.annual-event-committee article {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  background: #fafbfc;
+}
+
+.annual-event-people h3,
+.annual-event-committee h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.annual-event-people p,
+.annual-event-committee p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.annual-event-people span,
+.annual-event-committee span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: #718096;
+}
+
+.annual-event-committee a {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #2b6cb0;
+}
+
+.annual-event-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.annual-event-link-list li {
+  margin-bottom: 0.4rem;
+}
+
+.annual-event-link-list a {
+  color: #2b6cb0;
+}
+
+.annual-event-two-columns {
+  display: grid;
+  gap: 2rem;
+}
+
+.annual-event-two-columns > div {
+  min-width: 0;
+}
+
+.annual-event-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.annual-event-pills a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: #edf2f7;
+  color: #1a202c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.annual-event-pills a:hover {
+  background: #e2e8f0;
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: 768px) {
+  .annual-event-two-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .annual-event-hero {
+    padding: 1.25rem;
+  }
+
+  .annual-event-hero h1 {
+    font-size: 1.5rem;
+  }
+}

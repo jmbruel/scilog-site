@@ -1,0 +1,54 @@
+{{- /* calls.html — appels, contributions et prix d'une édition.
+       Context: dict with .event */ -}}
+{{- $event := .event -}}
+{{- with $event.calls }}
+  <section class="annual-event-section" id="appels">
+    <h2>Appels, contributions et prix</h2>
+    <div class="annual-event-split">
+      {{- range . }}
+        <article class="annual-event-panel">
+          <h3>{{ .title }}</h3>
+          {{- with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
+
+          {{- with .contribution_types }}
+            <h4>Types de contributions</h4>
+            <ul>
+              {{- range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{- end }}
+
+          {{- with .items }}
+            <h4>Rubriques prévues</h4>
+            <ul>
+              {{- range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{- end }}
+
+          {{- with .deadlines }}
+            <h4>Dates limites</h4>
+            <dl class="annual-event-deadlines">
+              {{- range . }}
+                <div>
+                  <dt>{{ .label }}</dt>
+                  <dd>{{ .date }}{{ with .note }} <span>{{ . }}</span>{{ end }}</dd>
+                </div>
+              {{- end }}
+            </dl>
+          {{- end }}
+
+          {{- with .chairs }}
+            <h4>Présidence</h4>
+            <ul>
+              {{- range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{- end }}
+
+          {{- with .status }}<p class="annual-event-muted">{{ . }}</p>{{ end }}
+          {{- with .submission_url }}
+            <p><a class="annual-event-text-button" href="{{ . }}" target="_blank" rel="noopener">Soumettre une contribution</a></p>
+          {{- end }}
+        </article>
+      {{- end }}
+    </div>
+  </section>
+{{- end }}
