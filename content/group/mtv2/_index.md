@@ -7,7 +7,7 @@ draft: false
 
 MTV2 : Méthodes de test pour la validation et la vérification
 
-  * [Description MTV2 : disponible ici](/group/mtv2/)
+  * [Description MTV2 : disponible ici](/group/mtv2/MTV2_2026)
   * **Actualités du groupe MTV2** :
 
 
