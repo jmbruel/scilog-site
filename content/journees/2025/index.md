@@ -1,63 +1,52 @@
 ---
-title: "Journées nationales GPL/SciLog 2024-2025"
-slug: "2024-2025"
-label: "2024-2025"
-type: page
-date: "2025-07-14T20:26:08Z"
+title: "Journées nationales GPL/SciLog 2025"
+label: "2025"
+date: 2025-07-14
 draft: false
-status: "Archivée"
-date_label: "16-19 juin 2025"
+
+start_date: 2025-06-16
+end_date: 2025-06-19
+dates_label: "16-19 juin 2025"
 location: "Pau"
-featured: false
+
 summary: >
   Edition 2025 des journées nationales, organisée à Pau avec AFADL 2025,
   conférences invitées, groupes de travail, posters, démos et ateliers défis.
+
+important_dates:
+  - date: "16-19 juin 2025"
+    label: "Journées nationales à Pau"
+  - date: "8 mai-13 juin 2025"
+    label: "Période d'inscription Sciencesconf"
+  - date: "17 mars 2025"
+    label: "Date limite de candidature au prix de thèse 2025"
+  - date: "23 mai 2025"
+    label: "Notification des résultats du prix de thèse"
+
 links:
-  - label: "Site Sciencesconf"
+  - label: "Site Sciencesconf 2025"
     url: "https://gdrgpl2025.sciencesconf.org"
-    kind: "external"
-  - label: "Programme Sciencesconf"
+  - label: "Programme détaillé Sciencesconf"
     url: "https://gdrgpl2025.sciencesconf.org/program/details"
-    kind: "external"
-  - label: "Actes"
+  - label: "Actes des journées GDR SciLog 2025"
     url: "/assets/pdf/Actes_GDR_GPL_2025.pdf"
-nav:
-  - label: "Accueil"
-    id: "accueil"
-  - label: "Programme"
-    id: "programme"
-  - label: "Inscription"
-    id: "inscription"
-  - label: "Intervenants"
-    id: "intervenants"
-  - label: "Photos"
-    id: "photos"
-  - label: "Ressources"
-    id: "ressources"
-actions:
-  - label: "Programme"
-    url: "#programme"
-    kind: "primary"
-  - label: "Site 2025"
-    url: "https://gdrgpl2025.sciencesconf.org"
+  - label: "Actes AFADL 2025 sur HAL"
+    url: "https://hal.science/hal-05106227"
+  - label: "Transparents Franck Barbier"
+    url: "/assets/pdf/Economie_du_logiciel_Barbier.pdf"
+  - label: "Transparents Frédéric Loulergue"
+    url: "/assets/pdf/loulergue_afadl2025.pdf"
+
+aliases:
+  - /journees/2024-2025/
 ---
 
-{{< journee-edition >}}
 
 ## Bienvenue
 
 Les journées nationales 2025 du GDR GPL/SciLog ont eu lieu à Pau du lundi 16 juin au jeudi 19 juin 2025. Elles ont réuni les acteurs du GDR autour des groupes de travail, d'AFADL 2025, des conférences invitées, des posters, des démonstrations, du prix de thèse et des ateliers défis.
 
 Organisation locale : Adel Noureddine et Olivier Le Goaër.
-
-### Dates importantes
-
-| Date | Information |
-| --- | --- |
-| 16-19 juin 2025 | Journées nationales à Pau |
-| 8 mai-13 juin 2025 | Période d'inscription Sciencesconf |
-| 17 mars 2025 | Date limite de candidature au prix de thèse 2025 |
-| 23 mai 2025 | Notification des résultats du prix de thèse |
 
 ## Programme {#programme}
 
@@ -189,19 +178,8 @@ Les inscriptions sont closes. Elles étaient ouvertes sur Sciencesconf du 8 mai 
 | Frédéric Loulergue | Approches formelles pour les composants et outils système | LIFO, Université d'Orléans |
 | Federica Sarro | Search-Based Software Engineering for Greener and Fairer Artificial Intelligence Systems | University College London |
 
-## Photos et faits marquants {#photos}
+## Faits marquants {#faits-marquants}
 
 - Ouverture des journées nationales 2025 par les co-directrices du GDR, Mireille Blay et Catherine Dubois, ainsi que les organisateurs locaux Adel Noureddine et Olivier Le Goaër.
 - 107 inscrits étaient annoncés au jour de l'ouverture.
 - Prix du meilleur poster décerné à Meriem Smati pour le poster _The use of Digital Twins to Bolster the Resilience of IoT System-of-Systems_.
-
-## Ressources {#ressources}
-
-- [Site Sciencesconf 2025](https://gdrgpl2025.sciencesconf.org)
-- [Programme détaillé Sciencesconf](https://gdrgpl2025.sciencesconf.org/program/details)
-- [Actes des journées GDR SciLog 2025](/assets/pdf/Actes_GDR_GPL_2025.pdf)
-- [Actes AFADL 2025 sur HAL](https://hal.science/hal-05106227)
-- [Transparents Franck Barbier](/assets/pdf/Economie_du_logiciel_Barbier.pdf)
-- [Transparents Frédéric Loulergue](/assets/pdf/loulergue_afadl2025.pdf)
-
-{{< /journee-edition >}}

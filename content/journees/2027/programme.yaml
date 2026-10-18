@@ -1,0 +1,33 @@
+# Programme des journées.
+# Chaque jour contient une liste de sessions. Les sessions qui commencent
+# à la même heure sont affichées côte à côte (sessions parallèles).
+#
+# Champs d'une session :
+#   time    : horaire "HH:MM-HH:MM" (obligatoire)
+#   title   : titre de la session (obligatoire)
+#   room    : salle (facultatif)
+#   type    : keynote | gt | afadl | talk | poster | pause | social (facultatif, couleur)
+#   details : texte Markdown affiché dans un bloc dépliable (facultatif)
+#
+# Tant que la liste est vide, la section Programme n'est pas affichée.
+# Exemple :
+#
+# days:
+#   - label: "Lundi 7 juin"
+#     sessions:
+#       - time: "12:30-13:45"
+#         title: "Accueil"
+#         type: pause
+#       - time: "14:00-15:30"
+#         title: "GT IA"
+#         room: "Amphi A"
+#         type: gt
+#       - time: "14:00-15:30"
+#         title: "AFADL"
+#         room: "Salle 1"
+#         type: afadl
+#         details: |
+#           - Article 1, auteurs
+#           - Article 2, auteurs
+
+days: []

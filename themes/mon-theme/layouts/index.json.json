@@ -6,6 +6,9 @@
   {{- $content := $page.Content | plainify -}}
   {
     "title": {{ $page.Title | jsonify }},
+    "type": {{ $page.Type | jsonify }},
+    "section": {{ $page.Section | jsonify }},
+    "publishedAt": {{ $page.Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
     "url": {{ $page.RelPermalink | jsonify }},
     "description": {{ $summary | jsonify }},
     "readmore": {{ if lt (len $summary) (len $content) }}true{{ else }}false{{ end }},

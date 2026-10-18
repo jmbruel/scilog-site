@@ -1,0 +1,10 @@
+{{- /* Lit un fichier YAML du dossier de l'édition (programme.yaml,
+       intervenants.yaml, …) et renvoie son contenu, ou rien.
+       Usage : partial "journees/data.html" (dict "page" . "file" "comite.yaml") */ -}}
+{{- $data := "" -}}
+{{- with .page.Resources.Get .file -}}
+  {{- with . | transform.Unmarshal -}}
+    {{- $data = . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $data -}}
