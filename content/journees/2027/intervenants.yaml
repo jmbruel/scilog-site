@@ -1,0 +1,21 @@
+# Conférences invitées (keynotes).
+# Déposez la photo de chaque intervenant dans le dossier intervenants/
+# et indiquez son nom de fichier dans "photo".
+#
+# Champs : name, role, affiliation, photo, website, talk (titre),
+#          abstract (Markdown), bio (Markdown). Seul "name" est obligatoire.
+#
+# Tant que la liste est vide, la section n'est pas affichée. Exemple :
+#
+# - name: "Prénom Nom"
+#   role: "Professeure"
+#   affiliation: "Laboratoire, Université"
+#   photo: "prenom-nom.jpg"
+#   website: "https://..."
+#   talk: "Titre de la conférence"
+#   abstract: |
+#     Résumé de la conférence.
+#   bio: |
+#     Courte biographie.
+
+[]

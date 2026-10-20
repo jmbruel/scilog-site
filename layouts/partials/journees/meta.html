@@ -1,0 +1,27 @@
+{{- /* Métadonnées calculées d'une édition : libellé, dates, statut.
+       Le statut se met à jour seul à chaque construction du site :
+       "Prochaine édition" jusqu'à end_date, puis "Archivée".
+       Context: la page de l'édition. */ -}}
+{{- $p := .Params -}}
+{{- $label := $p.label | default .File.ContentBaseName -}}
+
+{{- $dates := $p.dates_label -}}
+{{- if and (not $dates) $p.start_date -}}
+  {{- $start := time.AsTime $p.start_date -}}
+  {{- $end := time.AsTime ($p.end_date | default $p.start_date) -}}
+  {{- if eq $start $end -}}
+    {{- $dates = $start | time.Format ":date_long" -}}
+  {{- else if eq ($start.Format "2006-01") ($end.Format "2006-01") -}}
+    {{- $dates = printf "%d-%s" $start.Day ($end | time.Format ":date_long") -}}
+  {{- else -}}
+    {{- $dates = printf "%s - %s" ($start | time.Format "2 January") ($end | time.Format ":date_long") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $upcoming := false -}}
+{{- with $p.end_date | default $p.start_date -}}
+  {{- $upcoming = ge ((time.AsTime .).AddDate 0 0 1).Unix now.Unix -}}
+{{- end -}}
+{{- $status := $p.status | default (cond $upcoming "Prochaine édition" "Archivée") -}}
+
+{{- return dict "label" $label "dates" $dates "status" $status "upcoming" $upcoming -}}

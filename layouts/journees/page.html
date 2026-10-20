@@ -1,0 +1,180 @@
+{{- /* Page d'une édition des journées nationales.
+       Tout vient du dossier content/journees/<année>/ :
+         index.md          front matter (infos générales) + texte libre
+         programme.yaml    intervenants.yaml    comite.yaml    partenaires.yaml
+         images/  intervenants/  partenaires/  photos/
+       Chaque section n'est affichée que si elle est renseignée. */ -}}
+{{ define "main" }}
+{{- $p := .Params -}}
+{{- $meta := partial "journees/meta.html" . -}}
+{{- $programme := partial "journees/data.html" (dict "page" . "file" "programme.yaml") -}}
+{{- $speakers := partial "journees/data.html" (dict "page" . "file" "intervenants.yaml") -}}
+{{- $committee := partial "journees/data.html" (dict "page" . "file" "comite.yaml") -}}
+{{- $partners := partial "journees/data.html" (dict "page" . "file" "partenaires.yaml") -}}
+{{- $photos := .Resources.Match "photos/*" -}}
+{{- $days := slice -}}
+{{- with $programme }}{{ $days = .days | default slice }}{{ end -}}
+
+{{- /* Navigation interne : construite automatiquement. */ -}}
+{{- $nav := slice (dict "id" "accueil" "label" "Accueil") -}}
+{{- range .Fragments.Headings -}}
+  {{- if eq .Level 2 }}{{ $nav = $nav | append (dict "id" .ID "label" (.Title | plainify)) }}{{ end -}}
+  {{- range .Headings -}}
+    {{- if eq .Level 2 }}{{ $nav = $nav | append (dict "id" .ID "label" (.Title | plainify)) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $speakers }}{{ $nav = $nav | append (dict "id" "intervenants" "label" "Intervenants") }}{{ end -}}
+{{- if $days }}{{ $nav = $nav | append (dict "id" "programme" "label" "Programme") }}{{ end -}}
+{{- with $p.venue }}{{ if .name }}{{ $nav = $nav | append (dict "id" "lieu" "label" "Lieu") }}{{ end }}{{ end -}}
+{{- if $photos }}{{ $nav = $nav | append (dict "id" "photos" "label" "Photos") }}{{ end -}}
+{{- if $partners }}{{ $nav = $nav | append (dict "id" "partenaires" "label" "Partenaires") }}{{ end -}}
+{{- if $committee }}{{ $nav = $nav | append (dict "id" "comite" "label" "Comité") }}{{ end -}}
+{{- if ne $p.code_of_conduct false }}{{ $nav = $nav | append (dict "id" "code" "label" "Code de conduite") }}{{ end -}}
+{{- if $p.links }}{{ $nav = $nav | append (dict "id" "ressources" "label" "Ressources") }}{{ end -}}
+
+<article class="je">
+  {{- /* ---- Bannière ---- */}}
+  {{- $hero := "" -}}
+  {{- with $p.hero_image }}{{ with $.Resources.Get . }}{{ $hero = .Fit "1600x900" }}{{ end }}{{ end }}
+  <header class="je-hero{{ if $hero }} je-hero--image{{ end }}" id="accueil"{{ with $hero }} style="background-image: url('{{ .RelPermalink }}')"{{ end }}>
+    <div class="je-hero-inner">
+      <p class="je-hero-meta">
+        <span class="je-pill">{{ $meta.status }}</span>
+        {{- with $meta.dates }}<span class="je-pill je-pill--light">{{ . }}</span>{{ end }}
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{- with $p.subtitle }}<p class="je-hero-subtitle">{{ . }}</p>{{ end }}
+      {{- with $p.location }}<p class="je-hero-place">{{ . }}</p>{{ end }}
+      <p class="je-hero-actions">
+        {{- with $p.registration }}{{ with .url }}
+          {{- if $meta.upcoming }}<a class="je-button je-button--primary" href="{{ . }}" target="_blank" rel="noopener">S'inscrire</a>{{ end }}
+        {{- end }}{{ end }}
+        {{- if $days }}<a class="je-button" href="#programme">Programme</a>{{ end }}
+      </p>
+    </div>
+  </header>
+
+  {{- if gt (len $nav) 2 }}
+  <nav class="je-nav" aria-label="Sections de l'édition">
+    {{- range $nav }}<a href="#{{ .id }}">{{ .label }}</a>{{ end }}
+  </nav>
+  {{- end }}
+
+  {{- /* ---- Dates importantes ---- */}}
+  {{- with $p.important_dates }}
+  <section class="je-dates" aria-label="Dates importantes">
+    {{- range . }}
+    <div class="je-date">
+      <strong>{{ .date }}</strong>
+      <span>{{ .label }}</span>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{- /* ---- Texte libre (index.md) ---- */}}
+  <div class="je-content">
+    {{ .Content }}
+  </div>
+
+  {{- with $speakers }}{{ partial "journees/speakers.html" (dict "page" $ "speakers" .) }}{{ end }}
+  {{- with $days }}{{ partial "journees/programme.html" (dict "page" $ "days" .) }}{{ end }}
+
+  {{- /* ---- Lieu ---- */}}
+  {{- with $p.venue }}{{ if .name }}
+  <section class="je-section" id="lieu">
+    <h2>Lieu</h2>
+    <div class="je-venue">
+      <div>
+        <h3>{{ .name }}</h3>
+        {{- with .address }}<p>{{ . }}</p>{{ end }}
+        {{- with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+        {{- $query := urlquery (delimit (slice .name .address) ", ") }}
+        <p class="je-links">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination={{ $query }}" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+          <a href="https://www.openstreetmap.org/search?query={{ $query }}" target="_blank" rel="noopener">OpenStreetMap</a>
+        </p>
+      </div>
+      {{- if and .lat .lon }}
+      {{- $bbox := printf "%f,%f,%f,%f" (sub .lon 0.01) (sub .lat 0.005) (add .lon 0.01) (add .lat 0.005) }}
+      <iframe class="je-map" title="Carte : {{ .name }}" loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{ $bbox }}&amp;layer=mapnik&amp;marker={{ .lat }},{{ .lon }}"></iframe>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}{{ end }}
+
+  {{- /* ---- Photos (tout le dossier photos/) ---- */}}
+  {{- with $photos }}
+  <section class="je-section" id="photos">
+    <h2>Photos</h2>
+    <div class="je-photos">
+      {{- range . }}
+        {{- if eq .ResourceType "image" }}
+        {{- $thumb := .Fill "480x320 Center" }}
+        {{- $full := .Fit "1600x1600" }}
+        <a href="{{ $full.RelPermalink }}" target="_blank" rel="noopener">
+          <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="Photo des journées {{ $meta.label }}" loading="lazy">
+        </a>
+        {{- end }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ---- Partenaires ---- */}}
+  {{- with $partners }}
+  <section class="je-section" id="partenaires">
+    <h2>Partenaires</h2>
+    <div class="je-partners">
+      {{- range . }}
+      <a class="je-partner" href="{{ .url | default "#" }}"{{ if .url }} target="_blank" rel="noopener"{{ end }}>
+        {{- with .logo }}{{ with $.Resources.Get (printf "partenaires/%s" .) }}
+          {{- $img := . }}{{ if ne .MediaType.SubType "svg" }}{{ $img = .Fit "300x150" }}{{ end }}
+          <img src="{{ $img.RelPermalink }}" alt="" loading="lazy">
+        {{- end }}{{ end }}
+        <span>{{ .name }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ---- Comité d'organisation ---- */}}
+  {{- with $committee }}
+  <section class="je-section" id="comite">
+    <h2>Comité d'organisation</h2>
+    <ul class="je-committee">
+      {{- range . }}
+      <li>
+        <span class="je-avatar" aria-hidden="true">{{ substr .name 0 1 }}</span>
+        <div>
+          <strong>{{ .name }}</strong>
+          {{- with .role }}<span>{{ . }}</span>{{ end }}
+          {{- with .affiliation }}<span class="je-muted">{{ . }}</span>{{ end }}
+          {{- with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  {{- if ne $p.code_of_conduct false }}{{ partial "journees/code-of-conduct.html" . }}{{ end }}
+
+  {{- /* ---- Ressources ---- */}}
+  {{- with $p.links }}
+  <section class="je-section" id="ressources">
+    <h2>Ressources</h2>
+    <ul>
+      {{- range . }}
+        {{- $external := or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
+        <li><a href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  <p class="je-back"><a href="{{ .Parent.RelPermalink }}">← Toutes les éditions</a></p>
+</article>
+{{ end }}

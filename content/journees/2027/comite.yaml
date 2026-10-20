@@ -1,0 +1,11 @@
+# Comité d'organisation.
+# Champs : name (obligatoire), role, affiliation, email.
+#
+# Tant que la liste est vide, la section n'est pas affichée. Exemple :
+#
+# - name: "Prénom Nom"
+#   role: "Président du comité d'organisation"
+#   affiliation: "Université"
+#   email: "prenom.nom@univ.fr"
+
+[]
