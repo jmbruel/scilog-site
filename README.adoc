@@ -153,12 +153,16 @@ Exemple minimal :
 
 [source,markdown]
 ----
-+++
-title = "Titre de mon actualite"
-date = "2026-01-15T10:00:00+01:00"
-draft = false
-categories = ["news"]
-+++
+---
+title: "16-17/11/2026 - DéfiThon AI4SE 2026"
+type: news
+date: "2026-10-26"
+draft: false
+categories:
+- An2026
+- AI4SE
+archives: ["2026-10"]
+---
 
 Texte de l'actualite.
 
