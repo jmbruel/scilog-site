@@ -12,6 +12,7 @@ type: "page"
 - Orateur: **Christian Attiogbé**
 - Titre: **Un plongement sémantique des algèbres de processus dans EventB/Rodin**
 - Lien: https://visio.numerique.gouv.fr/kbq-wtjp-rpv
+- [Transparents](/assets/pdf/slides-embeddingCSP_in_EB_Attiogbe_webinaire_IPP_2026.pdf)
 
 ## Résumé
 
