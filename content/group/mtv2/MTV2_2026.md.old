@@ -2,7 +2,7 @@
 title: Description du groupe MTV2
 type: news
 date: "2026-09-30T10:17:11Z"
-draft: false
+draft: true
 archives: ["2024-08"]
 ---
 
@@ -81,7 +81,7 @@ Une session commune entre :
 - le groupe de travail GL_Sec (La sécurité dans le développement logiciel)
 - le défi GL4Sec (Outils de test et de vérification pour la sécurité)
 
-a été organisé lors des [journées du GDR SciLog les 1-4 juin 2026 à Lille](https://scilog2026.fr/).
+a été organisée lors des [journées du GDR SciLog les 1-4 juin 2026 à Lille](https://scilog2026.fr/).
 
 ## Anciennes réunions (avant 2026)
 
