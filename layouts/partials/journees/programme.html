@@ -3,13 +3,25 @@
        regroupées sur une même ligne (sessions parallèles).
        Context: dict with .page and .days */ -}}
 {{- $page := .page -}}
-<section class="je-section" id="programme">
+<section class="je-section je-programme" id="programme" data-view="parallel" style="--je-day-count: {{ len .days }}">
   <h2>Programme</h2>
-  {{- if gt (len .days) 1 }}
-  <p class="je-day-links">
-    {{- range $i, $d := .days }}<a href="#programme-{{ add $i 1 }}">{{ $d.label }}</a>{{ end }}
-  </p>
-  {{- end }}
+  <div class="je-programme-bar">
+    {{- if gt (len .days) 1 }}
+    <p class="je-day-links">
+      {{- range $i, $d := .days }}<a href="#programme-{{ add $i 1 }}">{{ $d.label }}</a>{{ end }}
+    </p>
+    {{- end }}
+    {{- /* Choix de l'affichage : masqué sans JavaScript. */}}
+    <div class="je-view-switch" role="group" aria-label="Affichage du programme" hidden>
+      <button type="button" data-view="list" aria-pressed="false" title="Toutes les sessions dans une seule colonne">1 colonne</button>
+      <button type="button" data-view="parallel" aria-pressed="true" title="Sessions parallèles côte à côte">Sessions parallèles</button>
+      {{- if gt (len .days) 1 }}
+      <button type="button" data-view="days" aria-pressed="false" title="Un jour par colonne">Jours côte à côte</button>
+      {{- end }}
+    </div>
+  </div>
+
+  <div class="je-days">
 
   {{- range $i, $day := .days }}
   <div class="je-day" id="programme-{{ add $i 1 }}">
@@ -48,4 +60,30 @@
     {{- end }}
   </div>
   {{- end }}
+  </div>
+
+  <script>
+  (function () {
+    var section = document.currentScript.parentElement;
+    var bar = section.querySelector('.je-view-switch');
+    var buttons = bar.querySelectorAll('button');
+    var key = 'je-programme-view';
+    function setView(view, save) {
+      var valid = false;
+      buttons.forEach(function (b) {
+        var on = b.dataset.view === view;
+        if (on) valid = true;
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      if (!valid) return;
+      section.dataset.view = view;
+      if (save) { try { localStorage.setItem(key, view); } catch (e) {} }
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setView(b.dataset.view, true); });
+    });
+    try { var saved = localStorage.getItem(key); if (saved) setView(saved, false); } catch (e) {}
+    bar.hidden = false;
+  })();
+  </script>
 </section>
