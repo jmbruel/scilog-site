@@ -1,13 +1,13 @@
 ---
 title: "AI4SE : IA pour le Génie Logiciel"
 type: page
-date: "2024-06-23T11:20:58Z"
+date: "2026-09-30T11:20:58Z"
 draft: false
 categories:
 - AI4SE
 ---
 
-Le défi **AI4SE** traite de la question suivante : Comment appliquer l'IA (et notamment l'IA générative) pour construire des logiciels fiables ?. Il s'agit de proposer des méthodes et outils de génie logiciel intégrant de l'IA dédiée. Ce défi est très lié au défi SE4AIA, selon la logique suivante : Pour faire des logiciels de confiance en s'aidant de l'IA, il faut disposer d'une IA de confiance. Avec les avancées de l'IA, et particulièrement l'IA générative, la question se pose de son utilisation dans la modélisation et la vérification formelles des logiciels, par exemple pour réduire la complexité de l'application des méthodes formelles. Les systèmes logiciels sont “par nature” difficiles à spécifier et à concevoir. L'objectif des méthodes formelles est de permettre de traiter cette complexité au moyen d'outils mathématiques. Un objectif majeur de l'IA pour les méthodes formelles est de réduire la complexité de mise en œuvre de ces techniques pour les ingénieurs.
+Le défi **AI4SE** traite de la question suivante : Comment appliquer l'IA (et notamment l'IA générative) pour construire des logiciels fiables ? Il s'agit de proposer des méthodes et outils de génie logiciel intégrant de l'IA dédiée. Ce défi est très lié au défi SE4AIA, selon la logique suivante : Pour faire des logiciels de confiance en s'aidant de l'IA, il faut disposer d'une IA de confiance. Avec les avancées de l'IA, et particulièrement l'IA générative, la question se pose de son utilisation dans la modélisation et la vérification formelles des logiciels, par exemple pour réduire la complexité de l'application des méthodes formelles. Les systèmes logiciels sont “par nature” difficiles à spécifier et à concevoir. L'objectif des méthodes formelles est de permettre de traiter cette complexité au moyen d'outils mathématiques. Un objectif majeur de l'IA pour les méthodes formelles est de réduire la complexité de mise en œuvre de ces techniques pour les ingénieurs.
 
 Animé par Alain Giorgetti (Institut FEMTO-ST) et Meriem Ouederni (Toulouse INP/IRIT)
 

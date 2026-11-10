@@ -5,7 +5,7 @@ date: "2026-09-18"
 draft: false
 ---
 
-La prochaine journée Jumeaux Numériques du GDR Scilog aura lieu à Toulouse, le **10 décembre 2026** à la suite de la journée du programme EDT.
+La prochaine journée Jumeaux Numériques du GDR Scilog aura lieu à Toulouse, le **10 décembre 2026** à la suite de la [journée du programme EDT](https://www.edtlab.fr/en/news/event-2026-12-09-plenary-session).
 
 **Programme**
  
@@ -21,8 +21,7 @@ La prochaine journée Jumeaux Numériques du GDR Scilog aura lieu à Toulouse, l
 
 **Lieu de rassemblement**
 
-A Toulouse,
-Lieu exact à venir.
+INP Toulouse, ENSEEIHT
 
 **Informations**
 

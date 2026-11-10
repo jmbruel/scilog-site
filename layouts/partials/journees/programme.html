@@ -1,24 +1,51 @@
-{{- /* programme.html — programme d'une édition.
-       Context: dict with .event */ -}}
-{{- $event := .event -}}
-{{- with $event.programme }}
-  <section class="annual-event-section" id="programme">
-    <h2>Programme</h2>
-    {{- with .status }}<p class="annual-event-status">{{ . }}</p>{{ end }}
-    {{- with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
-    {{- with .days }}
-      <div class="annual-event-programme">
-        {{- range . }}
-          <article>
-            <h3>{{ .date }}</h3>
-            <ul>
-              {{- range .items }}
-                <li><span>{{ .time }}</span><strong>{{ .title }}</strong></li>
-              {{- end }}
-            </ul>
-          </article>
+{{- /* Programme d'une édition (programme.yaml).
+       Les sessions consécutives qui commencent à la même heure sont
+       regroupées sur une même ligne (sessions parallèles).
+       Context: dict with .page and .days */ -}}
+{{- $page := .page -}}
+<section class="je-section" id="programme">
+  <h2>Programme</h2>
+  {{- if gt (len .days) 1 }}
+  <p class="je-day-links">
+    {{- range $i, $d := .days }}<a href="#programme-{{ add $i 1 }}">{{ $d.label }}</a>{{ end }}
+  </p>
+  {{- end }}
+
+  {{- range $i, $day := .days }}
+  <div class="je-day" id="programme-{{ add $i 1 }}">
+    <h3>{{ $day.label }}</h3>
+    {{- with $day.description }}<p class="je-muted">{{ . }}</p>{{ end }}
+
+    {{- $groups := slice -}}
+    {{- $current := slice -}}
+    {{- range $day.sessions -}}
+      {{- if and $current (ne (substr .time 0 5) (substr (index $current 0).time 0 5)) -}}
+        {{- $groups = $groups | append (dict "sessions" $current) -}}
+        {{- $current = slice -}}
+      {{- end -}}
+      {{- $current = $current | append . -}}
+    {{- end -}}
+    {{- if $current }}{{ $groups = $groups | append (dict "sessions" $current) }}{{ end -}}
+
+    {{- range $groups }}
+    <div class="je-slot{{ if gt (len .sessions) 1 }} je-slot--parallel{{ end }}">
+      {{- range .sessions }}
+      <div class="je-session je-session--{{ .type | default "talk" }}">
+        <div class="je-session-head">
+          <span class="je-session-time">{{ .time }}</span>
+          <strong>{{ .title }}</strong>
+          {{- with .room }}<span class="je-session-room">{{ . }}</span>{{ end }}
+        </div>
+        {{- with .details }}
+        <details>
+          <summary>Détails</summary>
+          <div class="je-session-details">{{ $page.RenderString (dict "display" "block") . }}</div>
+        </details>
         {{- end }}
       </div>
+      {{- end }}
+    </div>
     {{- end }}
-  </section>
-{{- end }}
+  </div>
+  {{- end }}
+</section>

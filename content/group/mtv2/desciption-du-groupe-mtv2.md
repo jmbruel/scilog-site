@@ -2,7 +2,7 @@
 title: Description du groupe MTV2
 type: news
 date: "2024-08-22T10:17:11Z"
-draft: false
+draft: true
 archives: ["2024-08"]
 ---
 

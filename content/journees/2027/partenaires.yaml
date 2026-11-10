@@ -1,0 +1,11 @@
+# Partenaires et soutiens.
+# Déposez les logos dans le dossier partenaires/ et indiquez leur nom de fichier.
+# Champs : name (obligatoire), logo, url.
+#
+# Tant que la liste est vide, la section n'est pas affichée. Exemple :
+#
+# - name: "CNRS"
+#   logo: "cnrs.png"
+#   url: "https://www.cnrs.fr"
+
+[]

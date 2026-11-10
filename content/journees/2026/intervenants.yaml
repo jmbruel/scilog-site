@@ -1,0 +1,53 @@
+# Conférences invitées (keynotes).
+# Déposez la photo de chaque intervenant dans le dossier intervenants/
+# et indiquez son nom de fichier dans "photo".
+#
+# Champs : name, role, affiliation, photo, website, talk (titre),
+#          abstract (Markdown), bio (Markdown). Seul "name" est obligatoire.
+
+- name: "Sylvain Conchon"
+  role: "Professor"
+  affiliation: "LRI, Université Paris Sud, CNRS, INRIA Saclay-Île-de-France"
+  photo: "sylvain-conchon.png"
+  website: "https://usr.lmf.cnrs.fr/~conchon/"
+  talk: "The Cubicle Fuzzy Loop: A Fuzzing-Based Framework for the Cubicle Model Checker"
+  abstract: |
+    This talk presents the Cubicle Fuzzy Loop (CFL), a fuzzing-based extension of Cubicle, a model checker for parameterized systems. To prove safety, Cubicle generates invariants using forward exploration strategies such as BFS or DFS on finite model instances. However, these standard algorithms quickly face the state explosion problem due to Cubicle’s purely nondeterministic semantics. As a result, they struggle to discover critical states, which hinders invariant generation.
+
+    CFL replaces this approach with a powerful DFS-like algorithm inspired by fuzzing. Cubicle’s purely nondeterministic execution loop is modified to provide feedback on newly discovered states and visited transitions. This feedback is then used by CFL to construct schedulers that guide model exploration. Not only does this provide Cubicle with a richer variety of states for invariant generation, but it also enables the rapid detection of unsafe models.
+
+    Our first experiments have yielded promising results. CFL effectively enables Cubicle to generate crucial invariants for hierarchical systems.
+  bio: |
+    I'm Professor at Paris-Saclay University and a member of LMF (the Formal Methods Laboratory - ULMR 9061) and the Toccata team, a joint project with INRIA Saclay - Île-de-France. Previously, I was Senior Research Associate in the OBASCO team at Ecole des Mines de Nantes, Senior Research Associate in the PacSoft team at the OGI School of Science & Engineering at OHSU and Ph.D student at INRIA Rocquencourt in the MOCSOVA team.
+
+- name: "Thomas Degueule"
+  role: "Researcher"
+  affiliation: "CNRS, LaBRI"
+  photo: "thomas-degueule.jpg"
+  website: "https://tdegueul.github.io/"
+  talk: "Software Ecosystems & Libraries: Evolution, Compatibility, Tooling"
+  abstract: |
+    Modern software development heavily relies on third-party libraries distributed through large software ecosystems. Like any software artifact, libraries continuously evolve to introduce new features, fix bugs, and address security vulnerabilities. Keeping dependencies up to date is therefore essential to benefit from these improvements and avoid technical debt and security risks. As libraries evolve, they may break the contract previously established by introducing syntactic or semantic changes. Such breaking changes often discourage clients from upgrading their dependencies, increasing maintenance costs, raising security concerns, and making future upgrades even harder.
+
+    In this talk, we will discuss the central role of software ecosystems and libraries in modern software engineering, and the challenges raised by their inevitable evolution. We will explore API design and usage practices, examine how maintainers evolve their libraries and how frequently breaking changes occur, and present techniques to automatically detect and remediate syntactic and semantic compatibility issues. We will also show how research tools can concretely support practitioners in evolving their libraries and managing their dependencies. Finally, we will highlight research directions for building more sustainable and resilient software ecosystems.
+  bio: |
+    I obtained my PhD in Computer Science from the University of Rennes in 2016, where I worked with the DiverSE group at IRISA on leveraging metamodeling techniques for modular and composable software language engineering. From 2017 to 2020, I was a postdoctoral fellow with the SWAT group at Centrum Wiskunde & Informatica (CWI) in Amsterdam, studying how advanced programming paradigms can further contribute to reuse and modularity in software language engineering, while gradually expanding my research toward software evolution and empirical software engineering.
+
+    Since 2020, I have been a CNRS research scientist with the Progress group at LaBRI, specializing in software evolution, modularity, and comprehension, with a focus on software ecosystems and libraries. Together with my colleagues, we develop tools that help researchers analyze software systems at scale and support developers in evolving and maintaining their codebases.
+
+- name: "Elisa Gonzalez Boix"
+  role: "Professor"
+  affiliation: "Software Languages Lab, Vrije Universiteit Brussel"
+  photo: "elisa-gonzalez-boix.jpg"
+  website: "https://soft.vub.ac.be/disco/elisa/"
+  talk: "Programming distributed systems with replicated state"
+  abstract: |
+    Distributed systems replicate state across machines to enable high availability, fault tolerance, low latency, and scalability. Yet we cannot have the cake and eat it: the CAP theorem demonstrates a fundamental trade-off between consistency and availability when network partitions occur. As a result, many systems adopt weak consistency models, relaxing the consistency guarantees to provide high availability and low latency. However, concurrent updates may lead to conflicts that must be resolved to ensure state convergence. Replicated Data Types (RDTs) have emerged as a principled answer to this challenge, offering convergence guarantees out of the box.
+
+    In this talk, we take a closer look at what it means for developers to build and utilise RDTs in their applications. Building highly available distributed applications with RDTs remains challenging: developers face recurring obstacles, including a lack of appropriate abstractions for replica discovery and update propagation, composing RDTs, and security. We will discuss recent results aimed at improving the adoption of RDTs, covering three fronts: 1) principled approaches to efficient RDT implementation, 2) abstractions for application-specific RDTs, and 3) verification of RDTs in a (semi-)automatic way to give developers confidence in their designs. We will close with an outlook on promising research directions.
+  bio: |
+    I obtained an Engineering in Informatics degree (Enginyeria en Informática) at the Universitat Politècnica de Catalunya (UPC) in 2004. After working as software developer for IBM Toronto Labs in collaboration with UPC, I started a PhD in Sciences at the Programming Technology Lab (now known as the SOFT lab) of the VUB. In 2012, I obtained my PhD in Sciences at the VUB on programming language abstractions and tools for handling partial failures in distributed applications running on mobile ad hoc networks. My PhD heavily relied on reflection and meta-level programming.
+
+    As from October 2014, I am a full-time professor at the SOFT lab leading the DisCo research group. Disco counts with 2 post-doctoral researchers and 4 PhD students focusing on programming languages and tooling for concurrent and distributed systems. Together we explore several research topics including debuggers, secure programming technology, and programming abstractions for distributed systems like replicated data types.
+
+    Besides research, I am also interested in teaching computer science to youngsters. As a former Erasmus and UPC student, I also actively contribute to the Erasmus exchange between VUB and UPC. In my personal life, running, reading, my family and Catalonia are my main hobbies.

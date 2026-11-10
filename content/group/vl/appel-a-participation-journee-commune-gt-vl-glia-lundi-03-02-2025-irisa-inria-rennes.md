@@ -1,5 +1,5 @@
 ---
-title: "Appel à participation -- Journée commune GT VL &amp; GLIA - lundi 03/02/2025\
+title: "Appel à participation -- Journée commune GT VL & GLIA - lundi 03/02/2025\
   \ - IRISA/INRIA, Rennes"
 type: news
 date: "2024-12-04T15:24:59Z"

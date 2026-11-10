@@ -1,0 +1,13 @@
+# Partenaires et soutiens.
+# Déposez les logos dans le dossier partenaires/ et indiquez leur nom de fichier.
+# Champs : name (obligatoire), logo, url.
+
+- name: "CNRS"
+  logo: "cnrs.png"
+  url: "https://www.cnrs.fr"
+- name: "Université de Lille"
+  logo: "ulille.png"
+  url: "https://www.univ-lille.fr"
+- name: "Polytech Lille"
+  logo: "polytech.png"
+  url: "https://polytech-lille.fr"

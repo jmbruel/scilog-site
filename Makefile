@@ -37,32 +37,27 @@ deploy: public/index.html
 # -----------------------------------------------------
 # Journées nationales
 #
-# Crée la page Markdown d'une nouvelle édition. Usage :
+# Crée le dossier d'une nouvelle édition. Usage :
 #
-#   make new-journee EDITION=2027-2028
+#   make new-journee EDITION=2027
 #
-# Génère content/journees/2027-2028/_index.md. La nouvelle
-# édition apparaît automatiquement dans le menu "Journées" et
-# dans l'archive /journees/.
+# Copie le modèle archetypes/journee/ vers content/journees/2027/
+# (index.md, programme.yaml, intervenants.yaml, comite.yaml,
+# partenaires.yaml). L'édition apparaît automatiquement dans le
+# menu "Journées" et dans l'archive /journees/.
+# Guide : docs/journees-annuelles.md
 # -----------------------------------------------------
 EDITION ?=
 
-# Extrait l'année de départ (A) de "2027-2028".
-_A = $(word 1,$(subst -, ,$(EDITION)))
-
 new-journee:
-	@[ -n "$(EDITION)" ] || (echo "Usage: make new-journee EDITION=2027-2028" && exit 1)
-	@echo "$(EDITION)" | grep -Eq '^[0-9]{4}-[0-9]{4}$$' \
-		|| (echo "EDITION doit ressembler à 2027-2028" && exit 1)
-	@test -d content/journees/$(EDITION) \
-		&& echo "L'édition $(EDITION) existe déjà." && exit 1 \
-		|| true
-	@mkdir -p content/journees/$(EDITION)
-	@sed -e 's/2027-2028/$(EDITION)/g' -e 's/2027-01-01/$(_A)-01-01/g' \
-		-e 's/draft: true/draft: false/' \
-		content/journees/_template/_index.md \
-		> content/journees/$(EDITION)/_index.md
-	@echo "==> Édition $(EDITION) créée :"
-	@echo "     content/journees/$(EDITION)/_index.md"
-	@echo "Renseignez la page Markdown (date, lieu, programme…) puis lancez 'make serve'."
-	@echo "L'édition apparaîtra automatiquement dans le menu et l'archive."
+	@[ -n "$(EDITION)" ] || (echo "Usage: make new-journee EDITION=2027" && exit 1)
+	@echo "$(EDITION)" | grep -Eq '^[0-9]{4}$$' \
+		|| (echo "EDITION doit être une année, par exemple 2027" && exit 1)
+	@! test -d content/journees/$(EDITION) \
+		|| (echo "L'édition $(EDITION) existe déjà." && exit 1)
+	@hugo new content --kind journee journees/$(EDITION) >/dev/null
+	@echo "==> Édition $(EDITION) créée dans content/journees/$(EDITION)/"
+	@echo "Renseignez index.md et les fichiers .yaml, puis lancez 'hugo server'."
+
+serve:
+	hugo server

@@ -1,37 +1,29 @@
 {{- /* Carte d'une édition dans l'archive des journées.
-       Context: dict with .edition from Markdown front matter. */ -}}
-{{- $ed := .edition -}}
-{{- $pageURL := $ed.permalink | default (relURL (printf "/journees/%s/" $ed.slug)) -}}
-<article class="annual-day-card{{ if $ed.featured }} annual-day-card--featured{{ end }}">
+       Context: la page de l'édition. */ -}}
+{{- $meta := partial "journees/meta.html" . -}}
+<article class="annual-day-card{{ if $meta.upcoming }} annual-day-card--featured{{ end }}">
+  {{- with .Params.hero_image }}{{ with $.Resources.Get . }}
+    {{- $img := .Fill "800x260 Center" }}
+    <a href="{{ $.RelPermalink }}" class="annual-day-image"><img src="{{ $img.RelPermalink }}" alt="" loading="lazy"></a>
+  {{- end }}{{ end }}
   <div class="annual-day-topline">
-    <span class="annual-day-year">{{ $ed.label | default $ed.slug }}</span>
-    {{- with $ed.status }}
-      <span class="annual-day-status">{{ . }}</span>
-    {{- end }}
+    <span class="annual-day-year">{{ $meta.label }}</span>
+    <span class="annual-day-status">{{ $meta.status }}</span>
   </div>
 
-  <h2>{{ $ed.title }}</h2>
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
   <p class="annual-day-where">
-    {{- with $ed.date_label }}{{ . }}{{ end -}}
-    {{- if and $ed.date_label $ed.location }} · {{ end -}}
-    {{- with $ed.location }}{{ . }}{{ end -}}
+    {{- with $meta.dates }}{{ . }}{{ end -}}
+    {{- if and $meta.dates .Params.location }} · {{ end -}}
+    {{- with .Params.location }}{{ . }}{{ end -}}
   </p>
 
-  {{- with $ed.summary }}
+  {{- with .Params.summary }}
     <p class="annual-day-summary">{{ . | markdownify }}</p>
   {{- end }}
 
-  <div class="annual-day-actions" aria-label="Liens principaux">
-    <a class="annual-day-link annual-day-link--primary" href="{{ $pageURL }}">
-      Page de l'édition
-    </a>
-    {{- range $ed.links }}
-      {{- $url := .url -}}
-      {{- $isExternal := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
-      <a class="annual-day-link{{ with .kind }} annual-day-link--{{ . }}{{ end }}" href="{{ $url }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
-        {{ .label }}
-      </a>
-    {{- end }}
+  <div class="annual-day-actions">
+    <a class="annual-day-link annual-day-link--primary" href="{{ .RelPermalink }}">Page de l'édition</a>
   </div>
 </article>

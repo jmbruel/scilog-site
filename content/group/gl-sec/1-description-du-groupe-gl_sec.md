@@ -8,9 +8,9 @@ archives: ["2026-04"]
 
 ## Responsables
 
-  * [Dylan MARINHO Dylan](https://mygdr.hosted.lip6.fr/Fiche/1763/0)
-  * [Tchouki TIBERMACINE](https://mygdr.hosted.lip6.fr/Fiche/3932/0)
+  * [Dylan MARINHO](https://mygdr.hosted.lip6.fr/Fiche/1763/0)
   * [Nan MESSE](https://mygdr.hosted.lip6.fr/Fiche/5185/0)
+  * [Chouki TIBERMACINE](https://mygdr.hosted.lip6.fr/Fiche/3932/0)
 
 ## Thématiques
 

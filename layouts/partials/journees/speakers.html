@@ -1,17 +1,29 @@
-{{- /* speakers.html — intervenants d'une édition.
-       Context: dict with .event */ -}}
-{{- $event := .event -}}
-{{- with $event.speakers }}
-  <section class="annual-event-section" id="intervenants">
-    <h2>Intervenants</h2>
-    <div class="annual-event-people">
-      {{- range . }}
-        <article>
-          <h3>{{ .name }}</h3>
-          {{- with .role }}<p>{{ . }}</p>{{ end }}
-          {{- with .affiliation }}<span>{{ . }}</span>{{ end }}
-        </article>
-      {{- end }}
-    </div>
-  </section>
-{{- end }}
+{{- /* Conférences invitées (intervenants.yaml, photos dans intervenants/).
+       Context: dict with .page and .speakers */ -}}
+{{- $page := .page -}}
+<section class="je-section" id="intervenants">
+  <h2>Conférences invitées</h2>
+  <div class="je-speakers">
+    {{- range .speakers }}
+    <article class="je-speaker">
+      {{- with .photo }}{{ with $page.Resources.Get (printf "intervenants/%s" .) }}
+        {{- $img := .Fill "400x400 Top" }}
+        <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+      {{- end }}{{ end }}
+      <div class="je-speaker-body">
+        <h3>{{ with .website }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ if .website }}</a>{{ end }}</h3>
+        {{- with .role }}<p class="je-muted">{{ . }}</p>{{ end }}
+        {{- with .affiliation }}<p class="je-muted">{{ . }}</p>{{ end }}
+        {{- with .talk }}<p class="je-speaker-talk">{{ . }}</p>{{ end }}
+        {{- if or .abstract .bio }}
+        <details>
+          <summary>Résumé et biographie</summary>
+          {{- with .abstract }}<h4>Résumé</h4>{{ $page.RenderString (dict "display" "block") . }}{{ end }}
+          {{- with .bio }}<h4>Biographie</h4>{{ $page.RenderString (dict "display" "block") . }}{{ end }}
+        </details>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</section>

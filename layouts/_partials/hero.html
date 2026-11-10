@@ -31,7 +31,7 @@
       {{ end }}
 
       {{ range .Pages }}
-      {{- if or (eq .Type "page") (eq (.Params.type) "page") }}
+      {{- if or (eq .Type "page") (eq (.Params.type) "page") (eq .Type "journees") }}
       {{ $children = $children | append . }}
       {{ end }}
       {{ end }}
@@ -55,7 +55,7 @@
             ajoute juste ses fichiers et elle apparaît automatiquement.
           */}}
           {{ if eq .Name "Journées" }}
-            {{ $editions := sort $children "File.Path" "desc" }}
+            {{ $editions := sort $children "Params.start_date" "desc" }}
             {{ range $editions }}
             <li>
               <a href="{{ .RelPermalink }}">

@@ -1,0 +1,19 @@
+{{- /* Archive des journées nationales : une carte par dossier
+       content/journees/<année>/, de la plus récente à la plus ancienne. */ -}}
+{{ define "main" }}
+<div class="annual-days-page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{- $editions := sort .RegularPages "Params.start_date" "desc" }}
+  {{- if $editions }}
+  <div class="annual-days-list">
+    {{- range $editions }}
+      {{- partial "journees/edition-card.html" . }}
+    {{- end }}
+  </div>
+  {{- else }}
+  <p>Aucune édition n'est encore renseignée.</p>
+  {{- end }}
+</div>
+{{ end }}

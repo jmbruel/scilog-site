@@ -6,6 +6,20 @@ draft: false
 
 ---
 
+---
+
+📣 **Journée de la Sécurité et du Génie des Logiciels - 7 janvier 2027**
+
+*Le Défi GL4Sec, les groupes de travail MTV2 et GLSec du GdR SciLog et le projet PTCC SECUBIC organisent le 7 janvier 2027 (10h-18h) au Campus Cyber (Paris-La Défense, 5-7 rue Bellini, 92800 Puteaux) **une journée scientifique consacrée à La sécurité des logiciels** et aux apports du test, de la vérification et du génie logiciel à la cybersécurité.* 
+
+**Au programme** : exposés invités de chercheurs internationaux et présentations de la communauté française. Participation gratuite sur inscription obligatoire.
+
+**Appel à communications** : https://framaforms.org/appel-a-communication-journee-de-la-securite-et-du-genie-des-logiciels-1793188012
+
+**Inscription** (jusqu'au 7 décembre, dans la limite des places disponibles) : https://framaforms.org/inscription-journee-de-la-securite-et-du-genie-des-logiciels-1793185102
+
+---
+
 ## Contexte
 
 La sécurité des logiciels est devenue une préoccupation majeure dans un contexte où 
