@@ -231,6 +231,7 @@ We propose to reuse constraint-based type inference approach [The Essence of ML-
 - Pierre-Yves Schobbens, Université de Namur
 - Julien Signoles, Université Paris-Saclay, CEA, List
 - Fabien Siron, Université Paris-Saclay, CEA, List
+- Salwa Tabet Gonzalez, CEA, List
 - Théo Winterhalter, Inria Saclay, LMF
 - Yannick Zakowski, Inria
 
