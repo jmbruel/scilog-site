@@ -3,6 +3,7 @@ title: LVP
 type: page
 date: "2024-08-22T13:27:49Z"
 draft: false
+titles_only: true
 ---
 
 # Langages et vérification de programmes
@@ -41,7 +42,3 @@ Les personnes intéressées peuvent s'abonner à notre [liste de diffusion](http
 * [Julien Signoles](https://julien-signoles.fr/)
 
 ## Actualités du groupe LVP
-
-
-
-### 

@@ -3,6 +3,6 @@
   {{ .Content }}
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+    {{ if not $.Params.titles_only }}{{ .Summary }}{{ end }}
   {{ end }}
 {{ end }}
