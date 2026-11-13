@@ -1,13 +1,19 @@
 {{- /* Conférences invitées (intervenants.yaml, photos dans intervenants/).
+       Champ facultatif photo_anchor : cadrage du carré (défaut Center).
        Context: dict with .page and .speakers */ -}}
 {{- $page := .page -}}
 <section class="je-section" id="intervenants">
   <h2>Conférences invitées</h2>
   <div class="je-speakers">
     {{- range .speakers }}
+    {{- $speaker := . }}
     <article class="je-speaker">
       {{- with .photo }}{{ with $page.Resources.Get (printf "intervenants/%s" .) }}
-        {{- $img := .Fill "400x400 Top" }}
+        {{- /* Carré centré, sans agrandir les petites photos (sinon flou).
+               "photo_anchor" (Center, Top, Bottom, Smart…) ajuste le cadrage. */}}
+        {{- $size := math.Min .Width .Height 400 | int }}
+        {{- $anchor := $speaker.photo_anchor | default "Center" }}
+        {{- $img := .Fill (printf "%dx%d %s" $size $size $anchor) }}
         <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
       {{- end }}{{ end }}
       <div class="je-speaker-body">
