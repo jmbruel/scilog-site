@@ -1,5 +1,5 @@
 ---
-title: "16-17/11/2026 - DéfiThon AI4SE 2026"
+title: "DéfiThon AI4SE 2026"
 type: news
 date: "2026-10-26"
 draft: false
