@@ -6,6 +6,7 @@ draft: false
 categories:
 - An2026
 - AI4SE
+- hackathon
 archives: ["2026-10"]
 ---
 
