@@ -7,6 +7,7 @@ categories:
 - An2026
 - AI4SE
 - hackathon
+- industriel
 archives: ["2026-10"]
 ---
 

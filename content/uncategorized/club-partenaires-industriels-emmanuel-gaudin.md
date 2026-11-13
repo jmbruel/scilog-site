@@ -6,7 +6,7 @@ draft: false
 categories:
 - An2026
 - Partenariats
-- Industrie
+- Industriel
 archives: ["2026-04"]
 ---
 
