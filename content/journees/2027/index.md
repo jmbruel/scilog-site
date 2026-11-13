@@ -27,7 +27,7 @@ start_date: 2027-06-01
 end_date: 2027-06-04
 # Texte affiché pour les dates. Laissez vide pour le calculer.
 dates_label: "à annoncer"
-location: "à préciser"
+location: Brest
 
 # Bannière : déposez l'image dans images/ puis indiquez son nom.
 hero_image: ""
