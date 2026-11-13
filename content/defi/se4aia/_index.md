@@ -11,7 +11,7 @@ draft: false
 - Christelle Urtado – SyCoIA, IMT Mines Alès
 - Sylvie Trouilhet – IRIT, Université de Toulouse
 
-Laboratoires et chercheurs inscrits dans le défi : Sur le site (https://mygdr.hosted.lip6.fr/GTView/217/)[MyGDR]
+Laboratoires et chercheurs inscrits dans le défi : sur le site [MyGDR](https://mygdr.hosted.lip6.fr/GTView/217/)
 
 ## Objectif
 
