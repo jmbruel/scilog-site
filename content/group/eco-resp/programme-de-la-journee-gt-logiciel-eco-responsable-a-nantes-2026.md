@@ -10,7 +10,7 @@ categories:
 archives: ["2026-01"]
 ---
 
-La journée d'étude du **GT Logiciel Eco-Responsable** se déroulera le **23 janvier 2026** au LS2N (Faculté des Sciences et des Techniques) à Nantes.
+La journée d'étude du **GT Logiciel Eco-Responsable** se déroulera en présentiel le **23 janvier 2026** au LS2N (Faculté des Sciences et des Techniques) à Nantes.
 
 ## Programme
 
