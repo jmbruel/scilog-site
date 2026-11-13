@@ -199,6 +199,7 @@ We propose to reuse constraint-based type inference approach [The Essence of ML-
 - Jean-Christophe Filliâtre, CNRS
 - Caroline Fontaine, CNRS, LMF
 - Laurent Fuchs, XLIM, Université de Poitiers
+- Benjamin Gallay, CEA, List
 - Alain Giorgetti, Université Marie et Louis Pasteur, institut FEMTO-ST
 - Julien Girard-Satabin, CEA List
 - Olivier Hermant, Mines Paris PSL
