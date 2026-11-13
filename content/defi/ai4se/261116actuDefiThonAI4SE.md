@@ -8,6 +8,7 @@ categories:
 - AI4SE
 - hackathon
 - industriel
+- EvenementGPL
 archives: ["2026-10"]
 ---
 
