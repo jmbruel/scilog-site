@@ -43,6 +43,8 @@ Chargé·e parité, éthique et société  | {{< param "pes" >}}
 Chargé·e communication  | {{< param "com" >}}
 Chargé·e écoles et conférences  | {{< param "school" >}}
 Chargé·e prix de thèse  | {{< param "these" >}}
+Chargé·e école des jeunes chercheurs et jeunes chercheuses en Sciences du Logiciel (EJCP)  | {{< param "ejcp" >}}
+
 
 
 
