@@ -80,19 +80,3 @@ quotidien.
   + Exploiter la régularité des graphes de calcul dans les techniques
     de placement-ordonnancement sous contrainte TR.
 
-## Synchro : séminaires de la communauté francophone temps-réel
-
-### lundi 16 novembre 2026, 10h00
-- En ligne : https://visio.numerique.gouv.fr/tml-zuak-rpp
-- Intervenant : Yahya Hamdani, LIAS, ISAE-ENSMA
-- Titre : Ordonnancement temps réel optimal sur plateformes
-  multiprocesseurs uniformes : l’algorithme PCG*
-- Résumé : Sur les plateformes multiprocesseurs uniformes, où les
-  processeurs ont des vitesses différentes, l’ordonnancement optimal
-  se paie souvent par un grand nombre de préemptions et de
-  migrations. Je présenterai nos travaux sur ce problème, notamment
-  l’algorithme PCG*: son principe, ses garanties en termes de
-  préemptions et sa position par rapport aux approches existantes.
-- Bio : Yahya Hamdani est doctorant en deuxième année au LIAS
-  (ISAE-ENSMA, Poitiers). Il travaille sur l’ordonnancement temps réel
-  sur des plateformes multiprocesseurs uniformes.
