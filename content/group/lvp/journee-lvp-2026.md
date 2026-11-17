@@ -221,6 +221,7 @@ We propose to reuse constraint-based type inference approach [The Essence of ML-
 - Paul Patault, LMF
 - Balthazar Patiachvili, ENS PSL, Inria Paris
 - Valentin Perrelle, CEA List
+- François Pessaux, ENSTA
 - Quentin Petitjean, Université Paris-Saclay, CEA, List
 - Virgile Prevosto, Université Paris-Saclay, CEA, List
 - Lucas Ransan, Thales cortAIx Labs
