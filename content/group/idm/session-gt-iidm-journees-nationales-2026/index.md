@@ -12,12 +12,6 @@ archives: ["2026-06"]
 
 La session du GT IIDM s'est tenue le 3 juin 2026, de 11 h à 12 h 30, dans le cadre des Journées nationales « 1er Congrès des Sciences du Logiciel » à Polytech Lille, Villeneuve-d’Ascq.
 
-## Quelques photos
-
-![Une intervenante présente un exposé lors de la session du GT IIDM](IMG_6416.jpeg)
-
-![Les participants réunis dans la salle pendant la session du GT IIDM](IMG_6418.jpeg)
-
 ## Programme
 
 - 11 h - 11 h 25, Nicolas Anquetil : « Meta-models for reverse engineering in practice »
@@ -26,3 +20,10 @@ La session du GT IIDM s'est tenue le 3 juin 2026, de 11 h à 12 h 30, dans le ca
 - 12 h 15 - 12 h 30 : discussion générale sur le GT IIDM
 
 La session s'est déroulée en présentiel et a accueilli 40 personnes.
+
+
+## Quelques photos
+
+<img src="IMG_6416.jpeg" alt="Une intervenante présente un exposé lors de la session du GT IIDM" width="80%" />
+
+<img src="IMG_6418.jpeg" alt="Les participants réunis dans la salle pendant la session du GT IIDM" width="80%" />
