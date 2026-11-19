@@ -27,3 +27,4 @@ La session s'est déroulée en présentiel et a accueilli 40 personnes.
 <img src="IMG_6416.jpeg" alt="Une intervenante présente un exposé lors de la session du GT IIDM" width="80%" />
 
 <img src="IMG_6418.jpeg" alt="Les participants réunis dans la salle pendant la session du GT IIDM" width="80%" />
+    
