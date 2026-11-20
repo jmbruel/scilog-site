@@ -238,7 +238,7 @@ We propose to reuse constraint-based type inference approach [The Essence of ML-
 
 ## Organisation
 
-Journée organisée par [Julie Cailler](mailto:julie.cailler@loria.fr) (Université de Lorraine, Loria) et [Julien Signoles](mailto:julien.signoles@cea.fr) (Université Paris-Saclay, CEA, List) pour le programme scientifique et [Andrei Paskevich](mailto:andrei.paskevich@lmf.cnrs.fr) (LMF, Université Paris-Saclay) pour l'organisation locale, avec le soutien financier du [GDR SciLog](https://gdr-scilog.cnrs.fr/) du CNRS et de la [Graduate School "Informatique et Sciences du Numérique"](https://www.universite-paris-saclay.fr/graduate-schools/graduate-school-informatique-et-sciences-du-numerique) de l'Université Paris-Saclay.
+Journée organisée par [Julie Cailler](mailto:julie.cailler@loria.fr) (Université de Lorraine, Loria) et [Julien Signoles](mailto:julien.signoles@cea.fr) (Université Paris-Saclay, CEA, List) pour le programme scientifique et [Andrei Paskevich](mailto:andrei.paskevich@lmf.cnrs.fr) (LMF, Université Paris-Saclay) pour l'organisation locale, avec le soutien financier du [GDR SciLog](https://gdr-scilog.cnrs.fr/) du CNRS, de la [Graduate School "Informatique et Sciences du Numérique"](https://www.universite-paris-saclay.fr/graduate-schools/graduate-school-informatique-et-sciences-du-numerique) de l'Université Paris-Saclay et du [LMF](https://lmf.cnrs.fr/).
 
 <p style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem;">
   <a href="https://gdr-scilog.cnrs.fr/"><img src="/assets/png/lvp-logos/gdr_scilog.png" alt="Logo du GdR SciLog" style="height:70px;"/></a>
