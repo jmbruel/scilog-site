@@ -3,22 +3,11 @@
    (assets/css/calendrier.css, utilisé par layouts/calendrier/section.html)
    ============================================================ */
 
-/* ---- Petit bouton « Calendrier » à côté de la recherche (en-tête) ---- */
-.header-calendar {
-  display: inline-block;
-  margin-left: 0.5rem;
-  padding: 7px 10px;
-  border: 1px solid #767676;
-  border-radius: 2px;
-  font-size: 13px;
-  color: #036085;
-  vertical-align: middle;
-}
-
-.header-calendar:hover { background: #f2f2f2; text-decoration: none; }
-
-@media (max-width: 768px) {
-  .header-calendar { margin: 0.4rem 0 0; }
+/* ---- Menu principal ----
+   Avec l'entrée « Calendrier », 8 entrées : l'espacement passe de 2rem à 1.75rem
+   (identique entre toutes les entrées) pour que le menu reste sur une ligne. */
+@media (min-width: 769px) {
+  .site-bg .site-container .hero-banner .hero-nav ul { gap: 1.75rem; }
 }
 
 /* ---- Couleurs par type d'évènement ---- */

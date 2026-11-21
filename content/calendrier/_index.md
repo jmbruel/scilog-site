@@ -1,6 +1,10 @@
 ---
 title: "Calendrier"
 date: "2026-11-20T00:00:00+01:00"
+menu:
+  hero:
+    weight: 5
+    name: "Calendrier"
 # HTML : la page ; JSON : /calendrier/index.json, lu par l'application mobile.
 outputs: ["HTML", "JSON"]
 draft: false
