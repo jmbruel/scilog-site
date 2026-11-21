@@ -1,0 +1,13 @@
+{{- /* Flux JSON du calendrier (/calendrier/index.json), lu par l'application
+       mobile GDR SciLog. Mêmes évènements que la page /calendrier/.
+       Format des dates : "AAAA-MM-JJ" ou "AAAA-MM-JJTHH:MM" (heure de Paris). */ -}}
+{{- $cal := site.Data.calendrier }}
+{{- $events := partial "calendrier/evenements.html" . }}
+{{- dict
+      "version" 1
+      "fuseau" "Europe/Paris"
+      "types" $cal.types
+      "groupes" $cal.groupes
+      "defis" $cal.defis
+      "evenements" $events
+    | jsonify (dict "indent" "  ") }}

@@ -15,7 +15,8 @@ Vous trouverez sur ce site les dernières actualités relatives au {{% scilog %}
 
   * [Prochaines journées nationales](action/national-day/) (juin 2026)
   * [Annonces de conférences, ateliers et journées de travail](/action/)
+  * [Calendrier des évènements](/calendrier/) (réunions, conférences, soutenances, appels)
 
-
+{{< prochains-evenements >}}
 
 Dans le menu, vous trouverez des liens qui vous présentent le {{% scilog %}}, son [organisation](/bienvenue-site-scilog/organisation/), ses [principaux groupes thématiques](/group/), les [défis scientifiques](/defi/) qu'il aborde, ainsi que des archives sur les journées nationales passées.

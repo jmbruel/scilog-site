@@ -1,0 +1,247 @@
+/* ============================================================
+   Calendrier des évènements (/calendrier/)
+   (assets/css/calendrier.css, utilisé par layouts/calendrier/section.html)
+   ============================================================ */
+
+/* ---- Petit bouton « Calendrier » à côté de la recherche (en-tête) ---- */
+.header-calendar {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 7px 10px;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  font-size: 13px;
+  color: #036085;
+  vertical-align: middle;
+}
+
+.header-calendar:hover { background: #f2f2f2; text-decoration: none; }
+
+@media (max-width: 768px) {
+  .header-calendar { margin: 0.4rem 0 0; }
+}
+
+/* ---- Couleurs par type d'évènement ---- */
+.cal-type-reunion    { --cal-color: #036085; }
+.cal-type-conference { --cal-color: #2f7d4f; }
+.cal-type-soutenance { --cal-color: #8a5a12; }
+.cal-type-appel      { --cal-color: #9b2c2c; }
+.cal-type-autre      { --cal-color: #555; }
+
+.cal-app[hidden],
+.cal-fallback[hidden],
+.cal-app [hidden] { display: none !important; }
+
+/* ---- Filtres (simples : cases à cocher, comme un formulaire classique) ---- */
+.cal-filters {
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.cal-types {
+  border: 0;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.cal-types legend,
+.cal-multi summary {
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 0.3rem;
+}
+
+#cal-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.cal-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+/* Petit carré de couleur : légende des couleurs de la grille. */
+.cal-swatch {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--cal-color);
+}
+
+.cal-multi { margin: 0.4rem 0; }
+.cal-multi summary { cursor: pointer; }
+.cal-count { font-weight: normal; color: #666; }
+
+.cal-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  padding: 0.3rem 0 0.3rem 1rem;
+}
+
+.cal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.cal-actions .cal-btn {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #036085;
+}
+
+.cal-actions .cal-btn:hover { text-decoration: underline; }
+
+/* ---- Boutons de la barre d'outils ---- */
+.cal-btn {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #036085;
+  cursor: pointer;
+}
+
+.cal-btn:hover { background: #f2f2f2; }
+.cal-btn.is-active { color: #000; font-weight: bold; border-color: #888; }
+.cal-btn--link { border-color: transparent; }
+
+/* ---- Barre d'outils ---- */
+.cal-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.cal-views { display: flex; gap: 0.25rem; }
+.cal-nav { display: flex; align-items: center; gap: 0.4rem; }
+
+.cal-month-title {
+  margin: 0 0.4rem;
+  min-width: 10.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* ---- Grille mensuelle ---- */
+.cal-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.cal-table th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #667;
+  text-transform: uppercase;
+  padding: 0.3rem;
+}
+
+.cal-day {
+  vertical-align: top;
+  height: 4.75rem;
+  padding: 0.25rem;
+  border: 1px solid #e3e8ee;
+  overflow: hidden;
+}
+
+.cal-day--other { background: #fafbfc; }
+.cal-day--other .cal-day-num { color: #b0b8c1; }
+
+.cal-day-num {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #445;
+  margin-bottom: 0.15rem;
+}
+
+.cal-day--today .cal-day-num {
+  background: #036085;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  font-weight: 600;
+}
+
+.cal-pill {
+  display: block;
+  margin-top: 0.15rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: var(--cal-color);
+  color: #fff !important;
+}
+
+.cal-pill:hover { text-decoration: none; filter: brightness(1.15); }
+.cal-pill--past { opacity: 0.5; }
+
+/* ---- Liste des évènements (même présentation que la liste des actualités) ---- */
+.cal-list { margin-top: 1.5rem; }
+
+.cal-events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cal-event {
+  padding: 1rem 0.5rem;
+  border-top: 1px solid #ccc;
+}
+
+.cal-event:hover { background-color: #f2f2f2; transition: all 0.2s ease-out; }
+.cal-event:target { background-color: #f2f2f2; }
+
+.cal-event p { margin: 0.25rem 0; }
+.cal-event-when { font-size: 0.9rem; color: #555; }
+.cal-event-title { font-size: 1.05rem; }
+.cal-event-add { font-size: 0.85rem; color: #555; }
+
+/* Petite mention « passé » pour les évènements terminés. */
+.cal-past {
+  margin-left: 0.4rem;
+  padding: 0 0.3rem;
+  border: 1px solid #bbb;
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cal-empty { color: #666; font-style: italic; }
+
+/* ---- Petits écrans : la grille montre des points, la liste fait le reste ---- */
+@media (max-width: 768px) {
+  .cal-day { height: 3rem; padding: 0.15rem; text-align: center; }
+  .cal-pill {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    margin: 0 1px;
+    border-radius: 50%;
+    font-size: 0;
+  }
+  .cal-month-title { min-width: 0; font-size: 1.05rem; }
+}

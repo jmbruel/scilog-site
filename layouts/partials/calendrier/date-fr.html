@@ -1,0 +1,2 @@
+{{- /* Date en français : "1er juin 2027", "23 novembre 2026". */ -}}
+{{- .Day }}{{ if eq .Day 1 }}er{{ end }} {{ time.Format "January 2006" . | lower -}}

@@ -1,0 +1,45 @@
+{{- /* Liste courte des prochains évènements du calendrier.
+       Usage dans un contenu : {{< prochains-evenements >}}
+       ou {{< prochains-evenements nombre="3" >}} (5 par défaut).
+       Les évènements déjà terminés au moment de la visite sont masqués par
+       un petit script, le site n'étant reconstruit qu'à chaque publication. */ -}}
+{{- $nombre := int (.Get "nombre" | default 5) }}
+{{- $events := partial "calendrier/evenements.html" .Page }}
+{{- $today := now.Format "2006-01-02" }}
+{{- $upcoming := slice }}
+{{- range $events }}
+  {{- $last := (.fin | default .debut) | replaceRE "T.*" "" }}
+  {{- if ge $last $today }}{{ $upcoming = $upcoming | append . }}{{ end }}
+{{- end }}
+<div class="prochains-evenements">
+  <h2>Prochains évènements</h2>
+  {{- if $upcoming }}
+  <ul>
+    {{- range $i, $e := $upcoming }}
+    {{- $debut := time.AsTime ($e.debut | replaceRE "T.*" "") }}
+    {{- $last := ($e.fin | default $e.debut) | replaceRE "T.*" "" }}
+    <li data-fin="{{ $last }}"{{ if ge $i $nombre }} hidden{{ end }}>
+      <strong>{{ partial "calendrier/date-fr.html" $debut }}{{ with $e.fin }}{{ $f := . | replaceRE "T.*" "" }}{{ if ne $f ($e.debut | replaceRE "T.*" "") }} au {{ partial "calendrier/date-fr.html" (time.AsTime $f) }}{{ end }}{{ end }}</strong> :
+      {{ if $e.lien }}<a href="{{ $e.lien }}">{{ $e.titre }}</a>{{ else }}{{ $e.titre }}{{ end }}
+      {{- with $e.lieu }}, {{ . }}{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  <p>Aucun évènement annoncé pour le moment.</p>
+  {{- end }}
+  <p><a href="/calendrier/">Voir le calendrier complet</a></p>
+</div>
+<script>
+  (function () {
+    var box = document.currentScript.previousElementSibling;
+    var d = new Date();
+    var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    var shown = 0;
+    box.querySelectorAll('li[data-fin]').forEach(function (li) {
+      var keep = li.getAttribute('data-fin') >= today && shown < {{ $nombre }};
+      li.hidden = !keep;
+      if (keep) shown++;
+    });
+  })();
+</script>

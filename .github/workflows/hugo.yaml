@@ -111,3 +111,53 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  cnrs-site:
+    # Le site construit, prêt pour gdr-scilog.cnrs.fr. Le CNRS n'accepte le FTP
+    # que depuis certaines adresses : ci/publier-cnrs.sh, lancé depuis l'une
+    # d'elles, récupère cette branche et l'envoie (voir docs/publication-cnrs.md).
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/pages
+      - name: Publier le site construit sur la branche cnrs-site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir "$RUNNER_TEMP/site"
+          tar -xf "$RUNNER_TEMP/pages/artifact.tar" -C "$RUNNER_TEMP/site"
+          cd "$RUNNER_TEMP/site"
+          git init -q -b cnrs-site
+          git add -A
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -q -m "Site construit depuis $GITHUB_SHA"
+          # Un seul commit, remplacé à chaque fois : la branche ne grossit pas.
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:cnrs-site
+  notify-app:
+    # Starts scilog-notifier so the GDR SciLog app announces new publications
+    # within minutes instead of at the notifier's next scheduled run. The
+    # notifier keeps checking gdr-scilog.cnrs.fr for up to 20 minutes, since
+    # the live site can be updated after this deployment.
+    if: github.event_name != 'pull_request'
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    # A notifier problem must never mark the site's deployment as failed.
+    continue-on-error: true
+    steps:
+      - name: Ask scilog-notifier to check the site
+        env:
+          GH_TOKEN: ${{ secrets.NOTIFIER_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::NOTIFIER_TOKEN is not set: the app will be notified at the notifier's next scheduled run."
+            exit 0
+          fi
+          gh workflow run notify.yml --repo gdr-scilog/scilog-notifier --ref main -f wait_minutes=20
+          echo "scilog-notifier started: https://github.com/gdr-scilog/scilog-notifier/actions/workflows/notify.yml"

@@ -1,0 +1,43 @@
+{{- /* Tous les évènements du calendrier, triés par date de début.
+       Sources : data/calendrier.yaml + éditions des Journées nationales
+       (content/journees/<année>/). Utilisé par la page /calendrier/, son flux
+       JSON (lu par l'application mobile) et le shortcode prochains-evenements.
+       Usage : {{ $events := partial "calendrier/evenements.html" . }} */ -}}
+{{- $cal := site.Data.calendrier }}
+{{- $events := slice }}
+
+{{- range $cal.evenements }}
+  {{- $e := . }}
+  {{- with .lien }}
+    {{- if hasPrefix . "/" }}
+      {{- $e = merge $e (dict "lien" (absURL (strings.TrimPrefix "/" .))) }}
+    {{- end }}
+  {{- end }}
+  {{- $events = $events | append $e }}
+{{- end }}
+
+{{- /* Les Journées nationales sont reprises automatiquement. */ -}}
+{{- with site.GetPage "/journees" }}
+  {{- range .RegularPages }}
+    {{- if .Params.start_date }}
+      {{- $titre := .Title }}
+      {{- if in (lower (string .Params.dates_label)) "annoncer" }}
+        {{- $titre = printf "%s (dates à confirmer)" $titre }}
+      {{- end }}
+      {{- $e := dict
+            "titre" $titre
+            "type" "conference"
+            "debut" (time.Format "2006-01-02" .Params.start_date)
+            "lieu" (.Params.location | default "")
+            "lien" .Permalink
+            "description" (.Params.summary | default "" | plainify | strings.TrimSpace) }}
+      {{- with .Params.end_date }}
+        {{- $e = merge $e (dict "fin" (time.Format "2006-01-02" .)) }}
+      {{- end }}
+      {{- $events = $events | append $e }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- $events = sort $events "debut" }}
+{{- return $events }}

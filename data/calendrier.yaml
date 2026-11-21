@@ -1,0 +1,96 @@
+# ==================================================================
+#  Calendrier du GDR SciLog  (page /calendrier/)
+#
+#  Pour ajouter un évènement, copiez un bloc de la liste "evenements"
+#  ci-dessous et adaptez-le. Guide complet : docs/calendrier.md
+#
+#  Les Journées nationales (content/journees/<année>/) sont ajoutées
+#  automatiquement : inutile de les recopier ici.
+# ==================================================================
+
+# Types d'évènements proposés dans les filtres.
+types:
+  reunion: "Réunions GT / défi"
+  conference: "Conférences"
+  soutenance: "Soutenances de thèse"
+  appel: "Appels à projets"
+
+# Noms courts affichés dans les filtres (clé = identifiant utilisé
+# dans le champ "groupes" ou "defis" des évènements).
+groupes:
+  afsec: "AFSEC"
+  clap: "CLAP"
+  devx: "DevX"
+  eco-resp: "ECORESP"
+  edt: "EDT"
+  gl-sec: "GLSec"
+  ia: "IA"
+  idm: "IIDM"
+  ie: "TraceIE"
+  lvp: "LVP"
+  mtv2: "MTV2"
+  parts: "PARTS"
+  syla: "SyLA"
+  tones: "TONES"
+  vl: "VL"
+
+defis:
+  addyct: "ADDYCT"
+  ai4se: "AI4SE"
+  devx: "DevX"
+  fadingICT: "FadingICT"
+  gl4sec: "GL4Sec"
+  ipp: "IPP"
+  pae: "PAE"
+  se4aia: "SE4AIA"
+  trusted: "Trusted"
+
+# ------------------------------------------------------------------
+#  Évènements
+#
+#  Champs :
+#    titre       (obligatoire)
+#    type        (obligatoire) reunion | conference | soutenance | appel
+#    debut       (obligatoire) "AAAA-MM-JJ" ou "AAAA-MM-JJTHH:MM"
+#    fin         (facultatif)  même format ; jour inclus
+#    lieu        (facultatif)
+#    visio       (facultatif)  lien de visioconférence
+#    lien        (facultatif)  page de l'évènement (sur ce site ou ailleurs)
+#    groupes     (facultatif)  liste d'identifiants de GT (voir plus haut)
+#    defis       (facultatif)  liste d'identifiants de défis
+#    description (facultatif)  une ou deux phrases
+# ------------------------------------------------------------------
+evenements:
+  - titre: "AFADL 2026"
+    type: conference
+    debut: "2026-06-02"
+    fin: "2026-06-03"
+    lieu: "Lille"
+    lien: "https://scilog2026.fr/afadl"
+    description: "Approches Formelles pour l'Assistance au Développement de Logiciels, conjointement avec les journées nationales."
+
+  - titre: "Webinaire Synchro : ordonnancement temps réel optimal"
+    type: reunion
+    debut: "2026-11-16T10:00"
+    lieu: "En ligne"
+    visio: "https://visio.numerique.gouv.fr/tml-zuak-rpp"
+    lien: "/uncategorized/webinaire-synchro/"
+    groupes: [parts]
+    description: "Séminaire de la communauté francophone temps réel, exposé de Yahya Hamdani (LIAS, ISAE-ENSMA)."
+
+  - titre: "Journée LVP 2026"
+    type: reunion
+    debut: "2026-11-23"
+    lieu: "ENS Paris-Saclay, Gif-sur-Yvette"
+    lien: "/group/lvp/journee-lvp-2026/"
+    groupes: [lvp]
+    defis: [ipp]
+    description: "Journée du GT LVP, avec une session dédiée au défi IPP. Inscription obligatoire."
+
+  - titre: "Journée commune Défi GL4Sec et GTs MTV2 et GL_Sec"
+    type: reunion
+    debut: "2027-01-07"
+    lieu: "Campus Cyber, La Défense (Paris)"
+    lien: "/group/gl-sec/journee-commune-2026/"
+    groupes: [gl-sec, mtv2]
+    defis: [gl4sec]

@@ -1,0 +1,83 @@
+{{- /* Calendrier des évènements (/calendrier/).
+       Sources : data/calendrier.yaml + éditions des Journées nationales
+       (content/journees/<année>/). L'affichage et les filtres sont faits
+       en JavaScript (assets/js/calendrier.js) ; une liste simple reste
+       visible sans JavaScript. Guide : docs/calendrier.md */ -}}
+{{ define "main" }}
+{{- $cal := site.Data.calendrier }}
+{{- $events := partial "calendrier/evenements.html" . }}
+{{- $data := dict "types" $cal.types "groupes" $cal.groupes "defis" $cal.defis "evenements" $events }}
+
+<div class="cal-page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div id="cal-app" class="cal-app" hidden>
+    <div class="cal-filters" role="group" aria-label="Filtres">
+      <fieldset class="cal-types">
+        <legend>Types</legend>
+        <div id="cal-types"></div>
+      </fieldset>
+      <details class="cal-multi">
+        <summary>Groupes thématiques <span id="cal-gt-count" class="cal-count"></span></summary>
+        <div id="cal-gts" class="cal-checklist"></div>
+      </details>
+      <details class="cal-multi">
+        <summary>Défis <span id="cal-defi-count" class="cal-count"></span></summary>
+        <div id="cal-defis" class="cal-checklist"></div>
+      </details>
+      <div class="cal-actions">
+        <label class="cal-remember"><input type="checkbox" id="cal-remember"> Mémoriser mes filtres</label>
+        <button type="button" id="cal-reset" class="cal-btn cal-btn--link">Réinitialiser</button>
+        <button type="button" id="cal-ics" class="cal-btn">Exporter (.ics)</button>
+      </div>
+    </div>
+
+    <div class="cal-toolbar">
+      <div class="cal-views" role="tablist" aria-label="Affichage">
+        <button type="button" class="cal-btn" data-view="mois" role="tab">Mois</button>
+        <button type="button" class="cal-btn" data-view="liste" role="tab">À venir</button>
+      </div>
+      <div class="cal-nav" id="cal-nav">
+        <button type="button" class="cal-btn" id="cal-prev" aria-label="Mois précédent">‹</button>
+        <h2 id="cal-month-title" class="cal-month-title" aria-live="polite"></h2>
+        <button type="button" class="cal-btn" id="cal-next" aria-label="Mois suivant">›</button>
+        <button type="button" class="cal-btn cal-btn--link" id="cal-today">Aujourd'hui</button>
+      </div>
+    </div>
+
+    <div id="cal-grid" class="cal-grid"></div>
+    <div id="cal-list" class="cal-list"></div>
+  </div>
+
+  {{- /* Liste de secours, remplacée par le calendrier quand JavaScript est actif. */}}
+  <div id="cal-fallback" class="cal-fallback">
+    {{- if $events }}
+    <ul>
+      {{- range $events }}
+      <li>
+        <strong>{{ .debut | replaceRE "T.*" "" }}{{ with .fin }} → {{ . | replaceRE "T.*" "" }}{{ end }}</strong>
+        ({{ index $cal.types .type | default .type }}) :
+        {{ if .lien }}<a href="{{ .lien }}">{{ .titre }}</a>{{ else }}{{ .titre }}{{ end }}
+        {{- with .lieu }}, {{ . }}{{ end }}
+        {{- with .visio }} [<a href="{{ . }}">visio</a>]{{ end }}
+      </li>
+      {{- end }}
+    </ul>
+    {{- else }}
+    <p>Aucun évènement n'est encore renseigné.</p>
+    {{- end }}
+  </div>
+</div>
+
+<script type="application/json" id="cal-data">{{ $data | jsonify | safeJS }}</script>
+{{- with resources.Get "js/calendrier.js" }}
+  {{- if hugo.IsDevelopment }}
+<script src="{{ .RelPermalink }}" defer></script>
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{ end }}
