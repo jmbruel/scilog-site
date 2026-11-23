@@ -6,7 +6,7 @@ categories: ["news"]
 type: "page"
 ---
 
-Le défi [ipp](https://gdr-scilog.cnrs.fr/defi/ipp/) participe à la journée du GT [LVP](https://gdr-scilog.cnrs.fr/group/lvp), où une session lui
+Le défi [IPP](https://gdr-scilog.cnrs.fr/defi/ipp/) participe à la journée du GT [LVP](https://gdr-scilog.cnrs.fr/group/lvp), où une session lui
 sera dédiée. N'hésitez pas à proposer un exposé.
 
 ## Informations importantes
