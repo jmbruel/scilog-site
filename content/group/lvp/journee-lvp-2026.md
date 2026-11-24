@@ -86,9 +86,9 @@ archives: ["2026-11"]
 - 15:40-17:20 **Session 4**
   - 15:40-16:00 François Bobot, *[Preuve d'un domaine relationnel d'opération bit à bit en utilisant Why3, des solveurs et des IA agentiques](#resume-bobot)*
   - 16:00-16:20 Téo Bernier, *[Deductive Verification of a Patricia Trie with Creusot](#resume-bernier)*
-  - 16:20-16:40 Vincent Lafeychine, *[Formal Verification of Concurrent Rust Programs involving Weak Memory Behaviors](#resume-lafeychine)*
-  - 16:40-17:00 Sami Dahoux, *[Design Goals for a Progressive Formalization Language in Systems Requirements Engineering](#resume-dahoux)*
   - 17:00-17:20 Gabriel Scherer, *[Random generation of well-typed programs](#resume-scherer)*
+  - 16:40-17:00 Sami Dahoux, *[Design Goals for a Progressive Formalization Language in Systems Requirements Engineering](#resume-dahoux)*
+  - 16:20-16:40 Vincent Lafeychine, *[Formal Verification of Concurrent Rust Programs involving Weak Memory Behaviors](#resume-lafeychine)*
 - 17:20 **Clôture**
 
 ## Résumés des exposés
@@ -149,6 +149,18 @@ On nous demande souvent si nous vérifions formellement nos propres outils de v�
 
 Beyond their practical value, space-efficient mutable containers provide instructive use cases for deductive verification, in particular for Rust implementations, where ownership and borrowing simplify some aliasing concerns without eliminating the need for functional proofs. This talk reports on a verification case study of a Patricia trie implemented in safe Rust, specified and verified with Creusot. The code targets a concrete setting: keys are fixed-length arrays of Boolean values, and leaf contents are generic. The verified API is a finite-map interface comprising empty trie construction, mutation-based insertion and deletion, as well as lookup. The case study exposes the main proof challenges of compressed prefix trees: destructive updates, splitting at the first differing bit, and maintaining a global correspondence between explicit node prefixes and the extensional key–value relation represented by the trie. We prove functional correctness of lookup and updates, extensional properties such as the uniqueness of the value associated with a key, and client scenarios that validate the contracts on both symbolic and concrete executions.
 
+### Random generation of well-typed programs <small style="font-weight:normal">Gabriel Scherer, Inria & IRIF</small> {#resume-scherer}
+
+"Fuzzing" is a popular testing approach where we throw random inputs at a program and check that it respects some expected properties on all inputs. Fuzzing a metaprogram such as a compiler requires producing random input programs. To exercise interesting behaviors of the compiler, we want our input programs to be well-formed in a strong sense, in particular to be well-typed. Generating random well-typed programs is difficult when the type-system is powerful, there is a whole scientific literature on the topic, see for example [Testing an Optimising Compiler by Generating Random Lambda Terms, Pałka, 2012].
+
+Most existing generators integrate a large part of the implementation of a type-checker, "inverted" to assist in top-down random term generation by efficiently discarding choices that result in ill-typed programs. Scaling this approach to a full language would result in implementing two sophisticated type-checkers, once in the compiler and once in the program generator. This is one type-checker too many!
+
+We propose to reuse constraint-based type inference approach [The Essence of ML-based type inference, Pottier and Rémy, 2004] to write a single type-checker that can be used for both purposes: to check types of user-provided programs, and to efficiently guide a random program generator. This only requires a fairly simple modification to constraint generators: parametrizing them over a search monad. Our prototype implementation demonstrates that this approach can generate well-typed programs for the Hindley-Milner type system (prenex polymorphism). In particular, this improves on existing works that struggle to correctly handle polymorphism during program generation.
+
+### Design Goals for a Progressive Formalization Language in Systems Requirements Engineering <small style="font-weight:normal">Sami Dahoux, Qitab</small> {#resume-dahoux}
+
+Systems engineering has progressively evolved towards model-based practices in order to manage the growing complexity of cyber-physical projects. In parallel, formal early verification and validation (V&V) techniques, including simulation, model checking, and static analysis, have reached industrial maturity. However, adoption of these practices in industrial organizations remains limited, in part due to a low perceived return on investment. A key contributing factor is the authoring gap: no specification language currently occupies the right level of abstraction to simultaneously serve engineers writing natural language requirements, teams operating model-based workflows, and formal V&V back-ends. In this paper, we establish a set of six named design goals for REQ, a general-purpose textual requirements specification language designed to close this gap through progressive formalization. Each goal is motivated by observed engineering practice, paired with a language decision and supported by a rationale. A set of edition tools presented in Section 4, supports the contribution.
+
 ### Formal Verification of Concurrent Rust Programs involving Weak Memory Behaviors <small style="font-weight:normal">Vincent Lafeychine, LMF, Université Paris-Saclay</small> {#resume-lafeychine}
 
 Shared memory concurrency allows several threads to asynchronously read from and write to a shared memory using atomic operations. Using this mechanism to write programs may lead to large improvements of execution time.
@@ -159,17 +171,6 @@ In this presentation, we are interested in formally proving that a given Rust pr
 
 Our central contribution is to add to Creusot the ability to reason about concurrency and weak memory. This is done by attaching appropriate formal specifications to relevant parts of the Rust's standard library. We present several case studies to illustrate how the expected behavior can be specified by the programmer, including how extra annotations must be added to achieve automatic proof using SMT solvers.
 
-### Design Goals for a Progressive Formalization Language in Systems Requirements Engineering <small style="font-weight:normal">Sami Dahoux, Qitab</small> {#resume-dahoux}
-
-Systems engineering has progressively evolved towards model-based practices in order to manage the growing complexity of cyber-physical projects. In parallel, formal early verification and validation (V&V) techniques, including simulation, model checking, and static analysis, have reached industrial maturity. However, adoption of these practices in industrial organizations remains limited, in part due to a low perceived return on investment. A key contributing factor is the authoring gap: no specification language currently occupies the right level of abstraction to simultaneously serve engineers writing natural language requirements, teams operating model-based workflows, and formal V&V back-ends. In this paper, we establish a set of six named design goals for REQ, a general-purpose textual requirements specification language designed to close this gap through progressive formalization. Each goal is motivated by observed engineering practice, paired with a language decision and supported by a rationale. A set of edition tools presented in Section 4, supports the contribution.
-
-### Random generation of well-typed programs <small style="font-weight:normal">Gabriel Scherer, Inria & IRIF</small> {#resume-scherer}
-
-"Fuzzing" is a popular testing approach where we throw random inputs at a program and check that it respects some expected properties on all inputs. Fuzzing a metaprogram such as a compiler requires producing random input programs. To exercise interesting behaviors of the compiler, we want our input programs to be well-formed in a strong sense, in particular to be well-typed. Generating random well-typed programs is difficult when the type-system is powerful, there is a whole scientific literature on the topic, see for example [Testing an Optimising Compiler by Generating Random Lambda Terms, Pałka, 2012].
-
-Most existing generators integrate a large part of the implementation of a type-checker, "inverted" to assist in top-down random term generation by efficiently discarding choices that result in ill-typed programs. Scaling this approach to a full language would result in implementing two sophisticated type-checkers, once in the compiler and once in the program generator. This is one type-checker too many!
-
-We propose to reuse constraint-based type inference approach [The Essence of ML-based type inference, Pottier and Rémy, 2004] to write a single type-checker that can be used for both purposes: to check types of user-provided programs, and to efficiently guide a random program generator. This only requires a fairly simple modification to constraint generators: parametrizing them over a search monad. Our prototype implementation demonstrates that this approach can generate well-typed programs for the Hindley-Milner type system (prenex polymorphism). In particular, this improves on existing works that struggle to correctly handle polymorphism during program generation.
 
 ## Liste des participants
 
