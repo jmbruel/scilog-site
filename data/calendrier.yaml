@@ -94,3 +94,13 @@ evenements:
     lien: "/group/gl-sec/journee-commune-2026/"
     groupes: [gl-sec, mtv2]
     defis: [gl4sec]
+
+  - titre: "Webinaire Défi IPP"
+    type: reunion
+    debut: "2026-12-09T13:30"
+    fin: "2026-12-09T14:30"
+    lieu: "En ligne"
+    visio: "https://visio.numerique.gouv.fr/kbq-wtjp-rpv"
+    lien: "/defi/ipp/webinar-2026-12/"
+    defis: [ipp]
+
