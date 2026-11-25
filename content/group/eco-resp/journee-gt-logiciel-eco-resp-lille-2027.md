@@ -10,7 +10,7 @@ categories:
 archives: ["2026-11"]
 ---
 
-La journée d'étude du **GT Logiciel Eco-Responsable** se déroulera en présentiel le **4 février 2027** au Centre Inria de l'Université de Lille.
+La journée d'étude du [GT Logiciel Eco-Responsable](/group/eco-resp/) se déroulera en présentiel le **4 février 2027** au Centre Inria de l'Université de Lille.
 
 ## Programme
 
