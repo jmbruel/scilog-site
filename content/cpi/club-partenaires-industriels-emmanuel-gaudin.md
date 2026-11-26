@@ -8,6 +8,8 @@ categories:
 - Partenariats
 - Industriel
 archives: ["2026-04"]
+aliases:
+  - /uncategorized/club-partenaires-industriels-emmanuel-gaudin/
 ---
 
 Nous avons le plaisir d'annoncer qu'[Emmanuel Gaudin](mailto:emmanuel.gaudin@pragmadev.com) de la société Pragmadev, a accepté d'animer le futur **Club des partenaires industriels** du {{% scilog %}}.

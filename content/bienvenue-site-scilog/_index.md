@@ -5,7 +5,7 @@ date: "2024-06-23T09:46:44Z"
 menu:
   hero:
     weight: 0
-    name: "Bienvenue sur le site du GDR SciLog"
+    name: "Bienvenue"
 draft: false
 ---
 
