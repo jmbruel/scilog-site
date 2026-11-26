@@ -4,7 +4,7 @@ type: page
 date: "2026-11-26T00:00:00+01:00"
 menu:
   hero:
-    weight: 2
+    weight: 1
     name: "CPI"
 draft: false
 ---
