@@ -78,7 +78,7 @@ archives: ["2026-11"]
 - 12:05-13:05 **Déjeuner**
 - 13:05-15:10 **Session 3**
   - 13:05-13:50 Raphaël Monat, *[Formal Methods Meet Legal Implementations](#resume-monat)*
-  - 13:50-14:10 Erik Martin Dorel, *[Enseignement des méthodes formelles à l'Université de Toulouse : panorama et perspectives](#resume-dorel)*
+  - 13:50-14:10 Erik Martin-Dorel, *[Enseignement des méthodes formelles à l'Université de Toulouse : panorama et perspectives](#resume-dorel)*
   - 14:10-14:30 Guillaume Di Fatta, *[Vers un back-end CompCert vérifié pour WebAssembly](#resume-di-fatta)*
   - 14:30-14:50 Sebastien Bonduelle, *[Determinism Analysis and its Application to Evaluation Order Independence](#resume-bonduelle)*
   - 14:50-15:10 Alain Giorgetti, *[IA générative et preuve formelle, quels sont les prochains défis ?](#resume-giorgetti)*
@@ -119,7 +119,7 @@ La vérification formelle des systèmes complexes, notamment distribués et para
 
 Public administrations are steadily digitalizing all their procedures. In particular, computational laws – such as taxes and social benefits – are increasingly implemented within computers, enabling scalable, automated computations. These implementations have four key features: (i) they are critical software as they can have tremendous negative impact on citizens and states upon failure (e.g., the Phoenix pay system for civil servants in Canada, or the Louvois system for French military); (ii) they require interdisciplinary collaboration between lawyers and computer scientists to be correct; (iii) they are updated regularly by legal changes that can happen on yearly cycles; (iv) they have a long lifespan, counted at least in decades, as most changes are incremental. This talk will provide an overview of works bringing formal methods to legal implementations, using techniques ranging from compilation to automated verification. We will also discuss the impact our community can have on public administrations.
 
-### Enseignement des méthodes formelles à l'Université de Toulouse : panorama et perspectives <small style="font-weight:normal">Erik Martin Dorel, IRIT, Université de Toulouse — [Slides](/group/lvp/ressources/2026/martin_dorel.pdf)</small> {#resume-dorel}
+### Enseignement des méthodes formelles à l'Université de Toulouse : panorama et perspectives <small style="font-weight:normal">Erik Martin-Dorel, IRIT, Université de Toulouse — [Slides](/group/lvp/ressources/2026/martin_dorel.pdf)</small> {#resume-dorel}
 
 Les méthodes formelles sont un domaine singulier mêlant logique, mathématiques et informatique, dont l'enseignement peut à la fois permettre de préparer les apprenants à des postes de chercheur ou ingénieur dans le domaine (typiquement autour des systèmes critiques), mais aussi et surtout, de faciliter la compréhension de certaines théories, méthodologies, paradigmes utiles dans le bagage technique des ingénieurs en informatique. À l'Université de Toulouse (Faculté Sciences et Ingénierie), les méthodes formelles sont ainsi enseignées dans plusieurs modules de licence et master. Via cette présentation, nous visons à présenter une « photographie » de l'existant à l'UT-FSI et de certaines de nos pratiques, puis esquisser des perspectives, en visant idéalement à nourrir une discussion collégiale durant le GT pour échanger des retours d'expériences et des perspectives d'évolution de l'enseignement des méthodes formelles, notamment au sujet de l'impact indéniable des outils d'IA générative en enseignement.
 
@@ -129,7 +129,7 @@ WebAssembly (Wasm) est un langage de bas niveau portable qui est devenu un stand
 
 Cet exposé retracera les premières étapes de la conception d'un back-end Wasm formellement vérifié au sein du compilateur CompCert. Nous présenterons la chaîne de traduction développée depuis le langage intermédiaire Cminor vers une sémantique intermédiaire, nommée WasmCompCert (WasmCC), mécanisée sous Rocq. Si cette formalisation s'inspire directement de la sémantique de référence WasmCert, elle s'en distingue de par l'utilisation du modèle mémoire de CompCert. Enfin, nous détaillerons la mécanisation des preuves de préservation sémantique par simulation ainsi que la validation expérimentale du compilateur, complétée par une première évaluation des performances du code généré.
 
-### Determinism Analysis and its Application to Evaluation Order Independence <small style="font-weight:normal">Sebastien Bonduelle, Inria Rennes</small> {#resume-bonduelle}
+### Determinism Analysis and its Application to Evaluation Order Independence <small style="font-weight:normal">Sebastien Bonduelle, Inria Rennes — [Slides](/group/lvp/ressources/2026/bonduelle.pdf)</small> {#resume-bonduelle}
 
 In some programming languages, the order of evaluation of sub-expressions is under-specified. We design a static analysis for detecting whether the outcome of a program may depend on the choice of an evaluation order, for programs written in an imperative language equipped with a non-deterministic scheduling construct. The analysis is compositional, and is obtained by abstract interpretation of the 2-hypersemantics of programs, expressed as the tensor product of a program's semantics with itself. To detect whether a behaviour might be non-deterministic, the analysis features an abstract domain of dependencies, that can express ranges of sufficient conditions for an outcome to be insensitive to the evaluation order. The precision of the analysis is discussed by conducting experiments with a prototype analyser.
 
@@ -214,7 +214,7 @@ Our central contribution is to add to Creusot the ability to reason about concur
 - Aida Lahouij, LMF
 - Yanni Lefki, Inria, Université de Strasbourg
 - André Maroneze, Université Paris-Saclay, CEA, List
-- Erik Martin Dorel, IRIT, Université de Toulouse
+- Erik Martin-Dorel, IRIT, Université de Toulouse
 - Raphaël Monat, Inria & Université de Lille
 - Benoît Montagu, Inria Rennes
 - Patricia Mouy, CEA
