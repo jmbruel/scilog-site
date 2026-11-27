@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Groupes Thématiques on GDR SciLog</title><link>https://gdr-scilog.cnrs.fr/group/</link><description>Recent content in Groupes Thématiques on GDR SciLog</description><generator>Hugo</generator><language>fr-fr</language><copyright>&amp;copy; {currentYear} All right reserved contact@scilog.fr -- Last update {{ .Date }}</copyright><lastBuildDate>Wed, 23 Sep 2026 11:20:58 +0000</lastBuildDate><atom:link href="https://gdr-scilog.cnrs.fr/group/index.xml" rel="self" type="application/rss+xml"/><item><title>PARTS</title><link>https://gdr-scilog.cnrs.fr/group/parts/</link><pubDate>Wed, 23 Sep 2026 11:20:58 +0000</pubDate><guid>https://gdr-scilog.cnrs.fr/group/parts/</guid><description>&lt;h3 id="programmation-sûre-pour-les-nouvelles-applications-temps-réel"&gt;Programmation sûre pour les nouvelles applications temps réel&lt;/h3&gt;
+&lt;h2 id="contact"&gt;Contact&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Julien Forget (U. Lille)&lt;/li&gt;
+&lt;li&gt;Houssam Zahaf (U. Nantes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="membres-du-gt--sur-le-site-mygdr"&gt;Membres du GT : &lt;a href="https://mygdr.hosted.lip6.fr/GTView/205/"&gt;Sur le site MyGDR&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="liste-de-diffusion--groupe-renater"&gt;Liste de diffusion : &lt;a href="https://groupes.renater.fr/sympa/info/gt-parts-gdr-scilog"&gt;Groupe Renater&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="webinaire-mensuel--à-suivre-ici"&gt;Webinaire mensuel : &lt;a href="https://gdr-scilog.cnrs.fr/uncategorized/webinaire-synchro/"&gt;à suivre ici&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="contexte"&gt;Contexte&lt;/h2&gt;
+&lt;p&gt;Le paysage de l&amp;rsquo;informatique fait face à une forte diversification des
+architectures matérielles sur lesquelles les programmes
+s&amp;rsquo;exécutent. Ainsi, l&amp;rsquo;internet des objets (Internet of Things - IoT)
+amène un regain d&amp;rsquo;intérêt pour les cibles matérielles fortement
+contraintes en termes de ressources, qu&amp;rsquo;il s&amp;rsquo;agisse de puissance de
+calcul, de mémoire, ou d&amp;rsquo;énergie. À l&amp;rsquo;opposé, l&amp;rsquo;essor de
+l&amp;rsquo;apprentissage automatique induit une augmentation très forte des
+besoins en mémoire et en puissance de calcul, motivant la diffusion de
+plateformes matérielles hautes performances et hétérogènes, et ce sur
+l&amp;rsquo;ensemble des segments, depuis les serveurs de calcul jusqu&amp;rsquo;aux
+systèmes embarqués.&lt;/p&gt;</description></item><item><title>TONES</title><link>https://gdr-scilog.cnrs.fr/group/tones/</link><pubDate>Tue, 01 Sep 2026 14:00:00 +0000</pubDate><guid>https://gdr-scilog.cnrs.fr/group/tones/</guid><description>&lt;h3 id="techniques-doptimisation-et-de-vérification-pour-le-développement-des-systèmes-critiques"&gt;Techniques d’optimisation et de vérification pour le développement des systèmes critiques&lt;/h3&gt;
+&lt;h2 id="responsables-"&gt;Responsables :&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dorra BEN KHALIFA, LII, ENAC&lt;/li&gt;
+&lt;li&gt;Timothy BOURKE, Inria/ENS Paris&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="membres-du-défi--sur-le-site-mygdr"&gt;Membres du défi : &lt;a href="https://mygdr.hosted.lip6.fr/GTView/207/"&gt;Sur le site MyGDR&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="contexte-du-gt"&gt;Contexte du GT&lt;/h3&gt;
+&lt;p&gt;Les systèmes embarqués critiques, présents notamment dans l’aéronautique, l’automobile ou le médical, doivent être à la fois fiables, sûrs et performants, tout en respectant des contraintes fortes de ressources, de temps d’exécution et de consommation.
+Le GT s’intéresse aux méthodes permettant de &lt;strong&gt;concevoir, vérifier et optimiser ces systèmes&lt;/strong&gt;. Les travaux portent notamment sur les méthodes formelles, les langages synchrones, l’optimisation du code et de la précision numérique, ainsi que sur les systèmes intégrant de l’IA et s’exécutant sur des plateformes comme les FPGA et les SoC.
+L’objectif est de rapprocher &lt;strong&gt;vérification et optimisation&lt;/strong&gt; pour développer des systèmes critiques plus fiables, efficaces et frugaux, capables de répondre aux contraintes des applications embarquées de demain.&lt;/p&gt;</description></item></channel></rss>

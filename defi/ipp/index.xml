@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IPP : Interopérabilité pour les preuves et les programme on GDR SciLog</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/</link><description>Recent content in IPP : Interopérabilité pour les preuves et les programme on GDR SciLog</description><generator>Hugo</generator><language>fr-fr</language><copyright>&amp;copy; {currentYear} All right reserved contact@scilog.fr -- Last update {{ .Date }}</copyright><lastBuildDate>Tue, 24 Nov 2026 09:02:34 +0100</lastBuildDate><atom:link href="https://gdr-scilog.cnrs.fr/defi/ipp/index.xml" rel="self" type="application/rss+xml"/><item><title>Webinar 2026 12</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-12/</link><pubDate>Tue, 24 Nov 2026 09:02:34 +0100</pubDate><guid>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-12/</guid><description>&lt;h2 id="informations-utiles"&gt;Informations utiles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Horaire: &lt;strong&gt;Mercredi 9 décembre 2026, 13h30-14h30 (CEST)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Orateur: &lt;strong&gt;Romain Pascual&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Titre: &lt;strong&gt;When Engineer(ing Model)s Disagree: Consistency as an Interoperability Problem&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Lien: &lt;a href="https://visio.numerique.gouv.fr/kbq-wtjp-rpv"&gt;https://visio.numerique.gouv.fr/kbq-wtjp-rpv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="résumé"&gt;Résumé&lt;/h2&gt;
+&lt;p&gt;Designing a cyber-physical system involves many heterogeneous models: CAD
+geometry, simulations, control models, software. Each describes one aspect of
+the system in its own formalism, yet all of them must describe the same
+system. Keeping them consistent can be seen as an interoperability problem:
+models written in different languages must be related, often without any way of
+translating one into another. In this talk, I will present joint work with
+colleagues at KIT on formal foundations for model consistency. I will introduce
+a semantic account of consistency and our notion of observables: measurable
+system properties that act as a shared interface between heterogeneous models. I
+will also discuss how these ideas let existing formal-methods tools (solvers,
+model checkers, etc.) help detect and repair inconsistencies, and end with
+questions on how proof and analysis tools could help support consistency
+management.&lt;/p&gt;</description></item><item><title>Journée LVP IPP novembre 2026</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/journee-lvp-ipp-2026-11/</link><pubDate>Fri, 06 Nov 2026 09:13:34 +0200</pubDate><guid>https://gdr-scilog.cnrs.fr/defi/ipp/journee-lvp-ipp-2026-11/</guid><description>&lt;p&gt;Le défi &lt;a href="https://gdr-scilog.cnrs.fr/defi/ipp/"&gt;IPP&lt;/a&gt; participe à la journée du GT &lt;a href="https://gdr-scilog.cnrs.fr/group/lvp"&gt;LVP&lt;/a&gt;, où une session lui
+sera dédiée. N&amp;rsquo;hésitez pas à proposer un exposé.&lt;/p&gt;
+&lt;h2 id="informations-importantes"&gt;Informations importantes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Date: 23 novembre 2026&lt;/li&gt;
+&lt;li&gt;Lieu: ENS Paris-Saclay&lt;/li&gt;
+&lt;li&gt;Page des journées: &lt;a href="https://groupes.renater.fr/wiki/lvp/journee_lvp_novembre2026"&gt;https://groupes.renater.fr/wiki/lvp/journee_lvp_novembre2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Page d&amp;rsquo;inscription: &lt;a href="https://framaforms.org/journee-lvp-du-23-novembre-2026-1788266271"&gt;https://framaforms.org/journee-lvp-du-23-novembre-2026-1788266271&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;L&amp;rsquo;inscription est gratuite mais &lt;strong&gt;obligatoire&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="programme"&gt;Programme&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Session&lt;/th&gt;
+ &lt;th&gt;Horaire&lt;/th&gt;
+ &lt;th&gt;Orateur&lt;/th&gt;
+ &lt;th&gt;Titre&lt;/th&gt;
+ &lt;th&gt;Affiliation&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Café d&amp;rsquo;accueil&lt;/td&gt;
+ &lt;td&gt;9:00 - 9:25&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ouverture&lt;/td&gt;
+ &lt;td&gt;9:25 - 9:30&lt;/td&gt;
+ &lt;td&gt;Julie, Julien, Olivier, Virgile, Andreï&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Exposé invité 1&lt;/td&gt;
+ &lt;td&gt;9:30 - 10:15&lt;/td&gt;
+ &lt;td&gt;Frédéric Blanqui&lt;/td&gt;
+ &lt;td&gt;TBA&lt;/td&gt;
+ &lt;td&gt;Inria et ENS Paris-Saclay&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Pause café&lt;/td&gt;
+ &lt;td&gt;10:15 - 10:45&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Session 2 (IPP)&lt;/td&gt;
+ &lt;td&gt;10:45 - 12:05&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;10:45 - 11:05&lt;/td&gt;
+ &lt;td&gt;Nikolai Kosmatov&lt;/td&gt;
+ &lt;td&gt;Experience Report on Cache Coloring in the Bao Hypervisor&lt;/td&gt;
+ &lt;td&gt;Thales CortAIx Labs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;11:05 - 11:25&lt;/td&gt;
+ &lt;td&gt;Loïc Correnson&lt;/td&gt;
+ &lt;td&gt;Introducing Separation Logic into Frama-C/Wp&lt;/td&gt;
+ &lt;td&gt;Université Paris-Saclay, CEA, List&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;11:25 - 11:45&lt;/td&gt;
+ &lt;td&gt;Virgile Prevosto&lt;/td&gt;
+ &lt;td&gt;Optimiser l&amp;rsquo;instrumentation de propriétés haut-niveau pour la vérification à l&amp;rsquo;exécution&lt;/td&gt;
+ &lt;td&gt;Université Paris-Saclay, CEA, List&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;11:45 - 12:05&lt;/td&gt;
+ &lt;td&gt;Rabea Ameur-Boulifa&lt;/td&gt;
+ &lt;td&gt;Open Automata : modèles pour la vérification des systèmes complexes&lt;/td&gt;
+ &lt;td&gt;Telecom Paris&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Repas&lt;/td&gt;
+ &lt;td&gt;12:05 - 13:05&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Exposé invité 2&lt;/td&gt;
+ &lt;td&gt;13:05 - 13:50&lt;/td&gt;
+ &lt;td&gt;Raphaël Monat&lt;/td&gt;
+ &lt;td&gt;Formal Methods Meet Legal Implementation&lt;/td&gt;
+ &lt;td&gt;Inria et Université de Lille&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Session 3&lt;/td&gt;
+ &lt;td&gt;13:50 - 15:10&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;13:50 - 14:10&lt;/td&gt;
+ &lt;td&gt;Erik Martin-Dorel&lt;/td&gt;
+ &lt;td&gt;Enseignement des méthodes formelles à l&amp;rsquo;Université de Toulouse : panorama et perspectives&lt;/td&gt;
+ &lt;td&gt;IRIT, Université de Toulouse&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;14:10 - 14:30&lt;/td&gt;
+ &lt;td&gt;Guillaume Di Fatta&lt;/td&gt;
+ &lt;td&gt;Vers un back-end CompCert vérifié pour WebAssembly&lt;/td&gt;
+ &lt;td&gt;Université de Rennes, Inria, CNRS, Irisa&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;14:30 - 14:50&lt;/td&gt;
+ &lt;td&gt;Sébastien Bonduelle&lt;/td&gt;
+ &lt;td&gt;Determinism Analysis and its Application to Evaluation Order Independence&lt;/td&gt;
+ &lt;td&gt;Inria Rennes&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;14:50 - 15:10&lt;/td&gt;
+ &lt;td&gt;Alain Giorgetti&lt;/td&gt;
+ &lt;td&gt;IA générative et preuve formelle, quels sont les prochains défis ?&lt;/td&gt;
+ &lt;td&gt;Université Marie et Louis Pasteur, institut FEMTO-ST&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Pause café&lt;/td&gt;
+ &lt;td&gt;15:10 - 15:40&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Session 4&lt;/td&gt;
+ &lt;td&gt;15:40 - 17:20&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;15:40 - 16:00&lt;/td&gt;
+ &lt;td&gt;François Bobot&lt;/td&gt;
+ &lt;td&gt;Preuve d&amp;rsquo;un domaine relationnel d&amp;rsquo;opération bit à bit en utilisant Why3, des solveurs et des IA agentiques&lt;/td&gt;
+ &lt;td&gt;Université Paris-Saclay, CEA, List&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;16:00 - 16:20&lt;/td&gt;
+ &lt;td&gt;Téo Bernier&lt;/td&gt;
+ &lt;td&gt;Deductive Verification of a Patricia Trie with Creusot&lt;/td&gt;
+ &lt;td&gt;Thales CortAIx Labs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;16:20 - 16:40&lt;/td&gt;
+ &lt;td&gt;Vincent Lafeychine&lt;/td&gt;
+ &lt;td&gt;Formal Verification of COncurrent Rust Programs involving Weak Memory Behaviors&lt;/td&gt;
+ &lt;td&gt;LMF. Université Paris-Saclay&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;16:40 - 17:00&lt;/td&gt;
+ &lt;td&gt;Sami Dahoux&lt;/td&gt;
+ &lt;td&gt;TBA&lt;/td&gt;
+ &lt;td&gt;Qitab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;17:00 - 17:20&lt;/td&gt;
+ &lt;td&gt;Gabriel Scherer&lt;/td&gt;
+ &lt;td&gt;Random Generation of Well-Typed Programs&lt;/td&gt;
+ &lt;td&gt;Inria et IRIF&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Clôture&lt;/td&gt;
+ &lt;td&gt;17:20 - 17:30&lt;/td&gt;
+ &lt;td&gt;Julie, Julien, Olivier, Virgile Andreï&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Webinar 2026 11</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-11/</link><pubDate>Wed, 21 Oct 2026 15:15:22 +0200</pubDate><guid>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-11/</guid><description>&lt;h2 id="informations-utiles"&gt;Informations utiles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Horaire: &lt;strong&gt;Mercredi 4 novembre 2026, 13h30-14h30 (CEST)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Orateur: &lt;strong&gt;Christian Attiogbé&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Titre: &lt;strong&gt;Un plongement sémantique des algèbres de processus dans EventB/Rodin&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Lien: &lt;a href="https://visio.numerique.gouv.fr/kbq-wtjp-rpv"&gt;https://visio.numerique.gouv.fr/kbq-wtjp-rpv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gdr-scilog.cnrs.fr/assets/pdf/slides-embeddingCSP_in_EB_Attiogbe_webinaire_IPP_2026.pdf"&gt;Transparents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="résumé"&gt;Résumé&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;interopérabilité sémantique est une des difficultés qui entrave la
+modélisation ou l&amp;rsquo;analyse formelle de systèmes hétérogènes (ceux impliquant des
+composants de différentes natures ou construits dans différents formalismes).
+Ces difficultés impactent aussi l&amp;rsquo;interaction entre les outils d&amp;rsquo;assistance
+(&amp;ldquo;model-checkers&amp;rdquo; et prouveurs) à l&amp;rsquo;analyse formelle.&lt;/p&gt;
+&lt;p&gt;Dans ce travail, nous proposons un plongement sémantique des algèbres de
+processus (à la CSP de Hoare) dans les machines abstraites à événements discrets
+(à la Event-B) pour résoudre en partie ces difficultés.
+Le plongement est basé sur un encodage réversible des règles sémantiques de CSP pour en garantir la correction.&lt;br&gt;
+Un modèle formel générique en Event-B est alors proposé pour systématiser les
+traductions de modèles CSP, et utiliser la plateforme Rodin dédiée à Event-B.&lt;/p&gt;</description></item><item><title>Webinar 2026 05</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-05/</link><pubDate>Thu, 30 Apr 2026 09:13:34 +0200</pubDate><guid>https://gdr-scilog.cnrs.fr/defi/ipp/webinar-2026-05/</guid><description>&lt;h2 id="informations-utiles"&gt;Informations utiles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Horaire: &lt;strong&gt;Mercredi 6 mai 2026, 17h00-18h00 (CEST)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Orateur: &lt;strong&gt;Rishikesh Vaishnav&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Titre: &lt;strong&gt;Translating Proofs from Lean to Dedukti&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Lien: &lt;a href="https://visio.numerique.gouv.fr/kbq-wtjp-rpv"&gt;https://visio.numerique.gouv.fr/kbq-wtjp-rpv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Proof assistants are software tools that enable the precise expression of
+mathematical objects, properties, and proofs, including automation that checks
+the validity of proofs with respect to specific theorem statements. Proof
+assistants often feature a high degree of expressivity, allowing users to
+formally state and verify many interesting results, spanning from foundational
+to research-level mathematics. Many proof assistants have been developed over
+the years, with each of them being based on different theories and having their
+own communities and mathematical libraries, with interoperability between these
+various systems remaining an open challenge.&lt;/p&gt;</description></item><item><title>Mobilité d'Anne Grieu (11-18 mars 2026)</title><link>https://gdr-scilog.cnrs.fr/defi/ipp/mobiliteanne2026/</link><pubDate>Fri, 03 Apr 2026 10:00:00 +0000</pubDate><guid>https://gdr-scilog.cnrs.fr/defi/ipp/mobiliteanne2026/</guid><description>&lt;p&gt;Anne Grieu, doctorante à l&amp;rsquo;IRIT, a bénéficié d&amp;rsquo;une mobilité de 1 semaine (11-18 mars 2026) au sein du laboratoire LMF à Saclay dans le cadre du défi IPP du &lt;a href="https://gdr-scilog.cnrs.fr/"&gt;GDR SciLog&lt;/a&gt;
+.&lt;/p&gt;
+&lt;img src="https://gdr-scilog.cnrs.fr/assets/jpg/ens_saclay.jpg" alt="Entrée de l'ENS Saclay" width="90%"/&gt;
+&lt;h2 id="contexte-du-déplacement"&gt;Contexte du déplacement&lt;/h2&gt;
+&lt;p&gt;La thèse d&amp;rsquo;Anne est financée par le projet ANR ICSPA : &lt;em&gt;Interoperable and Confidential Set-Based Proof Assistants&lt;/em&gt;. Ce projet regroupe SAMOVAR, INRIA Nancy, LORIA, INRIA Paris-Saclay, LMF, l&amp;rsquo;IRIT, le LIRMM et CLEARSY. L&amp;rsquo;objectif de ce projet est de faciliter l&amp;rsquo;interopérabilité entre les assistants de preuve Atelier B, Event-B et TLA+, en utilisant Lambdapi comme framework pivot.&lt;/p&gt;</description></item></channel></rss>
