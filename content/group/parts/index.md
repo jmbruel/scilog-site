@@ -15,6 +15,8 @@ draft: false
 
 ## Liste de diffusion : [Groupe Renater](https://groupes.renater.fr/sympa/info/gt-parts-gdr-scilog)
 
+## Webinaire mensuel : [à suivre ici](https://gdr-scilog.cnrs.fr/uncategorized/webinaire-synchro/)
+
 ## Contexte
 
 Le paysage de l'informatique fait face à une forte diversification des
