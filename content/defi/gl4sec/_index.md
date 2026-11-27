@@ -8,15 +8,23 @@ draft: false
 
 ---
 
-📣 **Journée de la Sécurité et du Génie des Logiciels - 7 janvier 2027**
+📣 **Journée de la Sécurité et du Génie des Logiciels 2027**
 
-*Le Défi GL4Sec, les groupes de travail MTV2 et GLSec du GdR SciLog et le projet PTCC SECUBIC organisent le 7 janvier 2027 (10h-18h) au Campus Cyber (Paris-La Défense, 5-7 rue Bellini, 92800 Puteaux) **une journée scientifique consacrée à La sécurité des logiciels** et aux apports du test, de la vérification et du génie logiciel à la cybersécurité.* 
+<span style="color:DarkRed">Le [programme complet](/defi/gl4sec/gl4sec27) est désormais disponible !</span>
 
-**Au programme** : exposés invités de chercheurs internationaux et présentations de la communauté française. Participation gratuite sur inscription obligatoire.
+Cette **journée scientifique** réunit des chercheurs français et internationaux travaillant à l’**interface entre le génie logiciel et la cybersécurité**. Son objectif est de favoriser les échanges sur la manière dont les méthodes de **test**, de **vérification** et, plus largement, du génie logiciel peuvent être mises à profit pour améliorer la sécurité, la fiabilité et la confiance dans les systèmes logiciels. Le programme couvre à la fois les techniques fondamentales et les avancées récentes du domaine, en abordant des axes de recherche établis ainsi que des thématiques et défis émergents.
 
-**Appel à communications** : https://framaforms.org/appel-a-communication-journee-de-la-securite-et-du-genie-des-logiciels-1793188012
+*L’atelier est coorganisé par le défi [GL4Sec](/defi/gl4sec), les groupes de travail [MTV2](/group/mtv2) et [GLSec](/group/gl-sec) du GdR [SciLog](/), ainsi que le projet [SECUBIC](https://secubic-ptcc.github.io) du [PTCC](https://ptcc.fr/projets/secubic/). Nous remercions chaleureusement le CNRS, le PTCC et le CEA pour leur soutien.*
 
-**Inscription** (jusqu'au 7 décembre, dans la limite des places disponibles) : https://framaforms.org/inscription-journee-de-la-securite-et-du-genie-des-logiciels-1793185102
+## Informations pratiques
+
+* **Quand ?** Le 7 janvier 2027, de 10h00 à 17h00 
+* **Où ?** [Campus Cyber Paris-La Défense](https://maps.app.goo.gl/9ecxNorVG11TGnZX6), 5-7 Rue Bellini, 92800 Puteaux, France 
+* **Comment s’y rendre ?** 
+  * **Métro ligne 1 :** arrêt *Esplanade de la Défense*, puis 3 minutes à pied 
+  * **RER A ou E :** arrêt *La Défense Grande Arche*, puis métro ligne 1 ou 15 minutes à pied
+
+**L’inscription est gratuite mais obligatoire** avant le 7 décembre 2026 via le [formulaire dédié](https://framaforms.org/inscription-journee-de-la-securite-et-du-genie-des-logiciels-1793185102).
 
 ---
 
