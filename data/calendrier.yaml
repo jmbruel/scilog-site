@@ -87,11 +87,11 @@ evenements:
     defis: [ipp]
     description: "Journée du GT LVP, avec une session dédiée au défi IPP. Inscription obligatoire."
 
-  - titre: "Journée commune Défi GL4Sec et GTs MTV2 et GL_Sec"
+  - titre: "Journée de la Sécurité et du Génie des Logiciels 2027 (défi GL4Sec, GTs MTV2 et GL_Sec)"
     type: reunion
     debut: "2027-01-07"
     lieu: "Campus Cyber, La Défense (Paris)"
-    lien: "/group/gl-sec/journee-commune-2026/"
+    lien: "/defi/gl4sec/gl4sec27"
     groupes: [gl-sec, mtv2]
     defis: [gl4sec]
 
